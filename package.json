@@ -1,0 +1,20 @@
+{
+  "name": "crawl-server",
+  "version": "1.0.0",
+  "description": "Simple Express server",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "crawl:demo": "node src/demos/crawlee-demo.mjs",
+    "crawl:dealsspy": "node src/demos/dealsspy-crawl.mjs",
+    "crawl:amazon": "node src/demos/amazon-crawl.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crawlee": "^3.18.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "playwright": "^1.62.1"
+  }
+}
