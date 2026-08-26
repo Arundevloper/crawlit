@@ -1,4 +1,5 @@
 const { crawlDealsspy, getCachedProducts } = require('../services/dealsspy.service');
+const { parseRangeParams, filterByPriceRange } = require('../utils/price');
 
 const MIN_DISCOUNT = 40;
 
@@ -14,7 +15,9 @@ async function getProducts(req, res, next) {
     if (!cached) {
       return res.status(404).json({ error: 'No cached products yet. Call GET /api/products/refresh first.' });
     }
-    res.json({ count: cached.length, products: cached });
+    const range = parseRangeParams(req.query);
+    const filtered = filterByPriceRange(cached, range);
+    res.json({ count: filtered.length, products: filtered });
   } catch (err) {
     next(err);
   }
@@ -36,7 +39,8 @@ async function getHighDiscountProducts(req, res, next) {
     if (!cached) {
       return res.status(404).json({ error: 'No cached products yet. Call GET /api/products/refresh first.' });
     }
-    const filtered = cached
+    const range = parseRangeParams(req.query);
+    const filtered = filterByPriceRange(cached, range)
       .map((p) => ({ ...p, discountPct: parseDiscount(p.discount) }))
       .filter((p) => p.discountPct !== null && p.discountPct > MIN_DISCOUNT)
       .sort((a, b) => b.discountPct - a.discountPct);

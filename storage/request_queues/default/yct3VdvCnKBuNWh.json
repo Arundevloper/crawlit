@@ -1,0 +1,9 @@
+{
+	"id": "yct3VdvCnKBuNWh",
+	"json": "{\"id\":\"yct3VdvCnKBuNWh\",\"url\":\"https://www.amazon.in/dp/B0GR1B69CB\",\"loadedUrl\":\"https://www.amazon.in/dp/B0GR1B69CB?th=1\",\"uniqueKey\":\"https://www.amazon.in/dp/B0GR1B69CB\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"PRODUCT\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-08-20T08:02:12.534Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.amazon.in/dp/B0GR1B69CB",
+	"url": "https://www.amazon.in/dp/B0GR1B69CB"
+}

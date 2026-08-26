@@ -1,8 +1,7 @@
-const fs = require('fs/promises');
-const path = require('path');
+const { getDb } = require('../config/db');
 
 const SITEMAP_URL = 'https://www.dealsspy.in/sitemap/deals-sitemap.xml';
-const OUTPUT_FILE = path.join(__dirname, '../../data/dealsspy-products.json');
+const COLLECTION = 'dealsspy_products';
 
 async function getSeedUrls(limit) {
   const res = await fetch(SITEMAP_URL);
@@ -20,11 +19,21 @@ async function crawlDealsspy(limit = 100) {
     maxRequestsPerCrawl: limit,
     async requestHandler({ request, $, log }) {
       const title = $('h1.product-title').text().trim();
-      const price = $('.row.prices .price').first().text().trim();
-      const mrp = $('.row.prices .mrp').first().text().replace('MRP:', '').trim();
-      const discount = $('.row.prices .discount').first().text().trim();
+      let price = $('.row.prices .price').first().text().trim() || null;
+      const mrp = $('.row.prices .mrp').first().text().replace('MRP:', '').trim() || null;
+      const discount = $('.row.prices .discount').first().text().trim() || null;
       const store = $('.ds-store-action .store img').first().attr('alt') || null;
       const image = $('meta[property="og:image"]').attr('content') || null;
+
+      // "Flash sale" listings (e.g. "... @ ₹15999 on Flipkart Big Billion Days Sale",
+      // or "... Live @ 12 AM @ 37999") use a different template with no .row.prices
+      // block; the price only appears in the title, sometimes without a ₹ sign.
+      if (!price) {
+        const withSymbol = title.match(/₹\s?([\d,]+(?:\.\d+)?)/);
+        const trailingNumber = title.match(/@\s*([\d,]{4,})\s*$/);
+        const match = withSymbol || trailingNumber;
+        if (match) price = `₹${match[1]}`;
+      }
 
       log.info(`Scraped: ${title} — ${price}`);
       products.push({ title, price, mrp, discount, store, image, url: request.loadedUrl });
@@ -34,20 +43,19 @@ async function crawlDealsspy(limit = 100) {
   const seedUrls = await getSeedUrls(limit);
   await crawler.run(seedUrls);
 
-  await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(products, null, 2));
+  const collection = getDb().collection(COLLECTION);
+  await collection.deleteMany({});
+  if (products.length) await collection.insertMany(products);
 
   return products;
 }
 
 async function getCachedProducts() {
-  try {
-    const raw = await fs.readFile(OUTPUT_FILE, 'utf-8');
-    return JSON.parse(raw);
-  } catch (err) {
-    if (err.code === 'ENOENT') return null;
-    throw err;
-  }
+  const products = await getDb()
+    .collection(COLLECTION)
+    .find({}, { projection: { _id: 0 } })
+    .toArray();
+  return products.length ? products : null;
 }
 
 module.exports = { crawlDealsspy, getCachedProducts };

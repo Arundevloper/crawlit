@@ -1,7 +1,6 @@
-const fs = require('fs/promises');
-const path = require('path');
+const { getDb } = require('../config/db');
 
-const OUTPUT_FILE = path.join(__dirname, '../../data/amazon-products.json');
+const COLLECTION = 'amazon_products';
 
 async function crawlAmazon(query = 'laptop', limit = 10) {
   const { PlaywrightCrawler } = await import('crawlee');
@@ -63,20 +62,19 @@ async function crawlAmazon(query = 'laptop', limit = 10) {
 
   await crawler.run([{ url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`, label: 'SEARCH' }]);
 
-  await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(products, null, 2));
+  const collection = getDb().collection(COLLECTION);
+  await collection.deleteMany({});
+  if (products.length) await collection.insertMany(products);
 
   return products;
 }
 
 async function getCachedProducts() {
-  try {
-    const raw = await fs.readFile(OUTPUT_FILE, 'utf-8');
-    return JSON.parse(raw);
-  } catch (err) {
-    if (err.code === 'ENOENT') return null;
-    throw err;
-  }
+  const products = await getDb()
+    .collection(COLLECTION)
+    .find({}, { projection: { _id: 0 } })
+    .toArray();
+  return products.length ? products : null;
 }
 
 module.exports = { crawlAmazon, getCachedProducts };
