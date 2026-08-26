@@ -1,5 +1,6 @@
 const { crawlAmazon, getCachedProducts } = require('../services/amazon.service');
 const { crawlAmazonDeals, getCachedDeals } = require('../services/amazonDeals.service');
+const { parseRangeParams, filterByPriceRange } = require('../utils/price');
 
 const MIN_DISCOUNT = 40;
 
@@ -9,7 +10,9 @@ async function getProducts(req, res, next) {
     if (!cached) {
       return res.status(404).json({ error: 'No cached products yet. Call GET /api/amazon/refresh first.' });
     }
-    res.json({ count: cached.length, products: cached });
+    const range = parseRangeParams(req.query);
+    const filtered = filterByPriceRange(cached, range);
+    res.json({ count: filtered.length, products: filtered });
   } catch (err) {
     next(err);
   }
@@ -32,7 +35,9 @@ async function getDeals(req, res, next) {
     if (!cached) {
       return res.status(404).json({ error: 'No cached deals yet. Call GET /api/amazon/deals/refresh first.' });
     }
-    res.json({ count: cached.length, products: cached });
+    const range = parseRangeParams(req.query);
+    const filtered = filterByPriceRange(cached, range);
+    res.json({ count: filtered.length, products: filtered });
   } catch (err) {
     next(err);
   }
@@ -54,7 +59,8 @@ async function getHighDiscountDeals(req, res, next) {
     if (!cached) {
       return res.status(404).json({ error: 'No cached deals yet. Call GET /api/amazon/deals/refresh first.' });
     }
-    const filtered = cached
+    const range = parseRangeParams(req.query);
+    const filtered = filterByPriceRange(cached, range)
       .filter((p) => p.discountPct !== null && p.discountPct > MIN_DISCOUNT)
       .sort((a, b) => b.discountPct - a.discountPct);
 

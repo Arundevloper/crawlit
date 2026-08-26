@@ -1,7 +1,6 @@
-const fs = require('fs/promises');
-const path = require('path');
+const { getDb } = require('../config/db');
 
-const OUTPUT_FILE = path.join(__dirname, '../../data/amazon-deals.json');
+const COLLECTION = 'amazon_deals';
 const DEALS_URL = 'https://www.amazon.in/deals';
 
 async function crawlAmazonDeals(limit = 150) {
@@ -59,20 +58,19 @@ async function crawlAmazonDeals(limit = 150) {
 
   const result = [...products.values()].slice(0, limit);
 
-  await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(result, null, 2));
+  const collection = getDb().collection(COLLECTION);
+  await collection.deleteMany({});
+  if (result.length) await collection.insertMany(result);
 
   return result;
 }
 
 async function getCachedDeals() {
-  try {
-    const raw = await fs.readFile(OUTPUT_FILE, 'utf-8');
-    return JSON.parse(raw);
-  } catch (err) {
-    if (err.code === 'ENOENT') return null;
-    throw err;
-  }
+  const deals = await getDb()
+    .collection(COLLECTION)
+    .find({}, { projection: { _id: 0 } })
+    .toArray();
+  return deals.length ? deals : null;
 }
 
 module.exports = { crawlAmazonDeals, getCachedDeals };

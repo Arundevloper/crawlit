@@ -1,0 +1,9 @@
+{
+	"id": "NIs2AxQgqOFkOTm",
+	"json": "{\"id\":\"NIs2AxQgqOFkOTm\",\"url\":\"https://www.amazon.in/s?k=laptop\",\"loadedUrl\":\"https://www.amazon.in/s?k=laptop\",\"uniqueKey\":\"https://www.amazon.in/s?k=laptop\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"SEARCH\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-08-20T08:01:35.320Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.amazon.in/s?k=laptop",
+	"url": "https://www.amazon.in/s?k=laptop"
+}
