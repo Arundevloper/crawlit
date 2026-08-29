@@ -8,30 +8,53 @@ const { isKidsClothing, isMobilePhone, isHardwareTool } = require('../config/exc
 
 const MIN_DISCOUNT = 30;
 
-// Variants of one product (colors, sizes, pack counts) have distinct URLs/ASINs
-// but near-identical titles. The first 8 significant words identify the product,
-// so "SMOWKLY Casual Trousers ... (Black)" and "... (Beige)" collapse to one.
-function productSignature(title) {
-  if (!title) return null;
-  const words = String(title)
+function titleWords(title) {
+  return String(title || '')
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .split(/\s+/)
     .filter(Boolean);
-  return words.slice(0, 8).join(' ') || null;
+}
+
+// Variants of one product (colors, sizes, pack counts) have distinct URLs/ASINs
+// but near-identical titles. The first 8 significant words identify the product,
+// so "SMOWKLY Casual Trousers ... (Black)" and "... (Beige)" collapse to one.
+function prefixSignature(product) {
+  const words = titleWords(product.title);
+  return words.length ? words.slice(0, 8).join(' ') : null;
+}
+
+// The prefix alone misses variants whose distinguishing word comes early —
+// "Home Decor Vanilla ... Diffuser" vs "Home Decor Arabian Jasmine ... Diffuser"
+// share only two leading words. Those still agree on brand, store and MRP.
+function brandPriceSignature(product) {
+  const words = titleWords(product.title);
+  const mrp = String(product.mrp || '').replace(/[^0-9]/g, '');
+  if (words.length < 2 || !mrp) return null;
+  return `${words.slice(0, 2).join(' ')}|${mrp}|${product.store || ''}`;
+}
+
+// Collapses each group to its best-discounted member; products the key
+// cannot identify pass through untouched rather than being dropped.
+function dedupeBy(products, keyFn) {
+  const best = new Map();
+  const unkeyed = [];
+  for (const p of products) {
+    const key = keyFn(p);
+    if (!key) {
+      unkeyed.push(p);
+      continue;
+    }
+    const existing = best.get(key);
+    if (!existing || (p.discountPct || 0) > (existing.discountPct || 0)) {
+      best.set(key, p);
+    }
+  }
+  return [...best.values(), ...unkeyed];
 }
 
 function dedupeVariants(products) {
-  const bySignature = new Map();
-  for (const p of products) {
-    const sig = productSignature(p.title);
-    if (!sig) continue;
-    const existing = bySignature.get(sig);
-    if (!existing || (p.discountPct || 0) > (existing.discountPct || 0)) {
-      bySignature.set(sig, p);
-    }
-  }
-  return [...bySignature.values()];
+  return dedupeBy(dedupeBy(products, prefixSignature), brandPriceSignature);
 }
 
 async function getProducts(req, res, next) {
