@@ -2,7 +2,6 @@ const CATEGORIES = [
   { key: 'skincare', query: 'skin care' },
   { key: 'makeup', query: 'makeup' },
   { key: 'clothes', query: 'clothes' },
-  { key: 'mobile', query: 'mobile phone' },
   { key: 'powerbank', query: 'power bank' },
   { key: 'earbuds', query: 'earbuds' },
   // Brand-led queries: a bare "watch"/"shoes" search returns almost entirely
@@ -19,7 +18,6 @@ const CATEGORIES = [
   { key: 'electronics-accessories', query: 'usb cable charger' },
   { key: 'sweets', query: 'sweets' },
   { key: 'gym', query: 'gym equipment' },
-  { key: 'tools', query: 'tools' },
   { key: 'mouse-keyboard', query: 'mouse keyboard' },
   { key: 'helmet', query: 'helmet' },
   { key: 'purifier', query: 'air purifier' },
