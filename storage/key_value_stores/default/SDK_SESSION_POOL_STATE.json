@@ -1,6 +1,6 @@
 {
-  "usableSessionsCount": 20,
-  "retiredSessionsCount": 30,
+  "usableSessionsCount": 10,
+  "retiredSessionsCount": 40,
   "sessions": [
     {
       "id": "session_Yplsvd9gCT",
