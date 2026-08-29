@@ -70,7 +70,7 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
   await crawler.run([{ url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`, label: 'SEARCH' }]);
   await requestQueue.drop();
 
-  const docs = category ? products.map((p) => ({ ...p, category })) : products;
+  const docs = products.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
   await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
 
   return docs;

@@ -16,6 +16,7 @@
     --brand-dark: #0f172a;
     --footer-bg: #0b1120;
     --accent: #16a34a;
+    --deal-red: #dc2626;
     --shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
     --shadow-hover: 0 12px 24px rgba(15, 23, 42, 0.12);
   }
@@ -46,42 +47,50 @@
     z-index: 10;
     background: linear-gradient(115deg, #4338ca 0%, #6d28d9 100%);
     color: #fff;
-    padding: 14px 20px;
+    box-shadow: 0 4px 16px rgba(76, 29, 149, 0.25);
+  }
+
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 16px rgba(76, 29, 149, 0.25);
+    gap: 12px;
   }
 
   header.site-header .brand {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
+    align-items: center;
+    gap: 11px;
     text-decoration: none;
     color: inherit;
+    min-width: 0;
   }
 
-  .header-nav .home-btn {
-    display: inline-flex;
+  .logo-mark {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 7px 14px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: #fff;
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.15s ease;
+    justify-content: center;
+    color: #fde68a;
   }
 
-  .header-nav .home-btn:hover {
-    background: rgba(255, 255, 255, 0.26);
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 0;
   }
 
   header.site-header .brand-name {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.01em;
   }
@@ -91,9 +100,41 @@
   }
 
   header.site-header .tagline {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: #e0e7ff;
-    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-nav .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: #e0e7ff;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .header-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+  }
+
+  .header-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.92);
+    color: #4338ca;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   }
 
   /* ---------- Main ---------- */
@@ -140,6 +181,48 @@
     margin: 16px 0;
     font-size: 0.9rem;
   }
+
+  /* ---------- Live status bar ---------- */
+  .live-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    font-size: 0.84rem;
+  }
+
+  .live-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 800;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: #047857;
+  }
+
+  .live-dot::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    animation: livePulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes livePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); opacity: 1; }
+    50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); opacity: 0.65; }
+  }
+
+  .live-stat { color: var(--text-muted); }
+  .live-stat strong { color: var(--text); font-weight: 800; }
+  .live-sep { color: var(--border); }
 
   /* ---------- Toolbar: search / sort / price ---------- */
   .toolbar {
@@ -188,6 +271,39 @@
     cursor: pointer;
   }
 
+  /* ---------- View toggle (items per row) ---------- */
+  .view-toggle {
+    display: flex;
+    gap: 2px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 3px;
+  }
+
+  .view-toggle button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 6px 11px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .view-toggle button:hover { color: var(--text); }
+
+  .view-toggle button.active {
+    background: var(--brand);
+    color: #fff;
+  }
+
+  .view-toggle button:focus-visible,
   .toolbar select:focus-visible,
   .chip:focus-visible,
   .pagination button:focus-visible,
@@ -296,29 +412,39 @@
 
   @media (max-width: 620px) {
     main { padding: 16px 14px 32px; }
-    header.site-header { padding: 12px 16px; }
+    .header-inner { padding: 10px 14px; }
+    .tagline { display: none; }
     .grid { gap: 12px; }
     .card img { height: 130px; }
-    .card .body { padding: 10px 12px 12px; }
-    .card .title { font-size: 0.8rem; -webkit-line-clamp: 2; margin-bottom: 8px; }
-    .price { font-size: 0.95rem; }
-    .discount-badge { font-size: 0.7rem; padding: 3px 6px; }
+    .card .media { min-height: 130px; }
+    .card .body { padding: 10px 11px 10px; }
+    .card .title { font-size: 0.8rem; margin-bottom: 8px; }
+    .price { font-size: 1.12rem; }
+    .discount-badge { font-size: 0.7rem; padding: 4px 7px; }
+    .card-foot { gap: 5px; font-size: 0.68rem; }
   }
 
   @media (max-width: 360px) {
     .grid { grid-template-columns: 1fr; }
   }
 
+  /* Explicit user choice of items per row — only above the phone breakpoint,
+     so a 4-column pick never squeezes a narrow screen. Class specificity
+     (0,2,0) beats the plain .grid rules inside the media queries above. */
+  @media (min-width: 621px) {
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  }
+
   /* ---------- Card ---------- */
   .card {
+    position: relative;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 0;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    text-decoration: none;
     color: inherit;
     overflow: hidden;
     transition: box-shadow 0.15s ease, transform 0.15s ease;
@@ -329,9 +455,67 @@
     transform: translateY(-3px);
   }
 
+  /* Deal-quality tiers: the best discounts should read as better at a glance,
+     instead of every card carrying identical visual weight. */
+  .card.tier-steal {
+    border-color: #fde68a;
+    box-shadow: 0 2px 10px rgba(180, 83, 9, 0.12);
+  }
+
+  .card.tier-steal:hover { box-shadow: 0 14px 28px rgba(180, 83, 9, 0.2); }
+
+  .card.tier-hot { border-color: #fed7aa; }
+
+  /* Stretched link: the whole card is clickable, but the share button
+     sits above the overlay so it stays independently clickable. */
+  .card-link { text-decoration: none; color: inherit; }
+
+  .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .card-link:focus-visible::after {
+    outline: 2px solid var(--brand);
+    outline-offset: -3px;
+    border-radius: 14px;
+  }
+
+  .cta-hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #4338ca, #6d28d9);
+    color: #fff;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.18s ease;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .card:hover .cta-hint { transform: translateY(0); }
+
+  @media (hover: none) {
+    .cta-hint { display: none; }
+  }
+
   .card .media {
     position: relative;
-    background: #fafafa;
+    background: #fff;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-bottom: 1px solid #f1f5f9;
   }
 
   .card img {
@@ -339,76 +523,240 @@
     height: 170px;
     object-fit: contain;
     display: block;
-    background: #fafafa;
+  }
+
+  .no-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #cbd5e1;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
   }
 
   .discount-badge {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: var(--accent);
+    background: linear-gradient(135deg, #e11d48 0%, #dc2626 100%);
     color: #fff;
-    font-weight: 700;
-    font-size: 0.75rem;
-    padding: 4px 8px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    padding: 5px 9px;
     border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
+    z-index: 2;
   }
 
   .card .body {
-    padding: 12px 14px 14px;
+    padding: 12px 13px 11px;
     display: flex;
     flex-direction: column;
     flex: 1;
   }
 
   .card .title {
-    font-size: 0.88rem;
-    line-height: 1.35;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
     margin-bottom: 10px;
-    flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
+  /* Price block sits at the bottom of the flexible area so cards with
+     shorter titles keep their prices on a shared baseline. */
+  .price-block { margin-top: auto; }
+
   .price-row {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 7px;
     flex-wrap: wrap;
   }
 
   .price {
     font-weight: 800;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     color: var(--text);
+    letter-spacing: -0.02em;
   }
 
   .mrp {
     text-decoration: line-through;
     color: #9ca3af;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 
-  .meta-row {
-    margin-top: 8px;
+  .save {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #047857;
+    background: #ecfdf5;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  /* Footer: store, rating, age and share on one compact line */
+  .card-foot {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  .store {
-    font-size: 0.75rem;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
     color: var(--text-muted);
   }
 
-  .posted-time {
-    font-size: 0.72rem;
+  .card-foot .rating { font-weight: 700; color: #b45309; }
+
+  .card-foot .posted-time {
+    margin-left: auto;
+    font-size: 0.7rem;
     color: var(--brand);
     font-weight: 600;
     white-space: nowrap;
+  }
+
+  /* ---------- FOMO badges ---------- */
+  .fomo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+
+  .fomo {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    padding: 3px 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .fomo-hot {
+    background: #fffbeb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+  }
+
+  .fomo-steal {
+    background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+    color: #fff;
+    border: 1px solid transparent;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .fomo-drop {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+  }
+
+  .fomo-lowest {
+    background: #eef2ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(180, 83, 9, 0.45); }
+    50% { box-shadow: 0 0 0 5px rgba(180, 83, 9, 0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fomo-steal { animation: none; }
+  }
+
+  /* ---------- Store badge ---------- */
+  .store-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    flex: 0 0 auto;
+  }
+
+  .store-tag::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .store-tag.amazon { background: #fff3e0; color: #b45309; }
+  .store-tag.flipkart { background: #e6f0fd; color: #1d4ed8; }
+
+  /* ---------- Share button ---------- */
+  .share-btn {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .share-btn:hover {
+    background: #eef2ff;
+    color: var(--brand);
+    border-color: var(--brand);
+  }
+
+  .share-btn.copied {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  .share-btn:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+
+  /* ---------- Toast ---------- */
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%) translateY(12px);
+    background: var(--brand-dark);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 40;
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   /* ---------- Skeleton loading ---------- */
@@ -482,9 +830,7 @@
     position: relative;
     background: var(--footer-bg);
     color: #94a3b8;
-    padding: 20px 20px 18px;
     font-size: 0.82rem;
-    text-align: center;
   }
 
   footer.site-footer::before {
@@ -497,40 +843,106 @@
     background: linear-gradient(115deg, #4338ca 0%, #6d28d9 100%);
   }
 
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 20px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 340px;
+  }
+
   footer.site-footer .brand-name {
     color: #fff;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1.05rem;
   }
 
   footer.site-footer .brand-name .accent {
     color: #c4b5fd;
   }
 
-  @media (min-width: 480px) {
-    header.site-header .tagline { display: block; }
+  .footer-desc {
+    line-height: 1.5;
   }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links .col-title {
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .footer-links a:hover { color: #fff; }
+
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 20px auto 0;
+    padding: 14px 20px 18px;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: #64748b;
+  }
+
 </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">
-      <span class="brand-name">Crawl<span class="accent">It</span></span>
-      <span class="tagline">deal tracking, all in one place</span>
-    </a>
-    <nav class="header-nav">
-      <a class="home-btn" href="/">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
-        Home
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-8.6-8.6a2 2 0 0 1-.6-1.4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l8.4 8.4a2 2 0 0 1 0 2.8Z" transform="scale(0.9) translate(1.3 1.3)"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Crawl<span class="accent">It</span></span>
+          <span class="tagline">deal tracking, all in one place</span>
+        </span>
       </a>
-    </nav>
+      <nav class="header-nav">
+        <a class="nav-link active" href="/">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+          Home
+        </a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <div class="page-heading">
-      <span class="category-badge">Amazon</span>
+      <span class="category-badge">Amazon &amp; Flipkart</span>
       <h1>High Discount Deals</h1>
-      <p class="subtitle">Products with more than 30% off and MRP up to ₹10,000, sourced from amazon.in</p>
+      <p class="subtitle">Products with more than 30% off and MRP up to ₹10,000, sourced from amazon.in and flipkart.com</p>
     </div>
+
+    <div class="live-bar" id="liveBar" hidden></div>
 
     <div class="toolbar">
       <div class="search-wrap">
@@ -549,6 +961,21 @@
         <option value="500-2000">₹500 – ₹2,000</option>
         <option value="2000-10000">₹2,000 – ₹10,000</option>
       </select>
+      <select id="storeSelect" aria-label="Filter by store">
+        <option value="all">All stores</option>
+        <option value="Amazon">Amazon</option>
+        <option value="Flipkart">Flipkart</option>
+      </select>
+      <div class="view-toggle" id="viewToggle" role="group" aria-label="Items per row">
+        <button type="button" data-cols="2" aria-label="Show 2 items per row" title="2 per row">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+          2
+        </button>
+        <button type="button" data-cols="4" aria-label="Show 4 items per row" title="4 per row">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="4.5" height="4.5" rx="1"/><rect x="8.75" y="2" width="4.5" height="4.5" rx="1"/><rect x="15.5" y="2" width="4.5" height="4.5" rx="1"/><rect x="2" y="8.75" width="4.5" height="4.5" rx="1"/><rect x="8.75" y="8.75" width="4.5" height="4.5" rx="1"/><rect x="15.5" y="8.75" width="4.5" height="4.5" rx="1"/><rect x="2" y="15.5" width="4.5" height="4.5" rx="1"/><rect x="8.75" y="15.5" width="4.5" height="4.5" rx="1"/><rect x="15.5" y="15.5" width="4.5" height="4.5" rx="1"/></svg>
+          4
+        </button>
+      </div>
     </div>
 
     <div class="chips" id="chips" hidden></div>
@@ -563,12 +990,30 @@
     </div>
   </main>
 
+  <template id="noImgTpl"><span class="no-image"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="m21 15-5-5L5 20"/></svg>No image</span></template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 14 7-7 7 7"/></svg>
   </button>
 
   <footer class="site-footer">
-    <span class="brand-name">Crawl<span class="accent">It</span></span> — tracking deals across your favorite stores
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Crawl<span class="accent">It</span></span>
+        <span class="footer-desc">Tracking the best discounts across your favorite stores, refreshed automatically all day — so you never miss a deal.</span>
+      </div>
+      <div class="footer-links">
+        <span class="col-title">Explore</span>
+        <a href="/">Home</a>
+        <a href="/discounts.html">Amazon Deals</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CrawlIt. All rights reserved.</span>
+      <span>Prices &amp; availability are subject to change on the seller's site.</span>
+    </div>
   </footer>
 
   <script>
@@ -579,6 +1024,7 @@
     let searchText = '';
     let sortBy = 'newest';
     let priceBucket = 'all';
+    let storeFilter = 'all';
     let lastUpdatedText = '';
 
     const main = document.querySelector('main');
@@ -617,28 +1063,79 @@
       return `${days} day${days === 1 ? '' : 's'} ago`;
     }
 
+    function escapeAttr(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+      ));
+    }
+
     function cardHtml(p) {
       const posted = timeAgo(p.firstSeenAt);
       const isNew = p.firstSeenAt && (Date.now() - new Date(p.firstSeenAt).getTime()) < 60 * 60 * 1000;
+      const store = p.store || 'Amazon';
+      const storeClass = store.toLowerCase();
+      const priceNum = priceOf(p);
+      const mrpNum = Number(String(p.mrp || '').replace(/[₹,\s]/g, ''));
+      const savings = (priceNum && Number.isFinite(mrpNum) && mrpNum > priceNum)
+        ? Math.round(mrpNum - priceNum)
+        : null;
+      const d = p.discountPct || 0;
+      const tier = d >= 85 ? ' tier-steal' : d >= 70 ? ' tier-hot' : '';
       return `
-        <a class="card" href="${p.url}" target="_blank" rel="noopener">
+        <div class="card${tier}">
           <div class="media">
-            <img src="${p.image || ''}" alt="" loading="lazy" onerror="this.style.display='none'">
+            ${p.image
+              ? `<img src="${escapeAttr(p.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove(); this.parentNode.insertAdjacentHTML('afterbegin', document.getElementById('noImgTpl').innerHTML);">`
+              : document.getElementById('noImgTpl').innerHTML}
             <span class="discount-badge">${p.discountPct}% OFF</span>
             ${isNew ? '<span class="new-badge">NEW</span>' : ''}
           </div>
           <div class="body">
-            <div class="title">${p.title}</div>
-            <div class="price-row">
-              <span class="price">${p.price}</span>
-              <span class="mrp">${p.mrp}</span>
+            ${(p.badges && p.badges.length)
+              ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${escapeAttr(b.key)}">${b.label}</span>`).join('')}</div>`
+              : ''}
+            <a class="card-link" href="${escapeAttr(p.url)}" target="_blank" rel="noopener">
+              <div class="title">${p.title}</div>
+            </a>
+            <div class="price-block">
+              <div class="price-row">
+                <span class="price">${p.price}</span>
+                <span class="mrp">${p.mrp || ''}</span>
+              </div>
+              ${savings ? `<span class="save">Save ₹${savings.toLocaleString('en-IN')}</span>` : ''}
             </div>
-            <div class="meta-row">
-              <span class="store">${p.rating ? `★ ${p.rating} (${p.reviews || 0})` : ''}</span>
+            <div class="card-foot">
+              <span class="store-tag ${storeClass}">${store}</span>
+              ${p.rating ? `<span class="rating">★ ${p.rating}</span>` : ''}
               ${posted ? `<span class="posted-time">${posted}</span>` : ''}
+              <button class="share-btn" type="button" aria-label="Share this deal"
+                      data-url="${escapeAttr(p.url)}" data-title="${escapeAttr(p.title)}"
+                      data-price="${escapeAttr(p.price)}" data-discount="${escapeAttr(p.discountPct)}">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+              </button>
             </div>
           </div>
-        </a>
+          <span class="cta-hint">Grab this deal →</span>
+        </div>
+      `;
+    }
+
+    const liveBar = document.getElementById('liveBar');
+
+    function renderLiveBar() {
+      if (!allProducts.length) { liveBar.hidden = true; return; }
+      const hot = allProducts.filter(p => (p.discountPct || 0) >= 70).length;
+      const hourAgo = Date.now() - 60 * 60 * 1000;
+      const freshCount = allProducts.filter(p => new Date(p.firstSeenAt).getTime() > hourAgo).length;
+
+      liveBar.hidden = false;
+      liveBar.innerHTML = `
+        <span class="live-dot">LIVE</span>
+        <span class="live-stat"><strong>${allProducts.length}</strong> deals tracked</span>
+        <span class="live-sep">|</span>
+        <span class="live-stat"><strong>${hot}</strong> above 70% off</span>
+        <span class="live-sep">|</span>
+        <span class="live-stat"><strong>${freshCount}</strong> found in the last hour</span>
       `;
     }
 
@@ -654,6 +1151,7 @@
     function activeProducts() {
       let items = allProducts;
       if (currentCategory !== 'all') items = items.filter(p => p.category === currentCategory);
+      if (storeFilter !== 'all') items = items.filter(p => (p.store || 'Amazon') === storeFilter);
       if (searchText) {
         const q = searchText.toLowerCase();
         items = items.filter(p => (p.title || '').toLowerCase().includes(q));
@@ -726,6 +1224,69 @@
     document.getElementById('priceSelect').addEventListener('change', (e) => {
       priceBucket = e.target.value;
       renderPage(1);
+    });
+
+    document.getElementById('storeSelect').addEventListener('change', (e) => {
+      storeFilter = e.target.value;
+      renderChips();
+      renderPage(1);
+    });
+
+    const viewToggle = document.getElementById('viewToggle');
+
+    function applyCols(cols) {
+      grid.classList.remove('cols-2', 'cols-4');
+      grid.classList.add(`cols-${cols}`);
+      viewToggle.querySelectorAll('button').forEach((b) => {
+        b.classList.toggle('active', b.dataset.cols === String(cols));
+      });
+      try { localStorage.setItem('crawlit:cols', cols); } catch (err) { /* private mode */ }
+    }
+
+    viewToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (btn) applyCols(btn.dataset.cols);
+    });
+
+    let savedCols = '4';
+    try { savedCols = localStorage.getItem('crawlit:cols') || '4'; } catch (err) { /* private mode */ }
+    applyCols(savedCols === '2' ? '2' : '4');
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    grid.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.share-btn');
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const { url, title, price, discount } = btn.dataset;
+      const text = `${title}\n${price} (${discount}% off)\n\nvia CrawlIt`;
+
+      if (navigator.share) {
+        try {
+          await navigator.share({ title, text, url });
+          return;
+        } catch (err) {
+          if (err.name === 'AbortError') return; // user dismissed the sheet
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(`${text}\n${url}`);
+        btn.classList.add('copied');
+        setTimeout(() => btn.classList.remove('copied'), 1200);
+        showToast('Deal link copied to clipboard');
+      } catch (err) {
+        window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + url)}`, '_blank', 'noopener');
+      }
     });
 
     const backToTop = document.getElementById('backToTop');
@@ -801,6 +1362,7 @@
           return t > m ? t : m;
         }, 0);
         if (newest) lastUpdatedText = ` · Updated ${timeAgo(new Date(newest).toISOString()).toLowerCase()}`;
+        renderLiveBar();
         renderChips();
         renderPage(1);
       } catch (err) {
@@ -811,6 +1373,29 @@
     }
 
     load();
+
+    // Poll for genuinely new deals. The crawler runs continuously, so the feed
+    // updates itself rather than going stale until someone reloads.
+    setInterval(async () => {
+      try {
+        const res = await fetch('/api/amazon/deals/high-discount?maxMrp=10000');
+        if (!res.ok) return;
+        const data = await res.json();
+        const known = new Set(allProducts.map(p => p.url));
+        const fresh = data.products.filter(p => !known.has(p.url));
+
+        allProducts = data.products;
+        renderLiveBar();
+        renderChips();
+        renderPage(currentPage);
+
+        if (fresh.length) {
+          showToast(`${fresh.length} new deal${fresh.length === 1 ? '' : 's'} just landed`);
+        }
+      } catch (err) {
+        /* transient network hiccup — the next tick retries */
+      }
+    }, 60000);
   </script>
 </body>
 </html>

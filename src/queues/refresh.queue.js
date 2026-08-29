@@ -5,6 +5,9 @@ const { CATEGORIES } = require('../config/categories');
 
 const QUEUE_NAME = 'refresh';
 const CATEGORY_LIMIT = 3;
+// Flipkart reads every product off a single search page, so a larger limit
+// costs no extra page loads — unlike Amazon, which visits each product page.
+const FLIPKART_LIMIT = 10;
 
 const refreshQueue = new Queue(QUEUE_NAME, { connection });
 
@@ -13,6 +16,10 @@ const JOBS = [
   ...CATEGORIES.map((c) => ({
     name: `amazon-search:${c.key}`,
     data: { query: c.query, limit: CATEGORY_LIMIT, category: c.key },
+  })),
+  ...CATEGORIES.map((c) => ({
+    name: `flipkart-search:${c.key}`,
+    data: { query: c.query, limit: FLIPKART_LIMIT, category: c.key },
   })),
 ];
 
@@ -28,13 +35,17 @@ async function scheduleRefreshJobs() {
     }
   }
 
-  for (const job of JOBS) {
-    await refreshQueue.upsertJobScheduler(
-      job.name,
-      { every: refreshIntervalMs },
-      { name: job.name, data: job.data },
-    );
-  }
+  // Registered in parallel — sequential upserts made startup take ~15s once
+  // the job list grew past a hundred entries.
+  await Promise.all(
+    JOBS.map((job) =>
+      refreshQueue.upsertJobScheduler(
+        job.name,
+        { every: refreshIntervalMs },
+        { name: job.name, data: job.data },
+      ),
+    ),
+  );
   console.log(`Scheduled ${JOBS.length} refresh jobs every ${refreshIntervalMs / 1000}s`);
 }
 

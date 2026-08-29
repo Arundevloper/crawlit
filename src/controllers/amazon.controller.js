@@ -1,8 +1,38 @@
 const { crawlAmazon, getCachedProducts } = require('../services/amazon.service');
 const { crawlAmazonDeals, getCachedDeals } = require('../services/amazonDeals.service');
+const { getCachedFlipkart } = require('../services/flipkart.service');
 const { parseRangeParams, filterByPriceRange, parseDiscountPct } = require('../utils/price');
+const { isBrandedProduct } = require('../config/brands');
+const { computeBadges } = require('../utils/badges');
+const { isKidsClothing } = require('../config/exclusions');
 
 const MIN_DISCOUNT = 30;
+
+// Variants of one product (colors, sizes, pack counts) have distinct URLs/ASINs
+// but near-identical titles. The first 8 significant words identify the product,
+// so "SMOWKLY Casual Trousers ... (Black)" and "... (Beige)" collapse to one.
+function productSignature(title) {
+  if (!title) return null;
+  const words = String(title)
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+  return words.slice(0, 8).join(' ') || null;
+}
+
+function dedupeVariants(products) {
+  const bySignature = new Map();
+  for (const p of products) {
+    const sig = productSignature(p.title);
+    if (!sig) continue;
+    const existing = bySignature.get(sig);
+    if (!existing || (p.discountPct || 0) > (existing.discountPct || 0)) {
+      bySignature.set(sig, p);
+    }
+  }
+  return [...bySignature.values()];
+}
 
 async function getProducts(req, res, next) {
   try {
@@ -55,38 +85,55 @@ async function refreshDeals(req, res, next) {
 
 async function getHighDiscountDeals(req, res, next) {
   try {
-    const [deals, searchProducts] = await Promise.all([getCachedDeals(), getCachedProducts()]);
-    if (!deals && !searchProducts) {
+    const [deals, searchProducts, flipkart] = await Promise.all([
+      getCachedDeals(),
+      getCachedProducts(),
+      getCachedFlipkart(),
+    ]);
+    if (!deals && !searchProducts && !flipkart) {
       return res.status(404).json({ error: 'No cached deals yet. Call GET /api/amazon/deals/refresh first.' });
     }
 
-    // Merge both sources: the deals-page crawl (labeled "hot-deals") and the
-    // per-category search crawls (each carrying the category it was found under).
-    const fromDeals = (deals || []).map((p) => ({ ...p, category: 'hot-deals' }));
-    const fromSearch = (searchProducts || []).map((p) => ({
+    // Merge all sources: the Amazon deals page (labeled "hot-deals"), the
+    // per-category Amazon searches, and the per-category Flipkart searches.
+    const normalize = (p, fallbackCategory) => ({
       ...p,
+      store: p.store || 'Amazon',
       discountPct: parseDiscountPct(p.discountPct ?? p.discount),
-      category: p.category || 'other',
-    }));
+      category: p.category || fallbackCategory,
+    });
+
+    const merged = [
+      ...(deals || []).map((p) => normalize(p, 'hot-deals')),
+      ...(searchProducts || []).map((p) => normalize(p, 'other')),
+      ...(flipkart || []).map((p) => normalize(p, 'other')),
+    ];
 
     const seen = new Set();
-    const merged = [...fromDeals, ...fromSearch].filter((p) => {
+    const deduped = merged.filter((p) => {
       if (!p.url || seen.has(p.url)) return false;
       seen.add(p.url);
       return true;
     });
 
     const range = parseRangeParams(req.query);
-    let filtered = filterByPriceRange(merged, range)
-      .filter((p) => p.discountPct !== null && p.discountPct > MIN_DISCOUNT);
+    let filtered = dedupeVariants(filterByPriceRange(deduped, range))
+      .filter((p) => p.discountPct !== null && p.discountPct > MIN_DISCOUNT)
+      .filter((p) => isBrandedProduct(p.title, p.category))
+      .filter((p) => !isKidsClothing(p.title));
 
     if (req.query.category) {
       filtered = filtered.filter((p) => p.category === req.query.category);
     }
+    if (req.query.store) {
+      filtered = filtered.filter((p) => p.store === req.query.store);
+    }
 
     filtered.sort((a, b) => new Date(b.firstSeenAt) - new Date(a.firstSeenAt));
 
-    res.json({ minDiscount: MIN_DISCOUNT, count: filtered.length, products: filtered });
+    const withBadges = filtered.map((p) => ({ ...p, badges: computeBadges(p) }));
+
+    res.json({ minDiscount: MIN_DISCOUNT, count: withBadges.length, products: withBadges });
   } catch (err) {
     next(err);
   }
