@@ -5,7 +5,9 @@ const CATEGORIES = [
   { key: 'mobile', query: 'mobile phone' },
   { key: 'powerbank', query: 'power bank' },
   { key: 'earbuds', query: 'earbuds' },
-  { key: 'watch', query: 'watch' },
+  // Brand-led queries: a bare "watch"/"shoes" search returns almost entirely
+  // white-label listings, which the brand gate in config/brands.js then drops.
+  { key: 'watch', query: 'titan casio fastrack watch' },
   { key: 'handbag', query: 'handbag' },
   { key: 'fans', query: 'fan' },
   { key: 'perfume', query: 'perfume' },
@@ -22,8 +24,8 @@ const CATEGORIES = [
   { key: 'helmet', query: 'helmet' },
   { key: 'purifier', query: 'air purifier' },
   { key: 'household', query: 'household items' },
-  { key: 'shoes', query: 'shoes' },
-  { key: 'sandals', query: 'sandals slippers' },
+  { key: 'shoes', query: 'nike adidas puma campus shoes' },
+  { key: 'sandals', query: 'bata sparx paragon sandals' },
   { key: 'extension-board', query: 'extension board' },
   { key: 'birthday-party', query: 'birthday party supplies' },
   // DealsSpy-style staples: branded everyday consumables that dominate their feed

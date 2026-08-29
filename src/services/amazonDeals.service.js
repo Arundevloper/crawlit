@@ -57,7 +57,7 @@ async function crawlAmazonDeals(limit = 150) {
 
   await browser.close();
 
-  const result = [...products.values()].slice(0, limit);
+  const result = [...products.values()].slice(0, limit).map((p) => ({ ...p, store: 'Amazon' }));
 
   await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
 

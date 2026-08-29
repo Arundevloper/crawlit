@@ -15,6 +15,7 @@ async function connectDB() {
   await Promise.all([
     db.collection('amazon_products').createIndex({ url: 1 }, { unique: true }),
     db.collection('amazon_deals').createIndex({ asin: 1 }, { unique: true }),
+    db.collection('flipkart_products').createIndex({ url: 1 }, { unique: true }),
   ]);
 
   console.log(`Connected to MongoDB database "${mongoDbName}"`);
