@@ -1,5 +1,6 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
+const { convertLinks } = require('./earnkaro.service');
 
 const COLLECTION = 'amazon_products';
 
@@ -71,6 +72,7 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
   await requestQueue.drop();
 
   const docs = products.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
+  await convertLinks(docs);
   await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
 
   return docs;
