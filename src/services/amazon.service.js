@@ -1,12 +1,19 @@
 const { getDb } = require('../config/db');
+const { upsertProducts, findRecent } = require('../utils/upsert');
 
 const COLLECTION = 'amazon_products';
 
-async function crawlAmazon(query = 'laptop', limit = 10) {
-  const { PlaywrightCrawler } = await import('crawlee');
+async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
+  const { PlaywrightCrawler, RequestQueue } = await import('crawlee');
   const products = [];
 
+  // Unique queue per run: Crawlee's shared "default" queue would otherwise mark
+  // this query's URLs as already handled on repeat runs (e.g. the scheduled refresh),
+  // causing later runs in the same process to silently scrape nothing.
+  const requestQueue = await RequestQueue.open(`amazon-products-${Date.now()}`);
+
   const crawler = new PlaywrightCrawler({
+    requestQueue,
     maxRequestsPerCrawl: limit + 1,
     async requestHandler({ request, page, log }) {
       if (request.label === 'PRODUCT') {
@@ -61,19 +68,16 @@ async function crawlAmazon(query = 'laptop', limit = 10) {
   });
 
   await crawler.run([{ url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`, label: 'SEARCH' }]);
+  await requestQueue.drop();
 
-  const collection = getDb().collection(COLLECTION);
-  await collection.deleteMany({});
-  if (products.length) await collection.insertMany(products);
+  const docs = category ? products.map((p) => ({ ...p, category })) : products;
+  await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
 
-  return products;
+  return docs;
 }
 
 async function getCachedProducts() {
-  const products = await getDb()
-    .collection(COLLECTION)
-    .find({}, { projection: { _id: 0 } })
-    .toArray();
+  const products = await findRecent(getDb().collection(COLLECTION));
   return products.length ? products : null;
 }
 

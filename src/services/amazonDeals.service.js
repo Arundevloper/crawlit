@@ -1,4 +1,5 @@
 const { getDb } = require('../config/db');
+const { upsertProducts, findRecent } = require('../utils/upsert');
 
 const COLLECTION = 'amazon_deals';
 const DEALS_URL = 'https://www.amazon.in/deals';
@@ -58,18 +59,13 @@ async function crawlAmazonDeals(limit = 150) {
 
   const result = [...products.values()].slice(0, limit);
 
-  const collection = getDb().collection(COLLECTION);
-  await collection.deleteMany({});
-  if (result.length) await collection.insertMany(result);
+  await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
 
   return result;
 }
 
 async function getCachedDeals() {
-  const deals = await getDb()
-    .collection(COLLECTION)
-    .find({}, { projection: { _id: 0 } })
-    .toArray();
+  const deals = await findRecent(getDb().collection(COLLECTION));
   return deals.length ? deals : null;
 }
 

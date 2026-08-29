@@ -17,8 +17,7 @@ const crawler = new PlaywrightCrawler({
                 const text = (sel) => document.querySelector(sel)?.textContent?.trim().replace(/\s+/g, ' ') || null;
 
                 // Amazon's buybox price + discount live together in one accessibility
-                // label, e.g. "₹78,990.00 with 10 percent savings" — same idea as
-                // dealsspy's single `.row.prices` segment holding price+mrp+discount.
+                // label, e.g. "₹78,990.00 with 10 percent savings".
                 let price = null;
                 let discount = null;
                 const label = text('#apex-pricetopay-accessibility-label');
