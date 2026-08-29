@@ -47,7 +47,13 @@ async function convertLink(originalUrl) {
 
     const data = await res.json();
     if (data.success === 1 && data.data) {
-      return data.data;
+      // The API sometimes returns error messages inside `data` with success: 1.
+      // A real affiliate link always starts with "http".
+      if (typeof data.data === 'string' && data.data.startsWith('http')) {
+        return data.data;
+      }
+      console.warn(`[EarnKaro] No affiliate available for ${originalUrl}: ${data.data}`);
+      return null;
     }
 
     console.warn('[EarnKaro] Unexpected response:', JSON.stringify(data));
@@ -70,7 +76,11 @@ async function convertLinks(products) {
     return products;
   }
 
-  const toConvert = products.filter((p) => p.url && !p.affiliateUrl);
+  // Only Flipkart is available on EarnKaro — skip Amazon URLs to avoid
+  // wasted API calls. Update this filter if more sellers are added.
+  const isSupported = (url) => /flipkart\.com/i.test(url);
+
+  const toConvert = products.filter((p) => p.url && !p.affiliateUrl && isSupported(p.url));
   if (!toConvert.length) return products;
 
   console.log(`[EarnKaro] Converting ${toConvert.length} link(s)…`);
