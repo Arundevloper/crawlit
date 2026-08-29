@@ -1185,7 +1185,7 @@
             ${(p.badges && p.badges.length)
               ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${escapeAttr(b.key)}">${b.label}</span>`).join('')}</div>`
               : ''}
-            <a class="card-link" href="${escapeAttr(p.url)}" target="_blank" rel="noopener">
+            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="_blank" rel="noopener">
               <div class="title">${p.title}</div>
             </a>
             <div class="price-block">
@@ -1200,12 +1200,12 @@
               ${ratingNum ? `<span class="rating">★ ${ratingNum}</span>` : ''}
               ${posted ? `<span class="posted-time"><span class="t-full">${posted}</span><span class="t-short">${timeAgoShort(p.firstSeenAt)}</span></span>` : ''}
               <button class="share-btn" type="button" aria-label="Share this deal"
-                      data-url="${escapeAttr(p.url)}" data-title="${escapeAttr(p.title)}"
+                      data-url="${escapeAttr(p.affiliateUrl || p.url)}" data-title="${escapeAttr(p.title)}"
                       data-price="${escapeAttr(p.price)}" data-discount="${escapeAttr(p.discountPct)}">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
               </button>
             </div>
-            <a class="grab-btn" href="${escapeAttr(p.url)}" target="_blank" rel="noopener">Grab Deal →</a>
+            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="_blank" rel="noopener">Grab Deal →</a>
           </div>
         </div>
       `;

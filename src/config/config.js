@@ -20,4 +20,6 @@ module.exports = {
   refreshIntervalMs: Number(process.env.REFRESH_INTERVAL_MS) || 15 * 60 * 1000,
   adminUser: process.env.ADMIN_USER,
   adminPass: process.env.ADMIN_PASS,
+  earnKaroApiToken: process.env.EARNKARO_API_TOKEN,
+  earnKaroConvertOption: process.env.EARNKARO_CONVERT_OPTION || 'convert_only',
 };
