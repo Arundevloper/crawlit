@@ -6,7 +6,12 @@ let db;
 
 async function connectDB() {
   if (db) return db;
-  if (!mongoUri) throw new Error('MONGO_URI is not set');
+  if (!mongoUri) {
+    throw new Error(
+      'MONGO_URI is not set. Create a .env file in the project root (it is ' +
+        'gitignored, so it is not deployed) — see .env.example for the format.',
+    );
+  }
 
   client = new MongoClient(mongoUri);
   await client.connect();
