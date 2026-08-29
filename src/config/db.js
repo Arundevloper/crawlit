@@ -11,6 +11,12 @@ async function connectDB() {
   client = new MongoClient(mongoUri);
   await client.connect();
   db = client.db(mongoDbName);
+
+  await Promise.all([
+    db.collection('amazon_products').createIndex({ url: 1 }, { unique: true }),
+    db.collection('amazon_deals').createIndex({ asin: 1 }, { unique: true }),
+  ]);
+
   console.log(`Connected to MongoDB database "${mongoDbName}"`);
   return db;
 }

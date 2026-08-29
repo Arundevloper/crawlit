@@ -7,7 +7,6 @@
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "crawl:demo": "node src/demos/crawlee-demo.mjs",
-    "crawl:dealsspy": "node src/demos/dealsspy-crawl.mjs",
     "crawl:amazon": "node src/demos/amazon-crawl.mjs"
   },
   "dependencies": {

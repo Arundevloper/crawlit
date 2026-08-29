@@ -1,9 +1,9 @@
 {
-  "usableSessionsCount": 112,
+  "usableSessionsCount": 94,
   "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_14rKwGUa8m",
+      "id": "session_1h4WvTwvUD",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -16,14 +16,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:28.959Z",
-      "createdAt": "2026-08-20T08:01:28.959Z",
+      "expiresAt": "2026-08-29T07:27:59.613Z",
+      "createdAt": "2026-08-29T06:37:59.613Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_C0WN2l36yT",
+      "id": "session_TBtw9xxWBv",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -34,135 +34,113 @@
         "cookies": [
           {
             "key": "session-id",
-            "value": "524-4920190-3854241",
-            "expires": "2027-08-20T08:01:30.906Z",
+            "value": "521-9728493-4465321",
+            "expires": "2027-08-29T06:38:00.153Z",
             "domain": "amazon.in",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.155Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
+            "creation": "2026-08-29T06:38:04.157Z",
+            "lastAccessed": "2026-08-29T06:38:15.515Z"
           },
           {
             "key": "session-id-time",
             "value": "2082787201l",
-            "expires": "2027-08-20T08:01:30.906Z",
+            "expires": "2027-08-29T06:38:00.153Z",
             "domain": "amazon.in",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.161Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
+            "creation": "2026-08-29T06:38:04.163Z",
+            "lastAccessed": "2026-08-29T06:38:15.515Z"
           },
           {
             "key": "sst-acbin",
-            "value": "Sst1|PQKcigP-WifZYiiC6ljPn2w6B3B9iS2S7uA182KNZ1lzqVwu-5uPGtj2U-ktXAo5F_YyOSTJOQD1jt5GJYtyadgHMj8dg3JCeqezzT0vvOGn3Iq9TlYteOueDjvoI2lQTXYACbXorKzYnke2Bx9fSxWOC_2NUbXMMVu2KWISlVqGEvUeOm7_jMKP7zfHUBCejH3nTq_PfHFGmORYdtqRRvFBfrvHY04UWeUzSEAjyhwv2RNaJcnpqhy9CwyqKTJxCFER",
-            "expires": "2027-08-20T08:01:30.906Z",
+            "value": "Sst1|PQLpBeZO2FT1JZ94aP1KC7MSB-zDNfPgahu0D4ZrhQ2IhbuyQCkXT23ID1dBuQ-CfyAjlQiRGxBthh66gVDQfsH173Q-T0wMrE2gh3wypr9skcDHW471YU7Rry0Sq0-17gXn1yTfwTrhEKtl3vpf6-Ou1qjuLWplCEuAcdpcEQWC8z8Zjkzf6ywXLeShX-NrzKmPLaa60BpQytmyzDzUG0SmoTFrbxfWYu2C_llwYBnZ_-R3FhDqAxLR4Vf_4kqBLsx3",
+            "expires": "2027-08-29T06:38:00.153Z",
             "domain": "amazon.in",
             "path": "/",
             "secure": true,
             "httpOnly": true,
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.162Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
+            "creation": "2026-08-29T06:38:04.165Z",
+            "lastAccessed": "2026-08-29T06:38:15.515Z"
           },
           {
             "key": "i18n-prefs",
             "value": "INR",
-            "expires": "2027-08-20T08:01:30.906Z",
+            "expires": "2027-08-29T06:38:00.153Z",
             "domain": "amazon.in",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.162Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
+            "creation": "2026-08-29T06:38:04.165Z",
+            "lastAccessed": "2026-08-29T06:38:15.516Z"
           },
           {
             "key": "lc-acbin",
             "value": "en_IN",
-            "expires": "2027-08-20T08:01:30.906Z",
+            "expires": "2027-08-29T06:38:00.153Z",
             "domain": "amazon.in",
             "path": "/",
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.162Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
-          },
-          {
-            "key": "ak_bmsc",
-            "value": "430091BF5CC325021ABFA12BBBE41DC9~000000000000000000000000000000~YAAQCxzFF9Y1Yx2gAQAALoMwHgDPhFZiqontDGcv6ZsRp6u3IhJsqvAbZ61DHkp9gOmxHg0Vyn7XUbGd6nHEGJCr10X9lBVyPzWeGO+ib0K/i4Yh4fEhe4gtJgVBysfogWas47Slev07PSHkO3hGvwhEqEYLXdY5cMI0+crIjnS9K1MGkJW4C0OusdqXuASqoXOhGvxxlwrHfiT8ItRKMUD3+MQD09CDN0/c7xvPRjj5EfJ8q56215i0c0xosd0WLU4zflyu04pOiVkWiw9cqB2mKWGXJ5ra/RJ8xgo+KsW9WLIVrwOdVfiJN7u1W1ycIRo/PE7j8UJ9um5dzWBMWnDa1/N28JFLhSueyaarQ4Dxag00gd9MbSnqt9HNEVz2TFWv9MtO+m0R9VAPaNSVoRqTxumGP4s0oMfphgKXuQ/NyJ1DCv4V86BLqr5Zr96U4ShjGWGEH0V6uoi5GldUX4G3d5hm3VVPptbDfkcRAi8w6N+d4puzZ/uZRFc=",
-            "expires": "2026-08-20T10:01:30.906Z",
-            "domain": "amazon.in",
-            "path": "/",
-            "httpOnly": true,
-            "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.162Z",
-            "lastAccessed": "2026-08-20T08:02:11.023Z"
+            "creation": "2026-08-29T06:38:04.165Z",
+            "lastAccessed": "2026-08-29T06:38:15.516Z"
           },
           {
             "key": "csm-hit",
-            "value": "tb:s-SYXK1535CV9XJCQ7NFX6|1787212927092&t:1787212929394&adb:adblk_no",
-            "expires": "2027-08-05T08:02:09.000Z",
+            "value": "tb:s-5ZR2XGA58M9QW89PVSH7|1787985490409&t:1787985493900&adb:adblk_no",
+            "expires": "2027-08-14T06:38:13.000Z",
             "domain": "www.amazon.in",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-08-20T08:01:35.162Z",
-            "lastAccessed": "2026-08-20T08:02:11.023Z"
+            "creation": "2026-08-29T06:38:04.165Z",
+            "lastAccessed": "2026-08-29T06:38:15.518Z"
           },
           {
             "key": "ubid-acbin",
-            "value": "522-0059813-5642118",
-            "expires": "2027-08-20T08:01:35.052Z",
+            "value": "522-3958056-0128046",
+            "expires": "2027-08-29T06:38:03.937Z",
             "domain": "amazon.in",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.163Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
-          },
-          {
-            "key": "bm_sv",
-            "value": "2F8EA369C5D035DC5A4951C7194A8611~YAAQCxzFF3r1Yx2gAQAA/x0xHgAbgs83HUij1U17Ys6iI/JtASuXZP/S2GlEQMXZrWLE0PGeEEbBnDw587lNDUHNsyiEqJ93eVQG6jYWD2EECv3WmHei00QZ2E/GFT1tuGcyn68aAHylWNvMTPNzNyZ3siHbCoFKg6ebIqjNjdD79Cm3vPgqcQ6CznRdosczNDizw87nWgE6cFQA6sbJ5R2p9SKNhByMzbzCBBocY7Mrsgypv2cgIEuoKfUGJXu1~1",
-            "expires": "2026-08-20T10:01:30.557Z",
-            "domain": "amazon.in",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2026-08-20T08:01:35.163Z",
-            "lastAccessed": "2026-08-20T08:02:11.023Z"
+            "creation": "2026-08-29T06:38:04.165Z",
+            "lastAccessed": "2026-08-29T06:38:15.516Z"
           },
           {
             "key": "session-token",
-            "value": "eOCIrAg8gTU2pA4Pa9dJnbCG/C4td/MqLr77hgxYT9odBobzIG5OpVjqaDrWhyHpTkdeWdNJPCVuZX7xCNGAHWJ5zEIVkhflG6lq39LYUWBR1lln4xlQk8+oVfLDcM0IlmQyuAr9ff58AnifseyhRFbcWjPN2kvMPPmty0xkpKBJTh8CkeqewqoiATliW43rZU97w1ItoXXpRoMMQOC1ciMg2vxDKEmq",
-            "expires": "2027-08-20T08:01:35.415Z",
+            "value": "36x3BlN+HJc6kfZX1PoKD7ERO3+j/z2dRRdoGfmxPO9WVlhnRjqkQPi02PUdJpiM+vy8UYrcYNVh1yZHvddOSVdaI7gM1eK3yWip1WAd6r+Nba71D/d32Ut60vTYZSm5l6AmAuPJJqv73ZUU9I+GADVRQXY3SeKHEsKw/lqhttLol/YDPZTKH5eliVFddAnM0H90tih87uO0K+yUxwcaTAjnYwAgr7we",
+            "expires": "2027-08-29T06:38:04.192Z",
             "domain": "amazon.in",
             "path": "/",
             "secure": true,
             "hostOnly": false,
-            "creation": "2026-08-20T08:01:39.047Z",
-            "lastAccessed": "2026-08-20T08:02:11.022Z"
+            "creation": "2026-08-29T06:38:08.578Z",
+            "lastAccessed": "2026-08-29T06:38:15.516Z"
           },
           {
             "key": "rxc",
-            "value": "AIB70Y39/d5o9AOzfaU",
-            "expires": "2026-08-21T08:02:09.627Z",
+            "value": "AMyF0gmUYQJCAiTTZJM",
+            "expires": "2026-08-30T06:38:09.676Z",
             "domain": "www.amazon.in",
             "path": "/",
             "hostOnly": true,
-            "creation": "2026-08-20T08:01:41.064Z",
-            "lastAccessed": "2026-08-20T08:02:11.023Z"
+            "creation": "2026-08-29T06:38:15.516Z",
+            "lastAccessed": "2026-08-29T06:38:15.516Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:28.974Z",
-      "createdAt": "2026-08-20T08:01:28.974Z",
-      "usageCount": 11,
+      "expiresAt": "2026-08-29T07:27:59.617Z",
+      "createdAt": "2026-08-29T06:37:59.617Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
-      "errorScore": 0
+      "errorScore": 1
     },
     {
-      "id": "session_nQwD8CZCOf",
+      "id": "session_2tvVTt0qCq",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -175,14 +153,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:35.487Z",
-      "createdAt": "2026-08-20T08:01:35.487Z",
+      "expiresAt": "2026-08-29T07:28:04.276Z",
+      "createdAt": "2026-08-29T06:38:04.276Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_2wk7Y9rRha",
+      "id": "session_HSsnOmeFXr",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -195,14 +173,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:37.423Z",
-      "createdAt": "2026-08-20T08:01:37.423Z",
+      "expiresAt": "2026-08-29T07:28:04.278Z",
+      "createdAt": "2026-08-29T06:38:04.278Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_A0mo7qVMc8",
+      "id": "session_QnNxJ8vlfv",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -215,14 +193,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:40.710Z",
-      "createdAt": "2026-08-20T08:01:40.710Z",
+      "expiresAt": "2026-08-29T07:28:09.785Z",
+      "createdAt": "2026-08-29T06:38:09.785Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_BTPNihpN6h",
+      "id": "session_UAmb8FUDgK",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -235,14 +213,141 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:40.712Z",
-      "createdAt": "2026-08-20T08:01:40.712Z",
+      "expiresAt": "2026-08-29T07:28:17.222Z",
+      "createdAt": "2026-08-29T06:38:17.222Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 1
+    },
+    {
+      "id": "session_jFpwEZzMM2",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.2",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-08-29T07:28:17.313Z",
+      "createdAt": "2026-08-29T06:38:17.313Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_nn3pFX0qmP",
+      "id": "session_yDide0ntj9",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.2",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "524-6545245-6303619",
+            "expires": "2027-08-29T06:38:17.048Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:38:17.048Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQI5FeQjbXJUrfKweyFf1_AJB18axG8iW9uX8i4vBdkMytCUEW0sWz0WUJv00a6blZBKWX3wWL7bUutU8Z9OCUXayVQGwKw3XlaNBSceLQCLMyUFNHvVDlt21EXMi5NWFkRWz0_WvqBchFHT-SxlKrssMVhGvyIAL-1CE0LLJDOoRjLxxe7INCxutTlI4ItKLQP58MKD1k0rwFOts8jLszk6_Lb3YMYFgrc8skGXSE_YJrCHCtYIfsQsRO1Oi_WeWt_T",
+            "expires": "2027-08-29T06:38:17.048Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:38:17.048Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:38:17.048Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-3726210-0943947",
+            "expires": "2027-08-29T06:38:21.492Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-VSQTZHQM9H005WYNVVCR|1787985498418&t:1787985505420&adb:adblk_no",
+            "expires": "2027-08-14T06:38:25.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          },
+          {
+            "key": "session-token",
+            "value": "NUFNVRBDIXcnOOtGKQh7P+rP6wYc+AX2kbF+g/ecuKKKzplsOcO4NyCTPomFlIjkm3xwGz/YSDPs+Ykik8R28pdQ2N6+U+9qr60ZFfUSAA+wAq+XSPRx0tDSm9AH7U/KvnQGtKjCzmi5yxQ87q+/uj6zbF/rpk20QK5+1QkRPnFCuDxV8Brj/9ggi7xfg9S1iOKAF2iN4vB/FqmPeJp0qu8VS5AUo+ZG",
+            "expires": "2027-08-29T06:38:25.051Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:26.064Z",
+            "lastAccessed": "2026-08-29T06:38:26.064Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-08-29T07:28:17.314Z",
+      "createdAt": "2026-08-29T06:38:17.314Z",
+      "usageCount": 1,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_ofGVLwbabg",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -255,14 +360,131 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:42.764Z",
-      "createdAt": "2026-08-20T08:01:42.764Z",
+      "expiresAt": "2026-08-29T07:28:28.417Z",
+      "createdAt": "2026-08-29T06:38:28.417Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_xU6fifcAH0",
+      "id": "session_JURTxtD2Rc",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.2",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-2407612-5891536",
+            "expires": "2027-08-29T06:38:29.184Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:38:29.185Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQKdEiOwJihpLYRsN9fTABlMB6LgYURiCYeOjwjFuoXt6fBCOZVa4sJuWTnxVtuxSsUDUKQ9DrMSaNTD43HGjylRuhu_PV87gcsiQJI9jR3fMbXbIcu8I-rmZdaFZc6QYzH5AjZy8GbAeD6UFBWegO-_sq3hLlHFIu1RrtoNHHJ-oyGE9jnw7p2dEwe9RCiTV72DKOR3Al7DisBc6pCtPcCXwMavTvEdVWr2GDVGhO4urdyVREA88AfzrgPGjX9PbY07",
+            "expires": "2027-08-29T06:38:29.185Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:38:29.186Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:38:29.186Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-NFPNPZ9P7XWTETK7V7XM|1787985528327&t:1787985530601&adb:adblk_no",
+            "expires": "2027-08-14T06:38:50.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.990Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "525-7762600-6742811",
+            "expires": "2027-08-29T06:38:33.398Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "session-token",
+            "value": "BVCckzbWZbqDSTfU5nr+TXjIZDmsSIOX6xzLM0HW1/ueWWBG7k71l1eopOjbGE3jL72s5OJpZ989gaLxyrQdm05vePBGahSKUTcagSDKlImF8A42SAT9aSrmEAb7hjEHbcIIS4qwcK/E8paT4XrFtuEeBNykxvJ7vZBaKX78dhuskAtw/DRNsuexS7uZ9+0CM873X5ONDaIZMePm7WKumgawkxv1BWsd",
+            "expires": "2027-08-29T06:38:34.386Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:38:36.103Z",
+            "lastAccessed": "2026-08-29T06:38:51.989Z"
+          },
+          {
+            "key": "rxc",
+            "value": "ANBoE1NdL4vHub6XbIc",
+            "expires": "2026-08-30T06:38:44.534Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:38:45.913Z",
+            "lastAccessed": "2026-08-29T06:38:51.990Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-08-29T07:28:28.418Z",
+      "createdAt": "2026-08-29T06:38:28.418Z",
+      "usageCount": 4,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_Zb3ZVQQpIJ",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -275,14 +497,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:51.301Z",
-      "createdAt": "2026-08-20T08:01:51.301Z",
+      "expiresAt": "2026-08-29T07:28:36.453Z",
+      "createdAt": "2026-08-29T06:38:36.453Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_LsEA647UGF",
+      "id": "session_ZRq6GFHYzI",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -295,14 +517,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:53.789Z",
-      "createdAt": "2026-08-20T08:01:53.789Z",
+      "expiresAt": "2026-08-29T07:28:36.454Z",
+      "createdAt": "2026-08-29T06:38:36.454Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_hNTMgNPg7i",
+      "id": "session_moP9lbbBhi",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -315,14 +537,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:51:53.793Z",
-      "createdAt": "2026-08-20T08:01:53.793Z",
+      "expiresAt": "2026-08-29T07:28:47.519Z",
+      "createdAt": "2026-08-29T06:38:47.519Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Tepp3l5CzB",
+      "id": "session_bWlANclsa9",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -335,14 +557,153 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:04.386Z",
-      "createdAt": "2026-08-20T08:02:04.386Z",
+      "expiresAt": "2026-08-29T07:28:54.186Z",
+      "createdAt": "2026-08-29T06:38:54.186Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_P7kkHap6n2",
+      "id": "session_NeRCc9N6XV",
+      "cookieJar": {
+        "version": "tough-cookie@6.0.2",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-6558726-4268513",
+            "expires": "2027-08-29T06:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQJJ5PxchKxJgmGsQQQPiD5QB7qRwDoOhYmi3ZhJq_RzvpYcCaqEzRf-IcGCCnvF7GAD6qNeLQIBFYDrQAY8inOwapfTYRyTcwhhUQI9s969eS-yFrUXLC9mqDdq5IS7ZoesininFNAH-yQXNH6zDMZPjLAbzejmKvq6BmcL_sEXyRLeABQ3Iz1ZqY6n7oLK_H-7Mpx3UxwdKOb0Gh2Ii47gPkeC0GKqtZZUwclW6vfsP9PSivYZ4RAgRI5Cnv15VnfP",
+            "expires": "2027-08-29T06:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "4BFEFC838BD7BE337812B579983EAD88~000000000000000000000000000000~YAAQXqXBF8833DugAQAAsiE+TAA/hpmvmFViFlnfDdjB2w0wPh2+aud8cjA/0yqLFOazagWq2jWbFQzKmJHqOE594brMbHsb4apNiB0LVsWu4S4DMzDnzrkdYI31JaLq29B6JVyvp7wL1X4229rc2osSMLdGpIDxCmckDG4rBlHiu2x/dgzDtuRHOP0tAfehdER1PrxnutnW8StAf1JZqmKBSWqGltb/8EG5Q3xMojy+jnyRyJKKiDCqoFgst4vrVBxZFtaAQI5nqPu8hYHBNw68g3vGIeY37v9LSHGQDhWURkxObfkLdfXhgomJ65jcmdG099cN0KfJ8hypdcHc7xaTw0B3VcWsdClyyXWfDY3nFY/6XcCvolTqfslqQ7RfwAbGCQDfcZ4iJRBGLJB6vX+sInZysS8EdZfnKUh5pV7iRN0kgRvNEBdgz5hbT3zmgHm80A6x8oRDLEcReLkvf8We81EWmT0AlwHzOeBdUEo1gySgqCvx4HdU",
+            "expires": "2026-08-29T08:38:54.451Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-SE9CP9S8SS2DX992ZN0C|1787985558239&t:1787985560567&adb:adblk_no",
+            "expires": "2027-08-14T06:39:20.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.074Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "525-0534740-7578765",
+            "expires": "2027-08-29T06:39:00.423Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "2328B8E89B8D40FA227202F80C2C3F62~YAAQXqXBF9BS3DugAQAA24w+TADEOD0iiT+xe4vOZ2oBMARyeU+NoCyeZiA4Ue1GBUhawlp2/9vB9wiVW9YotSCc3/L2HnrcGJjCbkAVubM6BNodQVnUdWquSrnte/QgsmmPIvsa3bJxJkIUAkJQxtYz+x3lzBsTOW1HApVgP71ziiZaUj/jtoQXHyqoZjen6KEMZol7Sb959IxNePh4PHCKr8bx6YT4kkwGwqcUspSnoQvJrF5rbV6dpYGuoRKH~1",
+            "expires": "2026-08-29T08:38:55.898Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:00.437Z",
+            "lastAccessed": "2026-08-29T06:39:23.074Z"
+          },
+          {
+            "key": "session-token",
+            "value": "rTb0q8OQhxQv+rWyJWAqU76j8kpCKbLkwFEIDVYYOykqbeAH3JuCDmspmngnPNUZ/1WTIiQ88gsHZb0/CTrIPMV9B2csZwDFroNo1diRqsmFKhZU4YotiOcWRmgvFgT+93mvaglAyeQwL9D/T01VxIrmCTcCEzK36j5ePmzL2MwD1VvMonsRJB4ITnZF2P+DXxXlKjysi3Y4uiL8Co+RWPBjM4UJZw9r",
+            "expires": "2027-08-29T06:39:00.763Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:09.444Z",
+            "lastAccessed": "2026-08-29T06:39:23.073Z"
+          },
+          {
+            "key": "rxc",
+            "value": "ADIww1m2fP95gQMM9i4",
+            "expires": "2026-08-30T06:39:10.259Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:39:16.037Z",
+            "lastAccessed": "2026-08-29T06:39:23.074Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2026-08-29T07:28:54.187Z",
+      "createdAt": "2026-08-29T06:38:54.187Z",
+      "usageCount": 4,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_WnHh3ycHW8",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -355,14 +716,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:06.411Z",
-      "createdAt": "2026-08-20T08:02:06.411Z",
+      "expiresAt": "2026-08-29T07:29:00.706Z",
+      "createdAt": "2026-08-29T06:39:00.706Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_TMbSO5HpXg",
+      "id": "session_xyv8MmJ490",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -375,14 +736,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:26.645Z",
-      "createdAt": "2026-08-20T08:02:26.645Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:11.057Z",
+      "createdAt": "2026-08-29T06:39:11.057Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_QDMzW2hiQB",
+      "id": "session_2HUyBmimUt",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -395,14 +756,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:26.650Z",
-      "createdAt": "2026-08-20T08:02:26.650Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:17.646Z",
+      "createdAt": "2026-08-29T06:39:17.646Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_W43Vv2I6DP",
+      "id": "session_u0QdTc05Mj",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -415,14 +776,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:26.651Z",
-      "createdAt": "2026-08-20T08:02:26.651Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:25.413Z",
+      "createdAt": "2026-08-29T06:39:25.413Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_YwhIR7jloB",
+      "id": "session_AdpkRealNH",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -430,419 +791,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:26.652Z",
-      "createdAt": "2026-08-20T08:02:26.652Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_NQMkvVaHsn",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:26.654Z",
-      "createdAt": "2026-08-20T08:02:26.654Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_6eANMaUVwq",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.154Z",
-      "createdAt": "2026-08-20T08:02:27.154Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_vb52OgrRCd",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.260Z",
-      "createdAt": "2026-08-20T08:02:27.260Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_GUSC74DeOS",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.272Z",
-      "createdAt": "2026-08-20T08:02:27.272Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_TJZpU9BiEe",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.335Z",
-      "createdAt": "2026-08-20T08:02:27.335Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_EZlujOoNEM",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.342Z",
-      "createdAt": "2026-08-20T08:02:27.342Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_XGmFmcWuHh",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.392Z",
-      "createdAt": "2026-08-20T08:02:27.392Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_XJJcihSHP8",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.602Z",
-      "createdAt": "2026-08-20T08:02:27.602Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_R7cjKYhAPL",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.656Z",
-      "createdAt": "2026-08-20T08:02:27.656Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_4Y9LUOwPzg",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.663Z",
-      "createdAt": "2026-08-20T08:02:27.663Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_hCMjhlfMMv",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.669Z",
-      "createdAt": "2026-08-20T08:02:27.669Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_2AUMIVwXGZ",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.737Z",
-      "createdAt": "2026-08-20T08:02:27.737Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_7CxGbVFblu",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.861Z",
-      "createdAt": "2026-08-20T08:02:27.861Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_H8GHQX8rMn",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.905Z",
-      "createdAt": "2026-08-20T08:02:27.905Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_cEnF8Ztp6v",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:27.944Z",
-      "createdAt": "2026-08-20T08:02:27.944Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_K0tZkwSqPr",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.174Z",
-      "createdAt": "2026-08-20T08:02:28.174Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_abfvfoc2Lt",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.187Z",
-      "createdAt": "2026-08-20T08:02:28.187Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_8ZZgRkGbeq",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.240Z",
-      "createdAt": "2026-08-20T08:02:28.240Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_is0dLfFJWW",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.249Z",
-      "createdAt": "2026-08-20T08:02:28.249Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_rgNw0TQ3UK",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "520-3438329-4161753",
+            "expires": "2027-08-29T06:39:26.364Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:39:26.365Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQKnnBp_CFFL2iMMR5mBH8EzB1_4lcHUNDsy48xAaYnBGfxLzFFYbvlwCKSMvMJVLpQJvE6vZ9xfoE9stTfyST10uUa6QlFQCXQXSf8kOjlx7AzPzq66e7vPaT9B91Nubp1qyCmVEJyuNKZyjy-4cwlryMqujeAGF5VrMnTs42S8auAT_U0yVypZfBiK2KVLHBrmOjalVHNegEcec2ZOlPcQHQPjFpW8x-Wil7AJCxsXae0UciL-35f5cEgQ_3UxMY1g",
+            "expires": "2027-08-29T06:39:26.365Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:39:26.365Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:39:26.365Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "CF2EF77E8628BFF4E3CAA4950A3CA2AD~000000000000000000000000000000~YAAQXqXBF6FX3DugAQAAWJ4+TADsdGbale1XKw0W1lhHx+yG6ZFh8NaQmDZdbMkHSwGlVFpPyKQnPncrb9xSDHlY5W8O30nYtr0xGG9X7FHN1xGBNdsYTK2GJDCLKFS7wPtut2Aw7dlvsxSumUNxxt/mZe7Oia7TdN+WnsO8ALWJtdgtzjJl6C/BRFDGkjx3EmQqRc7NLCGqZq0WPsNzry2iK/GvikfYs3AtMpyHqg8oAgqoH1uu7+ANOd7uiSK1R3EqUbbKTfc46rSvGlaFr1j/kX4E0UsoNuhJt1MjNqcdL44FDEpCTEfAVXJ3nCuDbxL9Buw6iAG5QywGim7O4uecxGaUQpDGghHln2rz5pHWK7hRMFShb06cpkr9wFi5cyCU1LLUPdngPtf3ujH8uni19ZOvoc6LIg9nhAC6dGNY0VNhqHsBuTpGYnw3T1RDyEiWMAU/U5ghv6t8MLS6fjaSAp5VIQr2+PBmysGYZz0ujiq6OAHEbzE=",
+            "expires": "2026-08-29T08:39:26.365Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "6AD64318EDCBFEEAE3DC3A80A32EEEB7~YAAQXqXBF9dw3DugAQAAQfk+TACsJDcHDH7UGjAzKhvQwYe+DpZEwgViuNc9PRzM+muGNFws85VXanU2RrR+PUpN6r/VRY86/HItSXzRbusWwpMIuRVdlgAum2suOMbZ6+7acRvOJoj6+gQrrG0uXXhjjY9QlHLQKGIu16TxDpVce4KiJg3jHExJySsjWjnAfCKTNaDsMErQ5Q9uVvDQQzmmiZEGv3vAzWPtBFMeHCR3pbiYvmSa4X/flwK0iEIw~1",
+            "expires": "2026-08-29T08:39:27.636Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.864Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-1780K6PR0T80CRQHYSDW|1787985586709&t:1787985588895&adb:adblk_no",
+            "expires": "2027-08-14T06:39:48.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:39:32.141Z",
+            "lastAccessed": "2026-08-29T06:39:50.864Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-6270561-4589759",
+            "expires": "2027-08-29T06:39:32.932Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:37.849Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "session-token",
+            "value": "jpAz9dmEpH87Gp3dML//M0EQgaZ9Xoxv/0+hpJjUxrTL5XQN5T50loIflJR3+v47w7PhwN3cUceJFv5jY6t/RfHlJRWZjALjD5C0mwPiP4cu5XIOZxIukflRBbq1lQkE/VLTQRLakMkKVtiGDjlTyugx/ljDzR1DIOBYUjWFxCr45u5axRn4a3dPBqpo9uYu0GkU3k1U2YXKPCNDFrkeEiZtr1wPgjS1",
+            "expires": "2027-08-29T06:39:33.570Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:37.849Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AJwYOP0f7+lkEHsFcWc",
+            "expires": "2026-08-30T06:39:33.615Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:39:37.849Z",
+            "lastAccessed": "2026-08-29T06:39:50.863Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.419Z",
-      "createdAt": "2026-08-20T08:02:28.419Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:25.414Z",
+      "createdAt": "2026-08-29T06:39:25.414Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_2oFqgUDypB",
+      "id": "session_qYfwfU9CK2",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -855,14 +935,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.494Z",
-      "createdAt": "2026-08-20T08:02:28.494Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:33.066Z",
+      "createdAt": "2026-08-29T06:39:33.066Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_hCN0Ok98zv",
+      "id": "session_4rrb5bMYFe",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -875,14 +955,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.497Z",
-      "createdAt": "2026-08-20T08:02:28.497Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:39.519Z",
+      "createdAt": "2026-08-29T06:39:39.519Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_RoMgquwxhv",
+      "id": "session_1gg1gkzjRx",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -895,14 +975,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.643Z",
-      "createdAt": "2026-08-20T08:02:28.643Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:45.950Z",
+      "createdAt": "2026-08-29T06:39:45.950Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_OEQdkGxgVA",
+      "id": "session_dXpR4N7mrO",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -915,14 +995,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.784Z",
-      "createdAt": "2026-08-20T08:02:28.784Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:53.049Z",
+      "createdAt": "2026-08-29T06:39:53.049Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_USaFtdtC8l",
+      "id": "session_0I3BzbrIhR",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -930,59 +1010,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.833Z",
-      "createdAt": "2026-08-20T08:02:28.833Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_iB8y9IVGZL",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.862Z",
-      "createdAt": "2026-08-20T08:02:28.862Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_jOTjO5g0ig",
-      "cookieJar": {
-        "version": "tough-cookie@6.0.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "520-1245112-2466307",
+            "expires": "2027-08-29T06:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.710Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQKAbl7vkXtCkWxQD8pVQRk4Bw2wQPKzgyDnHzbjG4kJaZKXQM4ZTXonSVZqCtbO9G8lA18DLWRQmupjfI6NYKJOp6TBwBf4yjF8WgNZE5h39atpY2U-s-NEFph3S_8UWLj-W7JKlW7tTcoVkdgsd5jI2EbeKmW_1dAw23ITz_DQ9HYokx2_m4rUvgSzvPO6rEh8Hn6Wzkh47WGKucGqnqMUmbONN8ATHX1n6uxY7Gv5i9bRBaf7Ixjxkj6GWR5HwwzO",
+            "expires": "2027-08-29T06:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "16624E249954B7E2D7C73086AE8A43A0~000000000000000000000000000000~YAAQFxzFF8A1GEWgAQAAEQo/TABC5ljCTbZoXIl+1xs0MIVM8wq0aOb/xtrn1sI0s76K37rijzAkGcGWJMoEpl1e4wQdUkEiOtX7aO2efu/uTh/Ql9DmlU/zrQmd1DRCzt/5VSDvL1o7Ek26EXNK1h5jU/tMR1R1v/bipmFppq9yp+h/5E8RAnV+Qk5+EHCSKVVP0NPVKjO6f6MlmaYpYubAAVx9h51+4RyxkGMWkhYw8JYkEtMrPqOoEWuRswqWLbtJURYxJabuvhsP2gHY5YY7aA83BVV+IlQsXCw1aeXoFqJCteA3CNfehOEGBCjNcbwxhq8WMasb73MYRJHAHb1ZbQkUOfsbH36xe17pgKGbbK4ObYqC+t6UW1HUuMPEbNROfovExnd/MMlTl9Blce36bHVVCEaNw07CvmNC9ZcGuEsIchv39ruhfJkoZMpjM0+VPNjvWjykRMaZ95/0Js4l+sUeBpSuOldaMbGeXwULR/miqqe6Vn6c",
+            "expires": "2026-08-29T08:39:54.936Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-T1VPVZ5THQRA1W3AW8CB|1787985608006&t:1787985609800&adb:adblk_no",
+            "expires": "2027-08-14T06:40:09.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.615Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "524-1070086-9857635",
+            "expires": "2027-08-29T06:39:58.633Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "session-token",
+            "value": "WHl6U7tdlMxbJdMUG/ELd7g8P6dRcBpFsOFJuFhpGdJ/5psSFAn1JIJErryypU6c2GR2OnzUpz5Ghv8nihFJUdMskqZJ2fDiwffnTknzOUOK/+ZadoukVeSyqkxnrdoWhc1yoiCSz4nQIxDqw/nlS4Zx3VoesnMHvRO6ReAajrK1/58NyfPAjzjNO9vsBwJ3s53mjwYWXKZEbnbZgygCRNnZfpCYupTc",
+            "expires": "2027-08-29T06:39:59.281Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.614Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "5506A95A784449C7658170A151F1FC5C~YAAQFxzFF+FkGEWgAQAARUc/TADEPBxFlfql5xZRy1fjU1Ee1usMRTFEHMhkrtdSTz9zaC8yv8LB8AFxRYhMra0+ZrC+YjiAU3KvGQZ1rNoWebhQuD7NC4pwpSDR2VS1JZ+PS4q+7ZnjRc8mOVTacIx6E+nbHTByNE9e42coI2zmEQrVIPH1FwxOlIuNvXtrs83bENE/ivFXgNYNkr9e78D4Pn07pqKwY1q4dDSjaB/yd8c8cP0AwE+oflkecEvO~1",
+            "expires": "2026-08-29T08:39:54.605Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:39:59.711Z",
+            "lastAccessed": "2026-08-29T06:40:10.615Z"
+          },
+          {
+            "key": "rxc",
+            "value": "ANYZay9FufnPxGZNjvU",
+            "expires": "2026-08-30T06:40:05.375Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:40:05.751Z",
+            "lastAccessed": "2026-08-29T06:40:10.615Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:28.968Z",
-      "createdAt": "2026-08-20T08:02:28.968Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:53.050Z",
+      "createdAt": "2026-08-29T06:39:53.050Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_OaUupcRPG4",
+      "id": "session_r5r33A9BtH",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -995,14 +1154,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.060Z",
-      "createdAt": "2026-08-20T08:02:29.060Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:29:59.941Z",
+      "createdAt": "2026-08-29T06:39:59.941Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_gEf35oSvBe",
+      "id": "session_7DJhhlL9Dx",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1015,14 +1174,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.093Z",
-      "createdAt": "2026-08-20T08:02:29.093Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:01.414Z",
+      "createdAt": "2026-08-29T06:40:01.414Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_strksWTFBF",
+      "id": "session_3T7CJ8zFiL",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1035,14 +1194,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.170Z",
-      "createdAt": "2026-08-20T08:02:29.170Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:07.390Z",
+      "createdAt": "2026-08-29T06:40:07.390Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_kI4KmDr2P6",
+      "id": "session_6BLG1EHI4n",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1055,14 +1214,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.282Z",
-      "createdAt": "2026-08-20T08:02:29.282Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:12.717Z",
+      "createdAt": "2026-08-29T06:40:12.717Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_UIjgMsnWK0",
+      "id": "session_MMBPNFs69Z",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1070,19 +1229,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "523-3021804-4236004",
+            "expires": "2027-08-29T06:40:13.219Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:40:13.219Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQJCfB60Qe4sMKN9uPLexmLVB4o8k5eisNwCWTUFomEcT_Vd_Sp7hwk5h3T4794cKpwC24_qaDm5LzogYeU6tbCcqpHncQgkGFH_LtE6kwDRlVktXsmRkmyapw-6LNhF1rKqztOYZaJ_YWguou3Txk9L7RaXfiUHR84CwbnDnIdC2xbw3aF92243IzfNiK82923nhHKb6V2zZlTyYn0Ltf9c4sp6WJjTFDqP-TQkL9Wr39P2XbYcJCD_NcSGOyLdzdg0",
+            "expires": "2027-08-29T06:40:13.219Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:40:13.219Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:40:13.219Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-M2TMWE7JJ8A18HA381SE|1787985626725&t:1787985629043&adb:adblk_no",
+            "expires": "2027-08-14T06:40:29.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.838Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-3789105-1991101",
+            "expires": "2027-08-29T06:40:17.714Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "session-token",
+            "value": "rWIXcb2DkBtESrPOxO9Qx75ITzuvFOxV+yDtfGHBUsEvJ7IY1qRw9kdEwX/6P5fLV3KcBMFvEfbEPsx3d2xBfsaoWp9twBmtWjVy+0pCuxHfg3QDeO3RA+lCieei11MdCklLKN/XuQHpHHhF5kKfRn7HK7Udt8GCQzXfzVn9NXesI0QmM5ze2vyio8j4xRhKT/GQVQzLACp0z2IvLeo0qrX+tuBC/Ben",
+            "expires": "2027-08-29T06:40:17.032Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:18.171Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AAj6w9ksRyvN9bbcdbM",
+            "expires": "2026-08-30T06:40:25.460Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:40:30.837Z",
+            "lastAccessed": "2026-08-29T06:40:30.837Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.310Z",
-      "createdAt": "2026-08-20T08:02:29.310Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:12.718Z",
+      "createdAt": "2026-08-29T06:40:12.718Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_1jWW2RPcgo",
+      "id": "session_dcOotEBsNU",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1095,14 +1351,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.390Z",
-      "createdAt": "2026-08-20T08:02:29.390Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:18.295Z",
+      "createdAt": "2026-08-29T06:40:18.295Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_u2WPvUF7LA",
+      "id": "session_mTUoa573fB",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1115,14 +1371,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.497Z",
-      "createdAt": "2026-08-20T08:02:29.497Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:18.297Z",
+      "createdAt": "2026-08-29T06:40:18.297Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_ar81MOybda",
+      "id": "session_eUhkATW33d",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1135,14 +1391,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.545Z",
-      "createdAt": "2026-08-20T08:02:29.545Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:26.159Z",
+      "createdAt": "2026-08-29T06:40:26.159Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_FPuGz50iTy",
+      "id": "session_j6UhgFJZ0q",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1155,14 +1411,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.650Z",
-      "createdAt": "2026-08-20T08:02:29.650Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:32.938Z",
+      "createdAt": "2026-08-29T06:40:32.938Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_FFS4xsVSKd",
+      "id": "session_qvxG5F1eKO",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1170,19 +1426,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-7837244-1780316",
+            "expires": "2027-08-29T06:40:33.540Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:40:33.540Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQLZ3ZPM0sQiqOlA4qY1C-K2B8Hc5z516u0l1-sGLQfoLJe8a4No05pE-5cHlH1HHNH8t4-KeHktkxpYs83xKGY0FvWBLM2dXyxu5lyb2HMezU1u0BrE0n1_myY6e-gJbh3iZaCOINR1M-aKxrvxhHPiBtSPtQW0QEY53YX6UoGJwmZmFg6J6U_MrDGEMOJY2V_ZvdCoxo4ph3e1wKECoSoV7X4YJsz3cLkNafmhBwNPZEKdnfg9OiY00gJhF6j_R4b3",
+            "expires": "2027-08-29T06:40:33.540Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:40:33.540Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:40:33.540Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-8XSEGFKRSYXMFAC350R9|1787985649374&t:1787985652337&adb:adblk_no",
+            "expires": "2027-08-14T06:40:52.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.350Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "525-0689266-5754824",
+            "expires": "2027-08-29T06:40:38.187Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "session-token",
+            "value": "cuIKLnghW1FeuK5EkOQIl1du8HpVJaEcXdMGt9p103q4wsmoA4pmfLFY5dPNx6v4xk+TXlWgiDqHBl+5wn+Z9DIuuR1EPh7RG2mXU43VN5lGotZzE1vEjAqnAK+7OgcZK4+aRE/m7UoZ+mzvqwFRdJ5nAgdSO0Z8nGCwvHRAXR6XCQFN812CWzX9M2L8FCuFYXoXgasN8agdWLjT37LjlbYsPdelG+CL",
+            "expires": "2027-08-29T06:40:38.616Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:40:38.863Z",
+            "lastAccessed": "2026-08-29T06:40:54.348Z"
+          },
+          {
+            "key": "rxc",
+            "value": "ADHlu4vCqYwLHD8p10E",
+            "expires": "2026-08-30T06:40:47.272Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:40:54.350Z",
+            "lastAccessed": "2026-08-29T06:40:54.350Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.782Z",
-      "createdAt": "2026-08-20T08:02:29.782Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:32.940Z",
+      "createdAt": "2026-08-29T06:40:32.940Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Mdh5pjrmUF",
+      "id": "session_haBCqh5QaJ",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1195,14 +1548,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.811Z",
-      "createdAt": "2026-08-20T08:02:29.811Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:38.976Z",
+      "createdAt": "2026-08-29T06:40:38.976Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_GqdFmjyHoU",
+      "id": "session_Vuu9LAHRA1",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1215,14 +1568,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.846Z",
-      "createdAt": "2026-08-20T08:02:29.846Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:38.979Z",
+      "createdAt": "2026-08-29T06:40:38.979Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_5gYolBvT8m",
+      "id": "session_ucdhdm7eig",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1235,14 +1588,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.850Z",
-      "createdAt": "2026-08-20T08:02:29.850Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:48.293Z",
+      "createdAt": "2026-08-29T06:40:48.293Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_TfFswx4Def",
+      "id": "session_mMmIBBLuIC",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1255,14 +1608,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:29.893Z",
-      "createdAt": "2026-08-20T08:02:29.893Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:56.806Z",
+      "createdAt": "2026-08-29T06:40:56.806Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_GFOlnL63rI",
+      "id": "session_sUd0VZ2rUe",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1270,19 +1623,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "520-4328436-0810752",
+            "expires": "2027-08-29T06:40:58.498Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.571Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:40:58.498Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.571Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQJxvGhxH9vacRf4OoCmZkNTBz8hQ0ns8VypiyLGUZMgRFAqhO4iajkJNa87505ImFPlTn-k4lIeMmE_lCVpC_gtRK_MS1uxbIKwYJjQefZ4i1aMn8v7Y_yTJ_GNt_b_wjDKK6O5KIHEkTXPC9HNjPFvKnSXj0ZkQViWMeqgIampIbPmjdiWyszsz-tpTGGkR3QzGenuyP2mlWeCocH1DwhEQf5z3Eh_HEfDwkcUbThD65hAHyYQrcNd7SFKk4ICgV6i",
+            "expires": "2027-08-29T06:40:58.498Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.571Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:40:58.499Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.571Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:40:58.499Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.571Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "981D4E45DF37D89C8D1ABB3F0D89F4E5~000000000000000000000000000000~YAAQFxzFF03+GEWgAQAAAzpATAAwdza0zHi3BRUmDyVm3LSUP92+vYfklj9ehfyDuI/dDwMAe7IKSW3LuKc513Raoe+Oh5RwDb8momQclKsn7g9pIktFgHb/n7t4AgYaVxa2xSNxLd/I/RL+GJfJMuSzIc7FB9JYV5QilZNpkDlYiCjDFkqkQLQkgtBAJyrb2E3RvLwSFIu/OWV5uWEptWYgKnKNGmUKA3IHAJDrZuRIlxdEoHdwaWSIFEMATVyZR4jOPcezwLPOvZGVsLBoKh4jGaQOZ5Oge4ehIk8EZ0RRf/HxQSMMdAKV7gcKql+6wf3qJ9A8kmic6cZ7us57i+k+qSWglsPl5im4BkvGunWNw/kXOgGlbHhJ3jI+lZSW5oZdc2vCsKp7rtphbzf2SzhhPwPyqH+pPIk9G2zc6HeVDCyB5oDMKcFA2RI7YTSSyMEpo5OABDy7AtbdaHtEwPzo0NxmYHnT+0e730sQA0iR3c0iL6fFu66hh41KZw==",
+            "expires": "2026-08-29T08:40:57.738Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.573Z",
+            "lastAccessed": "2026-08-29T06:41:15.938Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-5ZK43BPSSKJ0GQP20SRG|1787985672322&t:1787985674626&adb:adblk_no",
+            "expires": "2027-08-14T06:41:14.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:41:02.573Z",
+            "lastAccessed": "2026-08-29T06:41:15.938Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "522-2239322-6326518",
+            "expires": "2027-08-29T06:41:02.210Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.573Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "1F53F7C2D8C4745C415634D2D37F3078~YAAQFxzFFy0AGUWgAQAAXT1ATADsCXKH6AsFfCzixprHSscO8xnOzfxPqBWMDe2saiMZKw+0ez0JcOKQpPlIb68yYHWRKk0kPAS2RCQQFjtoSAAir4hC+2+vJteC0HPu3apkK8MJHS1zQtPCRa4BxmXQpvMtN2i99SZeOuWuOl9CZ+uPbyZTJ6cIOYIp/etByv1Gtwclavk+uz8wVrFa4GPc40o0j7CC3P41lq9wseLYTgqxqvuODYGzpv5iAvw=~1",
+            "expires": "2026-08-29T08:40:58.600Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:02.573Z",
+            "lastAccessed": "2026-08-29T06:41:15.938Z"
+          },
+          {
+            "key": "session-token",
+            "value": "+ci5kFqa0sltq4GL1qpPxn/nGnY4U0/oG0xB5Mj7FpE8EQPmcR21Q+Mt89tU/sZxSW9eGnPjAWQBD1FChO0bVTLhDa/+WLTefJYmBy22ZRhqJ2BeLpkiowmhqxiXAG9ZTFdDi1NtteKnlppYpmgfI4Npb/dDj21HIbzeuiVUF9iHZMl9AfMofAswmB8/TccTAvWN76oyCFSh9q6pKpAdwjLBbKXasUrk",
+            "expires": "2027-08-29T06:41:02.923Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:09.525Z",
+            "lastAccessed": "2026-08-29T06:41:15.936Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AM/bWQ+YvxypeXU+ZTc",
+            "expires": "2026-08-30T06:41:11.073Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:41:15.938Z",
+            "lastAccessed": "2026-08-29T06:41:15.938Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.003Z",
-      "createdAt": "2026-08-20T08:02:30.003Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:30:56.807Z",
+      "createdAt": "2026-08-29T06:40:56.807Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_5rNwcI91yC",
+      "id": "session_STNc6bqLIX",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1295,14 +1767,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.093Z",
-      "createdAt": "2026-08-20T08:02:30.093Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:02.802Z",
+      "createdAt": "2026-08-29T06:41:02.802Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_bPHQq2Y6ZE",
+      "id": "session_VRdLeIdjd6",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1315,14 +1787,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.108Z",
-      "createdAt": "2026-08-20T08:02:30.108Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:04.274Z",
+      "createdAt": "2026-08-29T06:41:04.274Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_SP5lPfyxWw",
+      "id": "session_QdWuuz1EwB",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1335,14 +1807,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.112Z",
-      "createdAt": "2026-08-20T08:02:30.112Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:11.769Z",
+      "createdAt": "2026-08-29T06:41:11.769Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_avGz2GZ5A6",
+      "id": "session_mC398gCwLS",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1355,14 +1827,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.230Z",
-      "createdAt": "2026-08-20T08:02:30.230Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:18.149Z",
+      "createdAt": "2026-08-29T06:41:18.149Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_27oP2oewVE",
+      "id": "session_si1xeo9n9J",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1370,19 +1842,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "520-0879947-3434411",
+            "expires": "2027-08-29T06:41:19.296Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:41:19.296Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQLamOiOkSdy4hpJg4-qoOC4B98maRrV2hx4jnj1Gd-HUuY3H9MGFgNOLgkZKBtD1qN2Le05dfdB1OxbUi5A90slrh-uYNIKL4ukitZg5BJBVTT48PwNKezFi-I-Q7QwgAvOshg4AIhJGz4okKkrJnUqJcmT0ZC019baLaTMccT-L8W_v0l-kdRo4Vh4RHQpc5VbLFOQRYiCgqM64HXC3xAKY6oY0C0K5SayTmUBZpPirZKAn7hWHIoCgLLhuhKNQ9WZ",
+            "expires": "2027-08-29T06:41:19.296Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:41:19.296Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:41:19.296Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "4AF85D61AC3616765FF02D7EEBFDEA1A~000000000000000000000000000000~YAAQEhzFFxhC+UWgAQAApoNATAAV8ydOyWuyLSWGSqxRylPUstkLqlR3EZ1pquI4yrxam9VXJGF2PozT3OQS7DjogTQMzK4b2tVeXCjNsxuwSFGqaHhMyObxv4sxEECIvIA0NX2wacOs/uGWOnHpJhjDq4XbayGHNzkHn570KHDs3ic05PAkGHAW0q4VjvI1rjSp3nmm9d+J4z1IwF881y+GvLfyEIsIo6eSb8hVEa4NB6ioxr33Lr7/Ja4ZrQIbmBewPZlYGAm6C8Az5LEQTmdCwkdMlm+xcDUrruuA+jRSwlgX2xJfbyldvKYzaxi6tSKDAmYvO8OhjUbMgpi4nL/wT3FxHLVhSrIqmWepJd5VIM35Jb141Gxrm4WCzFc/rc27lDM+Wk0kvP26Pv+mYBiMi73hWI1Zya4wUNTItBahCobKD1c0FcZL33xRjfEk47Qv+vJBaIIIMdS1cc9RTxV81ctQIv6fnhw9GPIWZ73y+S0BE+L8YYwmawTk8Q==",
+            "expires": "2026-08-29T08:41:18.595Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.977Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-94DGBMAPE4MEDZP8Q4XA|1787985697388&t:1787985700676&adb:adblk_no",
+            "expires": "2027-08-14T06:41:40.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.977Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-1954263-4250754",
+            "expires": "2027-08-29T06:41:23.085Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.117Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "CCFBDE0D19B5C1C42D94066FDF756038~YAAQEhzFF9lX+UWgAQAA1KtATABSgvg0UvN1YTqlxfMv9mjj2pEwfidsSDMUvNHTWArQbAz60qnpb+nsEHApazNzyDV845gEv8DyzS0AFl4vYF4FTh5z+JJR1vjQHc1sryaPp71dLED3z1vCOUhc3NyvyhRErUMlszIQ3T1rXpInHwdOU2Ur/YGn0/5CWuUbEJPWyn5h5P44s5WV7uAbrzLyKmwqJD+3Tb3Pk+lm26IkYS5d2AAFKIwAELROgyuR~1",
+            "expires": "2026-08-29T08:41:19.902Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:24.118Z",
+            "lastAccessed": "2026-08-29T06:41:41.977Z"
+          },
+          {
+            "key": "session-token",
+            "value": "bIKiz54g2s7DWL6MWpDVusMSSaEi1LgsR2jOszsCjunKzVAhlGC1M3axH0ma5NeUtoFGyr2VKQlexuAIeGTG17Gdu3ajteP7bIeLkNDV322Et+KBkeCCnZ/ZdCW0q7c1ivFd5YDXaUmtkmEullZPcoIldkCQgY52QD33NW1jQ//xmU2xDD8MvdOja/wv0ZuN3XHDG9WjGVNkgDzz4HVY4Qr1q/mVqIE+",
+            "expires": "2027-08-29T06:41:24.916Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:29.543Z",
+            "lastAccessed": "2026-08-29T06:41:41.976Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AK7VFLZTrk4fK4ONb6g",
+            "expires": "2026-08-30T06:41:25.478Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:41:29.543Z",
+            "lastAccessed": "2026-08-29T06:41:41.977Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.233Z",
-      "createdAt": "2026-08-20T08:02:30.233Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:18.150Z",
+      "createdAt": "2026-08-29T06:41:18.150Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_r009Qb4sHh",
+      "id": "session_P7uFtfXQeL",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1395,14 +1986,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.284Z",
-      "createdAt": "2026-08-20T08:02:30.284Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:25.070Z",
+      "createdAt": "2026-08-29T06:41:25.070Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_ltBBMa8S6t",
+      "id": "session_KdIudVMfAR",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1415,14 +2006,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.375Z",
-      "createdAt": "2026-08-20T08:02:30.375Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:31.087Z",
+      "createdAt": "2026-08-29T06:41:31.087Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_d8c2YyvIrY",
+      "id": "session_RH0b7bbCl4",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1435,14 +2026,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.384Z",
-      "createdAt": "2026-08-20T08:02:30.384Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:36.813Z",
+      "createdAt": "2026-08-29T06:41:36.813Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_3umhoE6XYU",
+      "id": "session_RMAL32OWP3",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1455,14 +2046,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.458Z",
-      "createdAt": "2026-08-20T08:02:30.458Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:44.042Z",
+      "createdAt": "2026-08-29T06:41:44.042Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_GsNLyqyhuQ",
+      "id": "session_D5dtGXHxPo",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1470,19 +2061,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "522-0031984-8661103",
+            "expires": "2027-08-29T06:41:44.450Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.319Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:41:44.450Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.319Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQLAjYabLB3I1QEJB2By255-B4yiyTxvimCT5scNjig5XC7RmuB4XBOx5E3NQLewhYjzX4x7lvQrkKjaxE8RtZe56dw2VwLHXAP4Xj5z-XT2tOeyVL1E9BIjo0H5eqBPDqYtx2rDSIN0MatzFPExeeLaTHTAmQDAmX-nQNpgoQ8JXaNg5SpGRzTjVXUVpQCk1p3_3QKqTegYzRgVz6Y0F3HWv3ojtrocKOoXTWJ-7we_tpRSpu8KqAF56knwjPKjg0Jf",
+            "expires": "2027-08-29T06:41:44.450Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.319Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:41:44.450Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.319Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:41:44.450Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.319Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "9ABB37C1E175342ABE1ACECD82574C0E~000000000000000000000000000000~YAAQXqXBF1Xq3DugAQAA/8pATAC3Ne655V605/Txa2LGCeDrZTI5CgDpBpFm6bohTYB8EykOQqTtCICnUFOiy7E1JhVzTRXvR/mZ/WINRUys930A7NQy2j05WIhysXKLKWPyz4eH7+2VsMYTm9THr1G/79EPXlcN0O90m7B6CTiN4AnregIetE+ZXGZNmcLMgtFxrwh5H4mkfXwfvPvhZVX+hv89fFfLLFVwe2Wa5iU++fKGpc0HdAlrmpbQHB2IQwExKyMQrNqPzIYmeuwMReWgioZ5HikIdPWdFc5qbnyp8dk1yWTg9YhgDtF4AaL6uMEq3/AXWINaiHkSAuGcs2mTPUPyb0jectudPu/OrAsce2o9JGnVDrkF3w6GEFDC4hKPJQUDp9f+yIYszH0bB0G1k66prrIHz2E7Hu1fwyr0BFflCJkGA8haYgFXMAhLeFHzgccMbbVnuq41U1PyivzNC+stbdTH6SH95t2Sw5qPRPKzzZ/YDRAZ2j4T",
+            "expires": "2026-08-29T08:41:44.873Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.320Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-J8Z6VRPBWCPCD19VE2TK|1787985718568&t:1787985720772&adb:adblk_no",
+            "expires": "2027-08-14T06:42:00.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:41:49.555Z",
+            "lastAccessed": "2026-08-29T06:42:03.320Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "520-8809111-8880263",
+            "expires": "2027-08-29T06:41:49.016Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.556Z",
+            "lastAccessed": "2026-08-29T06:42:03.320Z"
+          },
+          {
+            "key": "session-token",
+            "value": "L27Bil77NHd7gzF+Yf0HBn/LZUb6qgBLah9TnB8jvRL0m445wsf/XT9uXRg7q9vigax6iwYMUxZ7ISKWyehi8GmRTvcS/Th0NO5sYeZ0yM0JQvS9dOYVrd83b3FfZvrN4nUBnbtUY6KDPEOM8ymK2AlBSv2stXrSIA4P3PDDrCzsmgstmWIZgwMyCCm11ezUIkw9TXaUHXwOKMBRB/TYQJnvN7Ti5BYh",
+            "expires": "2027-08-29T06:41:49.278Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.556Z",
+            "lastAccessed": "2026-08-29T06:42:03.320Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "7956ECDCF62F36A0EC38D40F261C157F~YAAQXqXBF1323DugAQAABP9ATACKSmDVWQksNy3vCdO7q5Gf0X5An5k+Nk+f4PwwHIgYnMv67eQkswjgzpQJZICXk/k5LyOyppNN9PyuX51/y5/jCdXdF1r4wB6JhoDUJGarf1SVuRwq4np7R19mta+23TWXUWo/a09yUHM1ciui5XrGt6f1ObycCUrGEPCeiIgUTeUza6gYuL8xWfeXOCEbLB9BQ5DEDVvxhbXKF2Or7NOJbYsnGOmauquBaN0j~1",
+            "expires": "2026-08-29T08:41:45.181Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:41:49.556Z",
+            "lastAccessed": "2026-08-29T06:42:03.321Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AI4nurUHNYfKeJ5uE3w",
+            "expires": "2026-08-30T06:41:57.237Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:42:03.320Z",
+            "lastAccessed": "2026-08-29T06:42:03.320Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.481Z",
-      "createdAt": "2026-08-20T08:02:30.481Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:44.043Z",
+      "createdAt": "2026-08-29T06:41:44.043Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_NIdTBUckri",
+      "id": "session_VcQtUImGkN",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1495,14 +2205,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.599Z",
-      "createdAt": "2026-08-20T08:02:30.599Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:49.699Z",
+      "createdAt": "2026-08-29T06:41:49.699Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_T1mx1sroPl",
+      "id": "session_PA6NUYuIE3",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1515,14 +2225,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.701Z",
-      "createdAt": "2026-08-20T08:02:30.701Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:49.700Z",
+      "createdAt": "2026-08-29T06:41:49.700Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_iA9cStSDsz",
+      "id": "session_d4V607GzwR",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1535,14 +2245,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.794Z",
-      "createdAt": "2026-08-20T08:02:30.794Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:31:57.889Z",
+      "createdAt": "2026-08-29T06:41:57.889Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_7Oqpdmwtp5",
+      "id": "session_STQbgeqa8n",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1555,14 +2265,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.828Z",
-      "createdAt": "2026-08-20T08:02:30.828Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:05.390Z",
+      "createdAt": "2026-08-29T06:42:05.390Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_9u6AmxwfDd",
+      "id": "session_t0Jp9TR5BY",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1570,19 +2280,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-3564329-5670141",
+            "expires": "2027-08-29T06:42:05.999Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:42:05.999Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQIh6-iJIQr61aw5ItuTPKNRB1LxyypXFYqeGZS11pA-1oAThnGbIhyo45fIOErMsvNBeJXgpqZ7g4T0o37qyciYyk8xHE3krn2xk9id_NRb4_YrT8juRzVNgBmzTZkkjfZS1o0mOf1ClMSYOLoCYHWM2Pkq28zLoRjoi43R7RHCvG4PLhgdlwgARi1SByKhU5cI2dBO232qSTwSurBebpWc_AxuV6ND4Wi7Aq9ZcnwDAVcEOIvTOEKorxmCx6S528sF",
+            "expires": "2027-08-29T06:42:05.999Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:42:05.999Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:42:05.999Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-MJY3EG6XCDZF0YRGY6JH|1787985740269&t:1787985743982&adb:adblk_no",
+            "expires": "2027-08-14T06:42:23.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.334Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "523-7017849-1443746",
+            "expires": "2027-08-29T06:42:09.069Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:09.167Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "session-token",
+            "value": "Je3GtF3ty9LPjGa62FStqk5lCtf3Eku1LMbppT39sx9/Rr0nMC4sfmv50tyNUVvhOWsd+40bNLuwl0wazd5KA2YYYDgZhR4ocj6KipHNvV0Sr2tVFKLGnACMu72tUH75veLSF7OsDoitV2GmJHN21J/tTMgYBOELwVr/VzoMEJb7PePgYW9+KAB3fIxxsuJofm1aMSP3rSPnUEUFjHg5LJTRgPBCekfa",
+            "expires": "2027-08-29T06:42:09.432Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:15.736Z",
+            "lastAccessed": "2026-08-29T06:42:28.326Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AMo65r3Fu2Hb0yFRCsM",
+            "expires": "2026-08-30T06:42:16.720Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:42:17.912Z",
+            "lastAccessed": "2026-08-29T06:42:28.334Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.853Z",
-      "createdAt": "2026-08-20T08:02:30.853Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:05.390Z",
+      "createdAt": "2026-08-29T06:42:05.390Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_qcfBBfeqtb",
+      "id": "session_3QrgcvMJwf",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1595,14 +2402,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.858Z",
-      "createdAt": "2026-08-20T08:02:30.858Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:09.335Z",
+      "createdAt": "2026-08-29T06:42:09.335Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_WhmKBj5Jth",
+      "id": "session_sNYsnBpBT4",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1615,14 +2422,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:30.920Z",
-      "createdAt": "2026-08-20T08:02:30.920Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:09.337Z",
+      "createdAt": "2026-08-29T06:42:09.337Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_acLiwllknf",
+      "id": "session_2PWDRYm18u",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1635,14 +2442,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.087Z",
-      "createdAt": "2026-08-20T08:02:31.087Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:19.502Z",
+      "createdAt": "2026-08-29T06:42:19.502Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_C3Vk1jNuVY",
+      "id": "session_C6GIMHcfbS",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1655,14 +2462,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.116Z",
-      "createdAt": "2026-08-20T08:02:31.116Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:30.724Z",
+      "createdAt": "2026-08-29T06:42:30.724Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_gIJd0LULvG",
+      "id": "session_xF71JqpeBS",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1670,19 +2477,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "524-6439044-3200322",
+            "expires": "2027-08-29T06:42:31.524Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:42:31.525Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQJaF86Bc0k8YLBzUZ9-wYjKBxibcJm94m2YwwnQu594sFkF_V3Z28x7QKB3Lyj5nDrHskwSbwSn28e64_gNPK9qb3HURlUNWXj-Fdzt4HaEThwpncbPhZanCoWWzqh1bIiehQ5dbn6Funx1AWJ7jUAYlahPgYqAl_XRPAIAUXsLb0oUjIbz8S_cCBwZci6lWD25GT-nLDXCgvB8zQhenjyzeEiHr5ZOFjJjOF1vuYzJ90wIeRgEuG0vcqpVdBb2_A0d",
+            "expires": "2027-08-29T06:42:31.525Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:42:31.525Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:42:31.525Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-62H1V7WEKX57GA5ZZHH0|1787985769710&t:1787985771603&adb:adblk_no",
+            "expires": "2027-08-14T06:42:51.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:42:35.096Z",
+            "lastAccessed": "2026-08-29T06:42:52.919Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-3697902-6643805",
+            "expires": "2027-08-29T06:42:35.271Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:40.990Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "session-token",
+            "value": "SAW1M3UxZn5xe3WTLk1YPSLKyCnb7Lh0WxZMNvDCp1pneC3Ju9WoYtQUEQKOCWTyhghv63NfEWpXfOBuKM/9pv/Uvb0n47QZjeCiB2K+Zg+3WRux4XW25aMyOWeJas9G8vBTGKK0hLlFc3GNM96Po1tgaBgPEhS9P7H1WlvxpumjFhYu3LhbDhNjLH/0nD35bVO9diCYeHn+FyMajcOE2LMX2XZcPWdr",
+            "expires": "2027-08-29T06:42:36.095Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:42:40.990Z",
+            "lastAccessed": "2026-08-29T06:42:52.917Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AG4xIOaA87xN4DmNl+M",
+            "expires": "2026-08-30T06:42:38.096Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:42:40.990Z",
+            "lastAccessed": "2026-08-29T06:42:52.919Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.132Z",
-      "createdAt": "2026-08-20T08:02:31.132Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:30.727Z",
+      "createdAt": "2026-08-29T06:42:30.727Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_UwocBiGVeI",
+      "id": "session_KIwHYWJZan",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1695,14 +2599,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.183Z",
-      "createdAt": "2026-08-20T08:02:31.183Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:36.200Z",
+      "createdAt": "2026-08-29T06:42:36.200Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_kbc4KCQec2",
+      "id": "session_kezbanxO0K",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1715,14 +2619,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.189Z",
-      "createdAt": "2026-08-20T08:02:31.189Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:42.675Z",
+      "createdAt": "2026-08-29T06:42:42.675Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_pnFhmlciul",
+      "id": "session_WBufaEAej1",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1735,14 +2639,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.260Z",
-      "createdAt": "2026-08-20T08:02:31.260Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:49.160Z",
+      "createdAt": "2026-08-29T06:42:49.160Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_JMGnxUs6Pt",
+      "id": "session_Y6b6PiQrfB",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1755,14 +2659,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.396Z",
-      "createdAt": "2026-08-20T08:02:31.396Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:55.166Z",
+      "createdAt": "2026-08-29T06:42:55.166Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_S67dFpO8wU",
+      "id": "session_eL9cFskcB3",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1770,19 +2674,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "523-9985663-2499258",
+            "expires": "2027-08-29T06:42:55.876Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:42:55.876Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQJmd-pQU39FmLsmmRJMC5FBBxKDZzNJuukG6DdJJC7Z45gbiQTJE5HQyKaze4p7dFxu_gbUbWnQflwbg5bvKX6uF42X_oFpMYuvtZMHAv33cRvkoCUuoVzn4su5pDMfzyuxUbNnrbJO-BjLl8iUTtyLsbVcLIshxkcOweXpNrguS68RbMEHhZ7-8rYyJ02PwYhSkk_sEasvDmIXtxRj8ebhQpd4EVL7OoIwEt9UxLiF35vtblNMRlMsLXY7-YvY7csj",
+            "expires": "2027-08-29T06:42:55.876Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:42:55.876Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:42:55.876Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-TMNNSTFXYNT1BFD9PE08|1787985789163&t:1787985790862&adb:adblk_no",
+            "expires": "2027-08-14T06:43:10.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:43:01.656Z",
+            "lastAccessed": "2026-08-29T06:43:11.481Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "525-5563799-4455162",
+            "expires": "2027-08-29T06:42:59.348Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.657Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "session-token",
+            "value": "uQccPrbgTLudwCoy+9tX3qo6aq0hO/795xwyC2PpACVBsG82/BkyCxJcp23+L+CPkhYhI6KTp6jvhlABmHG8DuFQsGxKkFrBjaYqfOEFbNV/wtZZct5Hbx9USH3XE4lvgIoovG5ICZBgyvqQ5RgEJTKeHp0528SKiNR1uwCSgQSMCw/WEDZLvKt19wH8bxas4PVzg2EH5QoilPpXiJiC35WPgir1dOPt",
+            "expires": "2027-08-29T06:43:00.439Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:43:01.657Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AC4h1R6/q+rlhJsVwts",
+            "expires": "2026-08-30T06:43:08.073Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:43:11.480Z",
+            "lastAccessed": "2026-08-29T06:43:11.480Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.402Z",
-      "createdAt": "2026-08-20T08:02:31.402Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:32:55.167Z",
+      "createdAt": "2026-08-29T06:42:55.167Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Wk3N0eoMdU",
+      "id": "session_XeewK8WUuD",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1795,14 +2796,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.417Z",
-      "createdAt": "2026-08-20T08:02:31.417Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:33:01.816Z",
+      "createdAt": "2026-08-29T06:43:01.816Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_v1puzEIZm2",
+      "id": "session_wfglZDMuXe",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1815,14 +2816,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.447Z",
-      "createdAt": "2026-08-20T08:02:31.447Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:33:02.784Z",
+      "createdAt": "2026-08-29T06:43:02.784Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_PdFXdE7K9q",
+      "id": "session_9UWaHexeye",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1835,14 +2836,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.479Z",
-      "createdAt": "2026-08-20T08:02:31.479Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:33:08.668Z",
+      "createdAt": "2026-08-29T06:43:08.668Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_2SN1C5EdnN",
+      "id": "session_vherlcb73M",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1855,14 +2856,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.826Z",
-      "createdAt": "2026-08-20T08:02:31.826Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:22.210Z",
+      "createdAt": "2026-08-29T06:49:22.210Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Kvo1EC8Cab",
+      "id": "session_fxeqXqIMD7",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1870,19 +2871,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-1726524-1847256",
+            "expires": "2027-08-29T06:49:23.759Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.786Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:49:23.760Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.786Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQIBWnnBBvbv0CrtNHT7ws-QB2KqYo_XNkL9beUdMHcJRd_JvjrAVojyNoZYxG3FzjJy0iKsCtPBr1Q70_Y7LAv_59Ag8Uc2lAfMn8EbOeq-_i4p_LU9SwrcZ445g0TaYoIbWAX09O7OYGEvEAdghWWymDaYzzrBI3XMw9CAqZkFOp0HChMWb_4mkzNnfc1NhQWDAUTD34jlwvzVIW1xyqol2w-32fa3NBPteKR0Qy5snus7PTvPf7yhc12R6N2b61Fu",
+            "expires": "2027-08-29T06:49:23.760Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.786Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:49:23.760Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.786Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:49:23.760Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.787Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "EDD87A7DAB394B3D6CA98BD3FC0AB1CF~000000000000000000000000000000~YAAQFxzFF3BYHUWgAQAABbhHTAB67DpGnKJLSdWT23jDk+WsouvtEErxaM/qTN+P1Wa9zLsywhYvc97icHbOIYvcebNrrhSYCgEZlD0lKmftlkksNVqpyP94jcpvWg3cyVFtLG0kYe+K6YNu5EOqpQ0ieKz158ej55oAfYJJA9PpQBQzQlitGrjKjZMHgxOn83VWzahWt2+9FFuHnD3/a1C4VeYmK25LhKHKEhrclxpbNrHvuB6wO45Yc+whuhE/CBCUH569I4kxJI5YMC0lVWqEGU10kTKo7Ugo/rwi7pG3vYyF2NJ6nLiftTXZWDCMZf0g/niPKKZJGiDFGdV8M6dlDd7su+oMN/37e0zqCAPYFi2pneguzGs0lWlTE0/oZrBzwOMoA/Z4jW1cn1ifZ0myV5fZxgVwDSJl5HT5aS7NNiVO5nXvcz31kgeSaHW56FpRT/K1Nu1rmUtRZlMxcW5JmAiWmIEviCRldqy9nXX2+K+NRrvIKNNV",
+            "expires": "2026-08-29T08:49:22.760Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.787Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "CAF4DBA59F8048FED3825A87B408415D~YAAQFxzFF0WTHUWgAQAA3hVITACOXLQc4GgODCnXcp6rfGQQnurposc4H3AgIu52ZlMMvtgvSknV+ICw+I02lHiCEOSKegbBOHqsi3pSIxeaJWi+Q07subh3V7cyi9+tzL6VqGEk3tof67AAE0xoOrXgWvXt6Kr2e8oebG1ndLPV2QNIilqTlfGwQxLs2JCGfrCFlDA2eLrYioVRmUHUIGYRB14CxLuYSL1dV2qq9Z1jFoWO+L1tnz6CPsoETZHN~1",
+            "expires": "2026-08-29T08:49:23.783Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.788Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-BQ7D9RZC746513KNX7XM|1787986184046&t:1787986186352&adb:adblk_no",
+            "expires": "2027-08-14T06:49:46.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:49:28.210Z",
+            "lastAccessed": "2026-08-29T06:49:47.788Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "522-1169449-5422350",
+            "expires": "2027-08-29T06:49:28.646Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:35.046Z",
+            "lastAccessed": "2026-08-29T06:49:47.787Z"
+          },
+          {
+            "key": "session-token",
+            "value": "25H+Nad5ldbjc11Yeq/PF77rtKLSsKBqopqaPy0yxd2tgsa4ITo4HvHYvLnIvnaA4RoHz0PLdVTRqvKsWp5maqA5SAXkAcCd80ZnRzss2XSzUUQzNcKPt+h9DAq1SZuQ8Wnf7LHmrwYDCMUam3vpIS9ocDT+8JAgzpWejmf4mIj0n32MZeSynvS8YIy6lz/PcGGYYd+BLao+8g2uAxr/JMWV5C922OPu",
+            "expires": "2027-08-29T06:49:29.489Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:49:35.046Z",
+            "lastAccessed": "2026-08-29T06:49:47.787Z"
+          },
+          {
+            "key": "rxc",
+            "value": "ADQG2UczWoHUxEbCH5c",
+            "expires": "2026-08-30T06:49:31.174Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:49:35.046Z",
+            "lastAccessed": "2026-08-29T06:49:47.788Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.828Z",
-      "createdAt": "2026-08-20T08:02:31.828Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:22.211Z",
+      "createdAt": "2026-08-29T06:49:22.211Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_1HcF6HniN5",
+      "id": "session_5fcCiiS8CW",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1895,14 +3015,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.830Z",
-      "createdAt": "2026-08-20T08:02:31.830Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:29.092Z",
+      "createdAt": "2026-08-29T06:49:29.092Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_v0kgcyRLME",
+      "id": "session_EDZcXnqKZg",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1915,14 +3035,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.833Z",
-      "createdAt": "2026-08-20T08:02:31.833Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:36.614Z",
+      "createdAt": "2026-08-29T06:49:36.614Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_UezCnyAeNo",
+      "id": "session_dRt60gEffm",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1935,14 +3055,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:31.837Z",
-      "createdAt": "2026-08-20T08:02:31.837Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:43.408Z",
+      "createdAt": "2026-08-29T06:49:43.408Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_4ImMclUOxB",
+      "id": "session_h2Csayuhad",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1955,14 +3075,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.070Z",
-      "createdAt": "2026-08-20T08:02:32.070Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:50.232Z",
+      "createdAt": "2026-08-29T06:49:50.232Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Ar2dPXyxKH",
+      "id": "session_MFCwcozQhM",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1970,19 +3090,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "523-3383569-7400535",
+            "expires": "2027-08-29T06:50:40.636Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.636Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:50:40.636Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQKzHuw-lAJcZ-Y8mOP1-OQIB11lYDshbBe_wYPG0QBgP8UhOoVM0NkSKxgm5c3u7eu-M-ayHXsSNzfPlgDtP15eMQt1UntCp3WbWyFCnSwKofUye6zc7Z4Ivsb47OmcY4QhLTsI4HmVkkFNK-pnMkljJfXNypTdKb7VQh2ofjtmG-qNEFL8CStzzfYeMPkzhgEjaAH_ZoMVaYmKucn1rv549v8BvwvzM_A_23vExOCnyD_HlwsXHbwxvQPzk6CmwAyI",
+            "expires": "2027-08-29T06:50:40.637Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:50:40.637Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:50:40.637Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "E608D1F5ED49D1F52C5DEDC32C135BDA~000000000000000000000000000000~YAAQFxzFF/QLHkWgAQAAXORITAC9Uv80swm4A89NScCa890nKPSSZPHsAXR10BTyJiN1mLy2bbplxM3rd9wkSMzyx6t78y5VgowKTrXXCMtxn5vdBzDdc96QyNGzYACm1dpGSnLiJVQ6NPUlvEhNnnZkN8YUFzZ+vzLdDPPi1aOW1YZEP+J8y+/52zN+cUEAqD1e64ohfPDiNk/U8JcpexhfuhTOQs/2P8qwX5pArhmx8ertauzIzj3ucs8zP8S4ENoIWDXOGoKaKOlXHEBAgoU13iiXaEcKmxZzeIG2iiv1EI+wVjAu8gzpNqwBl4Chr/cpY70b1bB6u2CCle11fKGMdDlXqPvJQjcCdVT96yiu7M2XyLxXJ+G5wRfKGbyCkWtGGQNf9Trko/3/j2jInCRupBfhoYsUNS03QDv0lhEO/mvXE9EQGfVsyWo2AG6nxoZz0mJBsY5+DEcQbVj6YqWquJdg5LbwasLVXeySnAu05uh4fMrwQNl+",
+            "expires": "2026-08-29T08:50:06.637Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "FCDE54A5EED4AB36EB23343C648070BA~YAAQFxzFF/ULHkWgAQAAXORITACiPkozjFCiukCrOG09pxkKC98wXIZCo3cR/2uWHTeZFXMYuW8ueqS5TI2ZAg28EFbiJSiBisq1tbbXcLCwx9r5k7LAftVptASASJZcJ026guoxwpRrOVZXUrLKaPwJIo9FdiaS4qChNF3InamMQA3nunLg+Vt2AOTGRfGwkPmxAGTR6+6NdMDkTCFpP0OstzhIdZOul8oSsu3gboB2dVhKOhyJwUNJ40wciS8=~1",
+            "expires": "2026-08-29T08:50:40.637Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-3532721-8615533",
+            "expires": "2027-08-29T06:50:52.606Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-20YBWSWDGT4M2237HYH6|1787986271305&t:1787986274207&adb:adblk_no",
+            "expires": "2027-08-14T06:51:14.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:50:56.637Z",
+            "lastAccessed": "2026-08-29T06:51:15.570Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AJRObG/NhTL0i9b6JFA",
+            "expires": "2026-08-30T06:50:58.098Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:51:03.441Z",
+            "lastAccessed": "2026-08-29T06:51:15.570Z"
+          },
+          {
+            "key": "session-token",
+            "value": "xb0Qbeo+djHNAh7hgOPl22h3/nosk96aLUZ/qch+RrG8GhTpyQjX7BayC42m6h0mq4cjeM5DndTK1PydoHUMv4FkFXVRkrxkiRMAfxTB2S28wkFw2NwM4W1CSVM/BdXyncv0TT1Osamy84eGTjkjy6qUz64nz1S5EtZNDCZ0vRYJCPV8UACRF5z1WVZbY9BCnoGdWwfX7nDAzRqUt1/lhJ94HQxBxb5D",
+            "expires": "2027-08-29T06:50:58.389Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:03.441Z",
+            "lastAccessed": "2026-08-29T06:51:15.569Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.144Z",
-      "createdAt": "2026-08-20T08:02:32.144Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:39:50.233Z",
+      "createdAt": "2026-08-29T06:49:50.233Z",
+      "usageCount": 5,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_eXE07RBB72",
+      "id": "session_qmEBdMFpxD",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -1995,14 +3234,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.201Z",
-      "createdAt": "2026-08-20T08:02:32.201Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:40:50.867Z",
+      "createdAt": "2026-08-29T06:50:50.867Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_wLwKcl3oAh",
+      "id": "session_E77NXCUKah",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2015,14 +3254,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.238Z",
-      "createdAt": "2026-08-20T08:02:32.238Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:40:57.989Z",
+      "createdAt": "2026-08-29T06:50:57.989Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_RJ1SrICHcT",
+      "id": "session_MzkhdmqbZG",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2035,14 +3274,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.293Z",
-      "createdAt": "2026-08-20T08:02:32.293Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:05.032Z",
+      "createdAt": "2026-08-29T06:51:05.032Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_K4ARiFOGQe",
+      "id": "session_l8Goi3cbL6",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2055,14 +3294,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.298Z",
-      "createdAt": "2026-08-20T08:02:32.298Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:10.854Z",
+      "createdAt": "2026-08-29T06:51:10.854Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_TIkOXEpDGc",
+      "id": "session_9XYzVA7H2L",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2075,14 +3314,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.351Z",
-      "createdAt": "2026-08-20T08:02:32.351Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:41.415Z",
+      "createdAt": "2026-08-29T06:51:41.415Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_3moBBe3vhg",
+      "id": "session_gwCZPUfwuP",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2090,19 +3329,116 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-4293888-7263667",
+            "expires": "2027-08-29T06:51:42.214Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.947Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:51:42.215Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.947Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQKgPqFqEwLE1S_5EItKSjp4B5kKVuvafb4d5HRCSuH11DCjndYsxQI9iVdS0QYyOupsACLb-ArZ_0ana4TBkKv0ND-9zPuWlmwVlcdNDcFElvlq675OgyVdj4o1eRk36RuMUs4BNU80o1xwavPbz6-C-_NJWC7uaHNzq_5EsvwEqiQkrBzfWooJESX7SwZxtQEvgv1_2wuNTfEks7nW2TFbJ6HJvJKCOU9HkZtflorguO4h8ieImet6eYDkR2FTe_7a",
+            "expires": "2027-08-29T06:51:42.215Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.947Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:51:42.215Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.947Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:51:42.215Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.952Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-GHJ55YZD2GGD1V0VNG8C|1787986322852&t:1787986325308&adb:adblk_no",
+            "expires": "2027-08-14T06:52:05.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.957Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "525-2751344-6969931",
+            "expires": "2027-08-29T06:51:45.946Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:46.056Z",
+            "lastAccessed": "2026-08-29T06:52:07.952Z"
+          },
+          {
+            "key": "session-token",
+            "value": "9uL1+s+g4e4HcsEYhExpLDNib6rKafrXulKBowA7Y9XEIKTZYf98jMXkUw4sf/Lw1eaLMW8/T0ZO6K+Gu52x6V2hkAELv1iOgvFLviZbroENdBLhIq8K0LmlxtjF+vyBVa7FV1YtK+pvHA2Y1McSI5K+mM0/sGJXOS0uYBt3aguIq6C5ROYrCLgSeHOaMfGNgYpRcLdJg3sFil0lFf3fLoe7mxJ36DmE",
+            "expires": "2027-08-29T06:51:46.389Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:51:52.055Z",
+            "lastAccessed": "2026-08-29T06:52:07.952Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AMSK4BAWwT42Z07BH2A",
+            "expires": "2026-08-30T06:51:53.035Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:52:00.504Z",
+            "lastAccessed": "2026-08-29T06:52:07.957Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.422Z",
-      "createdAt": "2026-08-20T08:02:32.422Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:41.417Z",
+      "createdAt": "2026-08-29T06:51:41.417Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_wxh17xbSdF",
+      "id": "session_cIqZoyeEC9",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2115,14 +3451,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.576Z",
-      "createdAt": "2026-08-20T08:02:32.576Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:46.744Z",
+      "createdAt": "2026-08-29T06:51:46.744Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_cyEivN0VOQ",
+      "id": "session_RfW1GKFERV",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2135,14 +3471,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.616Z",
-      "createdAt": "2026-08-20T08:02:32.616Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:41:53.787Z",
+      "createdAt": "2026-08-29T06:51:53.787Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_q2kjBaKLsE",
+      "id": "session_AhjdmvhknG",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2155,14 +3491,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.628Z",
-      "createdAt": "2026-08-20T08:02:32.628Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:02.094Z",
+      "createdAt": "2026-08-29T06:52:02.094Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_cPmfjHqZgA",
+      "id": "session_SRBnwtXZe6",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2175,14 +3511,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.721Z",
-      "createdAt": "2026-08-20T08:02:32.721Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:11.358Z",
+      "createdAt": "2026-08-29T06:52:11.358Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_GgUaf0CZxK",
+      "id": "session_jMNi6r5QV3",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2190,19 +3526,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "521-0349593-6453765",
+            "expires": "2027-08-29T06:52:12.926Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.791Z",
+            "lastAccessed": "2026-08-29T06:52:47.202Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:52:12.926Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.202Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQINFN1_rgRtVJrZcWkIjU9uB2xbFGoPzN8u-2fZ-WLLwzuo6FASvOGxF1arhXnZkhfy1aAUELpmWejRptsmz_3eWuepV0OzKwDbayzTbMEZi5l7w_u7ncRoq-yIxiQLuXi3Gv3pLWDxV9ef3LVUjp3B3tRSXSQVy_fucgiVUyZWgCHafNsULw5pt5ovjIMDDs6Q5fTcMxARk59TFW1nOxql8lCdai1NTpLDxIwK_jdKNYODeHBafZrE_0baUo3nVOTl",
+            "expires": "2027-08-29T06:52:12.926Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.202Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:52:12.926Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.202Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:52:12.926Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "05B551C6A1E233BB9E5E60318722C91A~000000000000000000000000000000~YAAQXqXBF0zI3zugAQAArZxKTAAv47/t9/RqMYFNcJQlFnpoYeQ/QeZz6pf64dbz9lD40E0sKMNFXw/HnOOcK4pOy8j0ffd/Uz2u4JhURo+6sPcS9amnQrOnZorABK6+CarT32Z1kzx6ELr+cLPzY8obVtTyc7Tk96wibwxpnogC0Y+bYbveWHqEI76aaSo00eilwNCWkjwhtG7lCOEpVLCm/UZYaOvodfMQTYg/Nlb32p59gcpF2IZVC9B/E9e6d5fcfjEMeoUr4htMg5NgV/Ku5x9IwyLBK3VPAnYehTcUrM1ugC3EN7dW+z3Mi2e4cvr09916tuaC5jYZi0rgPZ+g6U9d0teB/CLyyDJ33v6huVxCB6mIXRZEG39ZCxiwkk6/1cSKBXeyarKtl+gDoYusMyWQCbaAM/E2dTJIMEJhh/4AkxGXErseC6FVHtqCajNj9e6HAb5vXNqxtiwci3c0xzVAth8x0SdEmVIg8KNxV5OLTs6LbL9Gyi49",
+            "expires": "2026-08-29T08:52:12.358Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "6A9E5A6846FE359FD81FC0B0602AC80D~YAAQXqXBF9fb3zugAQAAR9JKTACzABsEnkvigya2m6SKVU6TuaViw5r7nB1nPZKuz89/swoKRm962CfrtX0nTtUokY/P93/XXD4U6keGwsA28GXRAt8Mp83kyCPvNUMBxiRS1dmUXQKJb9EjQCxTPrmEhThJynEOFv8Bxa/g2zoFNviRwPxOvYTvPNWylk2cWOEHemaAIg9EFNC288ZbwqZsdTpRpDDrtZLaU4yANvxfrVdAEO29VycqEGFUJS7q~1",
+            "expires": "2026-08-29T08:52:12.079Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-YQ5J051YX4Y8J66CB7XA|1787986360655&t:1787986364565&adb:adblk_no",
+            "expires": "2027-08-14T06:52:44.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:52:19.792Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-4668283-8178626",
+            "expires": "2027-08-29T06:52:20.118Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:30.456Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "session-token",
+            "value": "iJ1Jv5tn37EsTwScJ6VATr2aD+gVDVSuXJmhxjvSIPPx/L0wK7ZD57NxRGGkV7AMkOkNwNp7AeS1FxiMudSQjLN6e1+tvJoKRtYxhpF8iXKIAwNTnoZz5wRVTonTpic6Z3RxHYy+OsxoQ9DWcsh24cZ+35+08NstrsdPx0sC1hFFJa9Yycu0KGLaOS0uReOYD2y4yROOC+/Sc/QdZoGRtKIMsC8pXAW2",
+            "expires": "2027-08-29T06:52:21.212Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:30.456Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          },
+          {
+            "key": "rxc",
+            "value": "AN486z0zcKjDFzbHczw",
+            "expires": "2026-08-30T06:52:22.279Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:52:30.457Z",
+            "lastAccessed": "2026-08-29T06:52:47.203Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.747Z",
-      "createdAt": "2026-08-20T08:02:32.747Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:11.369Z",
+      "createdAt": "2026-08-29T06:52:11.369Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_UVKEYWZ3R1",
+      "id": "session_Qca4AA9oWH",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2215,14 +3670,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.863Z",
-      "createdAt": "2026-08-20T08:02:32.863Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:21.488Z",
+      "createdAt": "2026-08-29T06:52:21.488Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_sUv0VnEV7m",
+      "id": "session_faL3WO9N5N",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2235,14 +3690,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.866Z",
-      "createdAt": "2026-08-20T08:02:32.866Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:32.071Z",
+      "createdAt": "2026-08-29T06:52:32.071Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_4p8dlWxiNg",
+      "id": "session_7ZbOrHRBPA",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2255,14 +3710,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.892Z",
-      "createdAt": "2026-08-20T08:02:32.892Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:39.786Z",
+      "createdAt": "2026-08-29T06:52:39.786Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_uzIbBkYx2N",
+      "id": "session_2IbtPxxM0n",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2275,14 +3730,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.935Z",
-      "createdAt": "2026-08-20T08:02:32.935Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:49.626Z",
+      "createdAt": "2026-08-29T06:52:49.626Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_WgERTmoDmQ",
+      "id": "session_EvI7Cb2JUu",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2290,19 +3745,138 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "session-id",
+            "value": "525-9662223-5077427",
+            "expires": "2027-08-29T06:52:51.375Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "session-id-time",
+            "value": "2082787201l",
+            "expires": "2027-08-29T06:52:51.375Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "sst-acbin",
+            "value": "Sst1|PQIQKCsw9k6Em9KnfkGc-fz5B1FpkxFbP3Q8uolp64jpqK5hRuRR74t4pU-_GNLEQTWsjjb1eoXO_ekfxDETsE_shhVkJwdWe19jDi3ZltiXYCCUfvqgirR19ES4Zr27GJ3cvpdtXef0UAM7Uf4VbkQsQ7bMZE_N_KGVIYJb2W0wEwgO4VtXNEY1gd_NFIgYPy8RfGTEYT3J0_ciVeuqIuv2teYek0AE98YSsSPZ89gvgDJhiu4LiIUB65OrNl6NThwH",
+            "expires": "2027-08-29T06:52:51.375Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "i18n-prefs",
+            "value": "INR",
+            "expires": "2027-08-29T06:52:51.375Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "lc-acbin",
+            "value": "en_IN",
+            "expires": "2027-08-29T06:52:51.375Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "ak_bmsc",
+            "value": "6224360159414FEBD917EC776CDF9D63~000000000000000000000000000000~YAAQFxzFF9F/H0WgAQAAzh1LTABzQ7J7nig++yptdV3ErXcC9wgGaF/dmNXttARzitajXTKAbYFon9jrdezy/98zlzQ8ucV5u5JFjv5zJLVHF+sllBF1b8kEgEnFk03Fph7b/n2Dl8uaTKYNi22eXnIv0rv87LaOiRjA8YjupAWLgn4hmtzzFsLy4o5bzI1IxXUQGcvW5Fc1rVCUtQheDCw4DcBEWBuP+7QmZxik8TJCkUaiRtc2wC75ZyC6TYBGip2qImofjVkXyrup6dhOVKoJT+W0UIrTjefJ6oR1oXC7j8OONXC+DRYJfovl5nidd/TnP0AXTaAtOUEyia/HYDWO+rrq7odwSmpbPoKsdM0E6Ymm/fICDIqtgdufZKKfMf1vHDo0ckDireC+o/rNZOeus/lsnZJz0DwZ2YJmKpTa6Fa3Xx8Sbqy/jcpmttaLazTgeSF0/92N8Q5uwPVwL4/bq1VSFUiSGXWG3AMkwa6JBXzXdD5ET0AI4EjbDg==",
+            "expires": "2026-08-29T08:52:50.406Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "httpOnly": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.151Z"
+          },
+          {
+            "key": "csm-hit",
+            "value": "tb:s-JP1304RZPQ0MNM2NSFKZ|1787986386353&t:1787986388178&adb:adblk_no",
+            "expires": "2027-08-14T06:53:08.000Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.151Z"
+          },
+          {
+            "key": "ubid-acbin",
+            "value": "521-8652554-8925326",
+            "expires": "2027-08-29T06:52:54.101Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "bm_sv",
+            "value": "8D054FA6277B2919FCF77A06C3E81C36~YAAQFxzFF4mDH0WgAQAAmyVLTAC2QzqiHZRuFn1up2tvDC8hr+i7yzV1nzB7RAyIwRk8G8iS1oJlh1O/NlNIA/KTd/7MTP6DOplAfKMMrwk/t58aj/pkg7/1H2yj2XVbXFYcgKFpd7tIj4GM+PprgC2U1CvpiljcCpZJ9JyyU6nQQTHOE2BFxQid39ucIbkGB8GH+47bdJKD54LwDkOSD8vHKSEACD5PgdnKpmxYnUoPkeJTMPk4nT62f2W7Odc=~1",
+            "expires": "2026-08-29T08:52:51.402Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:54.138Z",
+            "lastAccessed": "2026-08-29T06:53:09.151Z"
+          },
+          {
+            "key": "session-token",
+            "value": "8M2M4D6UzbW3JR9SocdbZyNC60UGYdcjsJaSMop6jYwY/q0gc8ts6CHM+vZAl9ZuEShGBsLzl/Xx4lsPMQAyw+NC5fqQpk5xpfHZYo/N8nhcG03ei0fXFWqp3fa3RhbltY5C2rmL69XtcQ+IoQJ1zVP/lcllkEBUxWmS8zBXFiuLgtzemM//+HlZzEhixXcs7YOfLRxf6CxNsW/Xl+NNVYigPefVdn2A",
+            "expires": "2027-08-29T06:52:54.659Z",
+            "domain": "amazon.in",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2026-08-29T06:52:58.988Z",
+            "lastAccessed": "2026-08-29T06:53:09.150Z"
+          },
+          {
+            "key": "rxc",
+            "value": "APvw6aq4qhuEAxHIPeY",
+            "expires": "2026-08-30T06:53:00.032Z",
+            "domain": "www.amazon.in",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2026-08-29T06:53:04.195Z",
+            "lastAccessed": "2026-08-29T06:53:09.151Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:32.977Z",
-      "createdAt": "2026-08-20T08:02:32.977Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:49.628Z",
+      "createdAt": "2026-08-29T06:52:49.628Z",
+      "usageCount": 4,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_J2J380JPIX",
+      "id": "session_DYYgVeKQrI",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2315,14 +3889,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:33.205Z",
-      "createdAt": "2026-08-20T08:02:33.205Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:42:54.608Z",
+      "createdAt": "2026-08-29T06:52:54.608Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_0Mm4JdVa35",
+      "id": "session_EsDxJxtW9F",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2335,14 +3909,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:33.270Z",
-      "createdAt": "2026-08-20T08:02:33.270Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:43:00.537Z",
+      "createdAt": "2026-08-29T06:53:00.537Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_HMJCH8F5Tw",
+      "id": "session_BB6TcA17hZ",
       "cookieJar": {
         "version": "tough-cookie@6.0.2",
         "storeType": "MemoryCookieStore",
@@ -2355,9 +3929,9 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2026-08-20T08:52:33.305Z",
-      "createdAt": "2026-08-20T08:02:33.305Z",
-      "usageCount": 1,
+      "expiresAt": "2026-08-29T07:43:05.741Z",
+      "createdAt": "2026-08-29T06:53:05.741Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     }
