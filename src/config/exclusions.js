@@ -37,6 +37,67 @@ function hasTerm(text, terms) {
   });
 }
 
+// Phone accessories are wanted; the handsets themselves are not.
+const PHONE_ACCESSORY_TERMS = [
+  'case', 'cover', 'pouch', 'tempered glass', 'screen guard', 'screen protector',
+  'charger', 'cable', 'adapter', 'holder', 'stand', 'mount', 'ring', 'skin',
+  'earphone', 'earbud', 'headphone', 'powerbank', 'power bank', 'selfie',
+];
+
+// Computers quote memory and storage the same way handsets do
+// ("(16GB DDR4, 512GB SSD)"), so they need an explicit exemption.
+const COMPUTER_TERMS = [
+  'laptop', 'notebook', 'chromebook', 'macbook', 'thinkpad', 'ideapad',
+  'ssd', 'hdd', 'ddr4', 'ddr5', 'lpddr4', 'lpddr5', 'processor', 'graphics',
+  'windows', 'desktop', 'monitor',
+];
+
+function isMobilePhone(title) {
+  if (!title) return false;
+  const text = String(title).toLowerCase();
+
+  if (hasTerm(text, PHONE_ACCESSORY_TERMS)) return false;
+  if (hasTerm(text, COMPUTER_TERMS)) return false;
+
+  // Explicit wording.
+  if (/\bsmart\s?phone\b/i.test(text)) return true;
+  if (/\b(keypad|feature|mobile)\s+phone\b/i.test(text)) return true;
+
+  // Retail convention for handsets: "(Black, 256 GB)", "(Green, 64 GB)".
+  if (/\([^)]*,\s*\d+\s*gb[^)]*\)/i.test(text)) return true;
+
+  // "6GB RAM, 128GB ROM" / "8GB RAM 256GB Storage" — capacity pairs. Requires
+  // both halves so a laptop's lone "8GB LPDDR5 RAM" is not swept up.
+  if (/\d+\s*gb\s*ram\b/i.test(text) && /\d+\s*gb\s*(rom|storage)\b/i.test(text)) return true;
+
+  // "(4GB+128GB)" style, used heavily by budget handsets.
+  if (/\b\d+\s*gb\s*\+\s*\d+\s*gb\b/i.test(text)) return true;
+
+  return false;
+}
+
+// Hardware tools. Kept deliberately narrow: "grinder" also means juicer/mixer
+// grinders and coffee machines, and "drill" appears in "No Drill" wall shelves,
+// so those words are only trusted alongside an unambiguous guard.
+const TOOL_TERMS = [
+  'tool kit', 'toolkit', 'hand tool', 'power tool', 'wrench', 'spanner',
+  'screwdriver', 'socket set', 'plier', 'pliers', 'die grinder',
+  'impact drill', 'drill machine', 'drill bit', 'hacksaw', 'chisel',
+  'measuring tape', 'allen key', 'ratchet',
+];
+
+const NOT_TOOL_TERMS = [
+  'juicer', 'mixer', 'coffee', 'kitchen', 'no drill', 'adhesive', 'shelf',
+  'makeup', 'hair', 'nail', 'garden', 'toy', 'kids',
+];
+
+function isHardwareTool(title) {
+  if (!title) return false;
+  const text = String(title).toLowerCase();
+  if (hasTerm(text, NOT_TOOL_TERMS)) return false;
+  return hasTerm(text, TOOL_TERMS);
+}
+
 function isKidsClothing(title) {
   if (!title) return false;
   const text = String(title).toLowerCase();
@@ -45,4 +106,4 @@ function isKidsClothing(title) {
   return !hasTerm(text, NOT_CLOTHING_TERMS);
 }
 
-module.exports = { isKidsClothing, KID_TERMS, APPAREL_TERMS };
+module.exports = { isKidsClothing, isMobilePhone, isHardwareTool, KID_TERMS, APPAREL_TERMS };

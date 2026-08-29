@@ -1,50 +1,29 @@
 {
   "requestsFinished": 4,
   "requestsFailed": 0,
-  "requestsRetries": 1,
+  "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
   "requestsFinishedPerMinute": 2,
-  "requestMinDurationMillis": 13023,
-  "requestMaxDurationMillis": 36264,
+  "requestMinDurationMillis": 25449,
+  "requestMaxDurationMillis": 35388,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 84524,
-  "crawlerStartedAt": "2026-08-29T08:38:06.083Z",
-  "crawlerFinishedAt": "2026-08-29T08:39:39.070Z",
-  "statsPersistedAt": "2026-08-29T08:39:39.070Z",
-  "crawlerRuntimeMillis": 99163,
-  "crawlerLastStartTimestamp": 1787992679907,
+  "requestTotalFinishedDurationMillis": 124203,
+  "crawlerStartedAt": "2026-08-29T10:05:56.568Z",
+  "crawlerFinishedAt": "2026-08-29T10:08:04.479Z",
+  "statsPersistedAt": "2026-08-29T10:08:04.479Z",
+  "crawlerRuntimeMillis": 129447,
+  "crawlerLastStartTimestamp": 1787997955032,
   "requestRetryHistogram": [
-    3,
-    null,
-    1
+    4
   ],
   "statsId": "1",
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 21131,
-  "requestTotalDurationMillis": 84524,
+  "requestAvgFinishedDurationMillis": 31051,
+  "requestTotalDurationMillis": 124203,
   "requestsTotal": 4,
   "requestsWithStatusCode": {
     "200": 4
   },
   "errors": {},
-  "retryErrors": {
-    "/home/arun/ArunProject/crawlit/node_modules/@crawlee/playwright/internals/utils/playwright-utils.js:168:17": {
-      "missing error code": {
-        "Error": {
-          "page.goto: Target page, context or browser has been closed": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "/home/arun/ArunProject/crawlit/node_modules/@crawlee/browser-pool/browser-pool.js:413:19": {
-      "missing error code": {
-        "Error": {
-          "browserController.newPage() failed: _3zn9KUWVNrv9I-WZYXNi": {
-            "count": 1
-          }
-        }
-      }
-    }
-  }
+  "retryErrors": {}
 }

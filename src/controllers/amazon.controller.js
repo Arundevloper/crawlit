@@ -4,7 +4,7 @@ const { getCachedFlipkart } = require('../services/flipkart.service');
 const { parseRangeParams, filterByPriceRange, parseDiscountPct } = require('../utils/price');
 const { isBrandedProduct } = require('../config/brands');
 const { computeBadges } = require('../utils/badges');
-const { isKidsClothing } = require('../config/exclusions');
+const { isKidsClothing, isMobilePhone, isHardwareTool } = require('../config/exclusions');
 
 const MIN_DISCOUNT = 30;
 
@@ -120,7 +120,14 @@ async function getHighDiscountDeals(req, res, next) {
     let filtered = dedupeVariants(filterByPriceRange(deduped, range))
       .filter((p) => p.discountPct !== null && p.discountPct > MIN_DISCOUNT)
       .filter((p) => isBrandedProduct(p.title, p.category))
-      .filter((p) => !isKidsClothing(p.title));
+      .filter((p) => !isKidsClothing(p.title))
+      .filter((p) => !isMobilePhone(p.title))
+      .filter((p) => !isHardwareTool(p.title))
+      // "mobile" and "tools" are retired categories. Some of their products
+      // carry no matchable pattern — a handset titled only "itel Ace 3 Shine"
+      // — so rows already crawled are excluded by category until they age
+      // out of the freshness window.
+      .filter((p) => !['mobile', 'tools'].includes(p.category));
 
     if (req.query.category) {
       filtered = filtered.filter((p) => p.category === req.query.category);

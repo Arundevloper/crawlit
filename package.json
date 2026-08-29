@@ -10,6 +10,8 @@
     "crawl:amazon": "node src/demos/amazon-crawl.mjs"
   },
   "dependencies": {
+    "@bull-board/api": "^9.5.0",
+    "@bull-board/express": "^9.5.0",
     "bullmq": "^6.1.2",
     "cors": "^2.8.5",
     "crawlee": "^3.18.0",
