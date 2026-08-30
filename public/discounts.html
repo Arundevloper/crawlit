@@ -1113,10 +1113,11 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
-    // On mobile, open deal links in the same tab so the OS can deep-link
-    // into the store app (Flipkart/Amazon) instead of opening a new browser tab.
+    // Open deal links in a new tab to keep the user's place on the feed.
+    // Note: Mobile OSes often block app deep-linking when opened in a new tab,
+    // so this will likely open the Flipkart/Amazon mobile website instead of the app.
     const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const linkTarget = isMobile ? '_self' : '_blank';
+    const linkTarget = '_blank';
 
     function renderSkeletons(count) {
       grid.innerHTML = Array.from({ length: count }).map(() => `
@@ -1190,7 +1191,7 @@
             ${(p.badges && p.badges.length)
               ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${escapeAttr(b.key)}">${b.label}</span>`).join('')}</div>`
               : ''}
-            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="noopener">
+            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}">
               <div class="title">${p.title}</div>
             </a>
             <div class="price-block">
@@ -1210,7 +1211,7 @@
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
               </button>
             </div>
-            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="noopener">Grab Deal →</a>
+            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}">Grab Deal →</a>
           </div>
         </div>
       `;
@@ -1239,6 +1240,7 @@
       'hot-deals':   '🔥',
       'steal-deals': '🤯',
       'mens-fashion':'👔',
+      'womens-fashion': '👗',
       'earbuds':     '🎧',
       'shoes':       '👟',
       'watch':       '⌚',
@@ -1257,6 +1259,8 @@
     };
 
     const MENS_FASHION_CATS = new Set(['clothes', 'innerwear', 'shoes', 'sandals', 'men-grooming', 'watch']);
+    const WOMENS_FASHION_CATS = new Set(['handbag', 'makeup', 'women-grooming', 'women-clothing', 'jewelry']);
+    const WOMENS_TERMS_RE = /\b(women|womens|woman|ladies|lady|girls|girl|kurti|kurtis|kurta set|saree|sari|lehenga|dress|dresses|bra|panties|panty|heels|flats|lipsticks|lipstick|eyeliner|mascara|jhumka|necklace|earrings|earring|mangalsutra|anklet|bangle|bangles|co-ord|coord|nighty|night suit|top|tops|tunic|gown|dupatta|palazzo|plazo|salwar|churidar)\b/i;
 
     function isMensFashion(p) {
       if (!p) return false;
@@ -1267,8 +1271,19 @@
       return false;
     }
 
+    function isWomensFashion(p) {
+      if (!p) return false;
+      const title = (p.title || '').toLowerCase();
+      if (/\b(men|mens|man|gentleman|boys|boy|beard|shaving)\b/i.test(title) && !/\b(women|ladies|girls)\b/i.test(title)) return false;
+      if (WOMENS_FASHION_CATS.has(p.category)) return true;
+      if (WOMENS_TERMS_RE.test(title)) return true;
+      if (p.category === 'sandals' && !/\b(men|mens)\b/i.test(title)) return true;
+      return false;
+    }
+
     function prettyLabel(key) {
       if (key === 'mens-fashion') return '👔 Men\'s Fashion';
+      if (key === 'womens-fashion') return '👗 Women\'s Fashion';
       const emoji = categoryEmojis[key] || '';
       const name = key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
       return emoji ? `${emoji} ${name}` : name;
@@ -1285,6 +1300,8 @@
         items = items.filter(p => (p.discountPct ?? 0) >= 85);
       } else if (currentCategory === 'mens-fashion') {
         items = items.filter(p => isMensFashion(p));
+      } else if (currentCategory === 'womens-fashion') {
+        items = items.filter(p => isWomensFashion(p));
       } else if (currentCategory !== 'all') {
         items = items.filter(p => p.category === currentCategory);
       }
@@ -1317,11 +1334,13 @@
       const counts = {};
       let stealCount = 0;
       let mensFashionCount = 0;
+      let womensFashionCount = 0;
       allProducts.forEach(p => {
         const c = p.category || 'other';
         counts[c] = (counts[c] || 0) + 1;
         if ((p.discountPct ?? 0) >= 85) stealCount++;
         if (isMensFashion(p)) mensFashionCount++;
+        if (isWomensFashion(p)) womensFashionCount++;
       });
       const keys = Object.keys(counts).sort((a, b) => {
         if (a === 'hot-deals') return -1;
@@ -1341,6 +1360,11 @@
       if (mensFashionCount > 0) {
         keys.splice(insertIdx, 0, 'mens-fashion');
         counts['mens-fashion'] = mensFashionCount;
+        insertIdx++;
+      }
+      if (womensFashionCount > 0) {
+        keys.splice(insertIdx, 0, 'womens-fashion');
+        counts['womens-fashion'] = womensFashionCount;
       }
 
       chips.hidden = keys.length < 2;

@@ -9,6 +9,8 @@ const WATCH_BRANDS = [
   'maxima', 'hmt', 'helix', 'giordano', 'swiss military', 'rolex', 'omega',
   'tag heuer', 'rado', 'g-shock', 'edifice', 'anne klein', 'kenneth cole',
   'carlington', 'daniel hechter', 'curren', 'benyar', 'naviforce',
+  'raga', 'titan raga', 'baby-g', 'baby g', 'sheen', 'enticer',
+  'shopoholic', 'the shopoholic', 'vyb', 'fastrack vyb', 'poze', 'sonata poze',
   // smart watches
   'noise', 'boat', 'fire-boltt', 'fireboltt', 'amazfit', 'garmin', 'apple',
   'samsung', 'oneplus', 'realme', 'redmi', 'xiaomi', 'huawei', 'honor',
@@ -26,7 +28,8 @@ const FOOTWEAR_BRANDS = [
   'columbus', 'sega', 'furo', 'roadster', 'hrx', 'allen solly',
   'louis philippe', 'van heusen', 'peter england', 'aldo', 'steve madden',
   'solethreads', 'aquasoft', 'walkaroo', 'flite', 'fausto', 'inc.5', 'catwalk',
-  'heel & buckle', 'metro shoes',
+  'heel & buckle', 'metro shoes', 'shoetopia', 'marc loire', 'truffle collection',
+  'carlton london',
 ];
 
 const CLOTHING_BRANDS = [
@@ -53,13 +56,34 @@ const CLOTHING_BRANDS = [
   'amazon brand - symbol', 'amazon brand - inkast', 'amazon brand - house & shields',
   'dennis lingo', 'veirdo', 'tbase', 'difference of opinion', 'bullmer',
   'maniac', 'lookmark', 'hellcat', 'tripr',
-  // Ethnic Wear
-  'manyavar', 'sojanya', 'fabindia', 'kisah', 'sanwara', 'vastramay',
-  'anand', 'shreekarnimfg', 'tathastu',
-  // Innerwear & Loungewear
-  'jockey', 'lux venus', 'lux cozi', 'lux', 'amul macho', 'amul comfy', 'amul',
-  'rupa frontline', 'rupa', 'dollar bigboss', 'dollar', 'vip', 'xyxx',
-  'damensch', 'bummer', 'sweet dreams', 'van heusen innerwear',
+  // Women's Western & Casual Wear (DealsSpy)
+  'tokyo talkies', 'popwings', 'leriya fashion', 'sassafras', 'urban rock',
+  'sanskrutihomes', 'appulse', 'pumpd', 'smowkly', 'wear lusso', 'barcino',
+  'fyltr', 'unikan', 'karara', 'street 9', 'berrylush', 'harpa', 'athena',
+  'vero moda', 'only', 'and', 'forever new', 'globus', 'faballey', 'zink london',
+  'madam', 'madame', 'kraus jeans', 'cover story', 'chemistry', 'eden ivy',
+  'symactive', 'myx', 'amazon brand - myx', 'amazon brand - eden ivy',
+  'amazon brand - symactive',
+  // Ethnic Wear (Kurtis, Sarees, Suits, Co-ords - DealsSpy)
+  'libas', 'rangriti', 'varanga', 'anouk', 'jaanvi fashion', 'sangria',
+  'aurelia', 'w for woman', 'biba', 'soch', 'fabindia', 'global desi',
+  'indya', 'house of indya', 'vishudh', 'gerua', 'gosriki', 'ryras',
+  'klosia', 'ziyaa', 'amayra', 'khushal k', 'isha fashion', 'siril',
+  'yashika', 'mirchi fashion', 'svatoh', 'iyisans', 'bee m pee', 'kanishk',
+  'manyavar', 'sojanya', 'kisah', 'sanwara', 'vastramay', 'anand',
+  'shreekarnimfg', 'tathastu',
+  // Lingerie, Loungewear & Innerwear (DealsSpy)
+  'clovia', 'zivame', 'enamor', 'alyne', 'jockey', 'lux venus', 'lux cozi',
+  'lux', 'amul macho', 'amul comfy', 'amul', 'rupa frontline', 'rupa',
+  'dollar bigboss', 'dollar', 'vip', 'xyxx', 'damensch', 'bummer',
+  'sweet dreams', 'van heusen innerwear', 'nykd', 'triumph', 'amante',
+  'zelocity', 'shyaway', 'wacoal', 'pee safe', 'peesafe',
+];
+
+const JEWELRY_BRANDS = [
+  'giva', 'mahi', 'sangria', 'mansiyaorange', 'voylla', 'yellow chimes',
+  'zaveri pearls', 'shining diva', 'prita', 'sukkhi', 'youbella',
+  'i jewels', 'peora', 'karatcart', 'atasi',
 ];
 
 const AUDIO_BRANDS = [
@@ -261,7 +285,9 @@ const BRAND_GATED = {
   gaming: GAMING_BRANDS,
   handbag: HANDBAG_BRANDS,
   clothes: CLOTHING_BRANDS,
+  'women-clothing': CLOTHING_BRANDS,
   innerwear: CLOTHING_BRANDS,
+  jewelry: JEWELRY_BRANDS,
 };
 
 // Categories where the brand must appear at the beginning of the title.
@@ -300,6 +326,7 @@ module.exports = {
   WATCH_BRANDS,
   FOOTWEAR_BRANDS,
   CLOTHING_BRANDS,
+  JEWELRY_BRANDS,
   AUDIO_BRANDS,
   MAKEUP_BRANDS,
   SKINCARE_BRANDS,

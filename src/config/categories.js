@@ -23,7 +23,8 @@ const CATEGORIES = [
   { key: 'purifier', query: 'air purifier' },
   { key: 'household', query: 'household items' },
   { key: 'shoes', query: 'nike adidas puma reebok red tape campus shoes' },
-  { key: 'sandals', query: 'bata sparx paragon sandals' },
+  { key: 'sandals', query: 'bata sparx shoetopia catwalk women sandals flats heels' },
+  { key: 'women-clothing', query: 'libas rangriti tokyo talkies sassafras women kurti dress' },
   { key: 'extension-board', query: 'extension board' },
   { key: 'birthday-party', query: 'birthday party supplies' },
   // DealsSpy-style staples: branded everyday consumables that dominate their feed
