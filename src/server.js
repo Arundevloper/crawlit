@@ -1,15 +1,22 @@
 require('dotenv').config();
 
 const app = require('./app');
-const { port } = require('./config/config');
+const { port, env } = require('./config/config');
 const { connectDB } = require('./config/db');
-const { scheduleRefreshJobs } = require('./queues/refresh.queue');
-const { startRefreshWorker } = require('./queues/refresh.worker');
 
 async function start() {
   await connectDB();
-  startRefreshWorker();
-  await scheduleRefreshJobs();
+
+  if (true) {
+    const { scheduleRefreshJobs } = require('./queues/refresh.queue');
+    const { startRefreshWorker } = require('./queues/refresh.worker');
+
+    startRefreshWorker();
+    await scheduleRefreshJobs();
+    console.log('Crawl workers started (production mode)');
+  } else {
+    console.log('Scraping disabled (local/dev mode) — set NODE_ENV=production to enable');
+  }
 
   app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

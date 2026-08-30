@@ -42,6 +42,8 @@ const PHONE_ACCESSORY_TERMS = [
   'case', 'cover', 'pouch', 'tempered glass', 'screen guard', 'screen protector',
   'charger', 'cable', 'adapter', 'holder', 'stand', 'mount', 'ring', 'skin',
   'earphone', 'earbud', 'headphone', 'powerbank', 'power bank', 'selfie',
+  'gamepad', 'controller', 'cooler', 'radiator', 'joystick', 'trigger', 'gaming',
+  'toy', 'learning', 'talking',
 ];
 
 // Computers quote memory and storage the same way handsets do
@@ -98,12 +100,30 @@ function isHardwareTool(title) {
   return hasTerm(text, TOOL_TERMS);
 }
 
+const PEST_CONTROL_TERMS = [
+  'repellent', 'repellant', 'rat trap', 'mouse trap', 'snake trap', 'insect killer',
+  'mosquito killer', 'pest control', 'cockroach killer', 'cockroach gel',
+  'lizard spray', 'rat spray', 'rodent spray', 'rat repellent', 'snake repellent',
+  'rodent repellent', 'lizard repellent', 'ant killer', 'termite killer',
+  'bedbug killer', 'bug zapper', 'fly trap', 'moth balls', 'insect repellent',
+  'rat poison', 'mosquito bat', 'mosquito racket',
+];
+
+function isPestControl(title) {
+  if (!title) return false;
+  const text = String(title).toLowerCase();
+  return PEST_CONTROL_TERMS.some((term) => text.includes(term));
+}
+
+const ADULT_TERMS = ['women', 'woman', 'ladies', 'adult', 'gym', 'yoga', 'workout', 'fitness'];
+
 function isKidsClothing(title) {
   if (!title) return false;
   const text = String(title).toLowerCase();
+  if (hasTerm(text, ADULT_TERMS)) return false;
   if (!hasTerm(text, KID_TERMS)) return false;
   if (!hasTerm(text, APPAREL_TERMS)) return false;
   return !hasTerm(text, NOT_CLOTHING_TERMS);
 }
 
-module.exports = { isKidsClothing, isMobilePhone, isHardwareTool, KID_TERMS, APPAREL_TERMS };
+module.exports = { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl, KID_TERMS, APPAREL_TERMS };

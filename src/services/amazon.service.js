@@ -1,5 +1,7 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
+const { isBrandedProduct } = require('../config/brands');
+const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const COLLECTION = 'amazon_products';
 
@@ -70,8 +72,21 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
   await crawler.run([{ url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`, label: 'SEARCH' }]);
   await requestQueue.drop();
 
-  const docs = products.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
-  await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
+  const validProducts = products.filter((p) => {
+    if (!p || !p.title || !p.url) return false;
+    const cat = category || p.category;
+    if (!isBrandedProduct(p.title, cat)) return false;
+    if (isKidsClothing(p.title)) return false;
+    if (isMobilePhone(p.title)) return false;
+    if (isHardwareTool(p.title)) return false;
+    if (isPestControl(p.title)) return false;
+    return true;
+  });
+
+  const docs = validProducts.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
+  if (docs.length) {
+    await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
+  }
 
   return docs;
 }
