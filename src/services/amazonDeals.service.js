@@ -1,5 +1,6 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
+const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const COLLECTION = 'amazon_deals';
 const DEALS_URL = 'https://www.amazon.in/deals';
@@ -57,9 +58,23 @@ async function crawlAmazonDeals(limit = 150) {
 
   await browser.close();
 
-  const result = [...products.values()].slice(0, limit).map((p) => ({ ...p, store: 'Amazon' }));
+  const validDeals = [...products.values()]
+    .slice(0, limit)
+    .filter((p) => {
+      if (!p || !p.title) return false;
+      if (p.discountPct !== null && p.discountPct < 30) return false;
+      if (isKidsClothing(p.title)) return false;
+      if (isMobilePhone(p.title)) return false;
+      if (isHardwareTool(p.title)) return false;
+      if (isPestControl(p.title)) return false;
+      return true;
+    });
 
-  await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
+  const result = validDeals.map((p) => ({ ...p, store: 'Amazon' }));
+
+  if (result.length) {
+    await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
+  }
 
   return result;
 }

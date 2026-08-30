@@ -1113,6 +1113,11 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
+    // On mobile, open deal links in the same tab so the OS can deep-link
+    // into the store app (Flipkart/Amazon) instead of opening a new browser tab.
+    const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const linkTarget = isMobile ? '_self' : '_blank';
+
     function renderSkeletons(count) {
       grid.innerHTML = Array.from({ length: count }).map(() => `
         <div class="skeleton">
@@ -1185,7 +1190,7 @@
             ${(p.badges && p.badges.length)
               ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${escapeAttr(b.key)}">${b.label}</span>`).join('')}</div>`
               : ''}
-            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="_blank" rel="noopener">
+            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="noopener">
               <div class="title">${p.title}</div>
             </a>
             <div class="price-block">
@@ -1205,7 +1210,7 @@
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
               </button>
             </div>
-            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="_blank" rel="noopener">Grab Deal →</a>
+            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="noopener">Grab Deal →</a>
           </div>
         </div>
       `;
@@ -1230,8 +1235,43 @@
       `;
     }
 
+    const categoryEmojis = {
+      'hot-deals':   '🔥',
+      'steal-deals': '🤯',
+      'mens-fashion':'👔',
+      'earbuds':     '🎧',
+      'shoes':       '👟',
+      'watch':       '⌚',
+      'smartwatch':  '⌚',
+      'handbag':     '👜',
+      'toys':        '🧸',
+      'kitchen-appliances': '🍳',
+      'skincare':    '✨',
+      'perfume':     '🧴',
+      'sunglasses':  '🕶️',
+      'luggage':     '🧳',
+      'backpack':    '🎒',
+      'innerwear':   '👕',
+      'sandals':     '🩴',
+      'home':        '🏠',
+    };
+
+    const MENS_FASHION_CATS = new Set(['clothes', 'innerwear', 'shoes', 'sandals', 'men-grooming', 'watch']);
+
+    function isMensFashion(p) {
+      if (!p) return false;
+      const title = (p.title || '').toLowerCase();
+      if (/\b(women|woman|ladies|girls|girl|baby|infant)\b/i.test(title)) return false;
+      if (MENS_FASHION_CATS.has(p.category)) return true;
+      if (/\b(men|mens|man|gentleman)\b/i.test(title)) return true;
+      return false;
+    }
+
     function prettyLabel(key) {
-      return key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      if (key === 'mens-fashion') return '👔 Men\'s Fashion';
+      const emoji = categoryEmojis[key] || '';
+      const name = key.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      return emoji ? `${emoji} ${name}` : name;
     }
 
     function priceOf(p) {
@@ -1241,7 +1281,13 @@
 
     function activeProducts() {
       let items = allProducts;
-      if (currentCategory !== 'all') items = items.filter(p => p.category === currentCategory);
+      if (currentCategory === 'steal-deals') {
+        items = items.filter(p => (p.discountPct ?? 0) >= 85);
+      } else if (currentCategory === 'mens-fashion') {
+        items = items.filter(p => isMensFashion(p));
+      } else if (currentCategory !== 'all') {
+        items = items.filter(p => p.category === currentCategory);
+      }
       if (storeFilter !== 'all') items = items.filter(p => (p.store || 'Amazon') === storeFilter);
       if (searchText) {
         const q = searchText.toLowerCase();
@@ -1269,9 +1315,13 @@
 
     function renderChips() {
       const counts = {};
+      let stealCount = 0;
+      let mensFashionCount = 0;
       allProducts.forEach(p => {
         const c = p.category || 'other';
         counts[c] = (counts[c] || 0) + 1;
+        if ((p.discountPct ?? 0) >= 85) stealCount++;
+        if (isMensFashion(p)) mensFashionCount++;
       });
       const keys = Object.keys(counts).sort((a, b) => {
         if (a === 'hot-deals') return -1;
@@ -1280,6 +1330,19 @@
         if (b === 'other') return -1;
         return counts[b] - counts[a];
       });
+
+      // Insert virtual chips right after "hot-deals"
+      let insertIdx = keys.indexOf('hot-deals') + 1;
+      if (stealCount > 0) {
+        keys.splice(insertIdx, 0, 'steal-deals');
+        counts['steal-deals'] = stealCount;
+        insertIdx++;
+      }
+      if (mensFashionCount > 0) {
+        keys.splice(insertIdx, 0, 'mens-fashion');
+        counts['mens-fashion'] = mensFashionCount;
+      }
+
       chips.hidden = keys.length < 2;
       chips.innerHTML = [
         `<button class="chip${currentCategory === 'all' ? ' active' : ''}" data-cat="all">All<span class="count">${allProducts.length}</span></button>`,

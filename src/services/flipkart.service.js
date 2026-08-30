@@ -1,6 +1,8 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
 const { convertLinks } = require('./earnkaro.service');
+const { isBrandedProduct } = require('../config/brands');
+const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const COLLECTION = 'flipkart_products';
 
@@ -121,9 +123,26 @@ async function crawlFlipkart(query = 'earbuds', limit = 10, category = null) {
     await browser.close();
   }
 
-  const docs = products.map((p) => ({ ...p, store: 'Flipkart', ...(category ? { category } : {}) }));
-  await convertLinks(docs);
-  await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
+  // Filter junk/unbranded products at scrape time:
+  // 1. Only recognized brands for gated categories (earbuds, shoes, watches, etc.)
+  // 2. Exclude kids apparel, mobile handsets, hardware tools
+  const validProducts = products.filter((p) => {
+    if (!p || !p.title || !p.url) return false;
+    const cat = category || p.category;
+    if (!isBrandedProduct(p.title, cat)) return false;
+    if (isKidsClothing(p.title)) return false;
+    if (isMobilePhone(p.title)) return false;
+    if (isHardwareTool(p.title)) return false;
+    if (isPestControl(p.title)) return false;
+    return true;
+  });
+
+  const docs = validProducts.map((p) => ({ ...p, store: 'Flipkart', ...(category ? { category } : {}) }));
+
+  if (docs.length) {
+    await convertLinks(docs);
+    await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
+  }
 
   return docs;
 }

@@ -4,9 +4,28 @@ const { getCachedFlipkart } = require('../services/flipkart.service');
 const { parseRangeParams, filterByPriceRange, parseDiscountPct } = require('../utils/price');
 const { isBrandedProduct } = require('../config/brands');
 const { computeBadges } = require('../utils/badges');
-const { isKidsClothing, isMobilePhone, isHardwareTool } = require('../config/exclusions');
+const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const MIN_DISCOUNT = 30;
+
+// High-speed response cache to serve multiple concurrent shoppers without
+// re-querying MongoDB and re-computing badges/deduplication on every request.
+const responseCache = new Map();
+const CACHE_TTL_MS = 60 * 1000; // 60 seconds TTL
+
+function getCache(key) {
+  const entry = responseCache.get(key);
+  if (entry && Date.now() - entry.timestamp < CACHE_TTL_MS) {
+    return entry.data;
+  }
+  responseCache.delete(key);
+  return null;
+}
+
+function setCache(key, data) {
+  if (responseCache.size > 50) responseCache.clear();
+  responseCache.set(key, { data, timestamp: Date.now() });
+}
 
 function titleWords(title) {
   return String(title || '')
@@ -108,6 +127,12 @@ async function refreshDeals(req, res, next) {
 
 async function getHighDiscountDeals(req, res, next) {
   try {
+    const cacheKey = req.originalUrl || JSON.stringify(req.query);
+    const cachedResponse = getCache(cacheKey);
+    if (cachedResponse) {
+      return res.json(cachedResponse);
+    }
+
     const [deals, searchProducts, flipkart] = await Promise.all([
       getCachedDeals(),
       getCachedProducts(),
@@ -146,6 +171,7 @@ async function getHighDiscountDeals(req, res, next) {
       .filter((p) => !isKidsClothing(p.title))
       .filter((p) => !isMobilePhone(p.title))
       .filter((p) => !isHardwareTool(p.title))
+      .filter((p) => !isPestControl(p.title))
       // "mobile" and "tools" are retired categories. Some of their products
       // carry no matchable pattern — a handset titled only "itel Ace 3 Shine"
       // — so rows already crawled are excluded by category until they age
@@ -162,8 +188,10 @@ async function getHighDiscountDeals(req, res, next) {
     filtered.sort((a, b) => new Date(b.firstSeenAt) - new Date(a.firstSeenAt));
 
     const withBadges = filtered.map((p) => ({ ...p, badges: computeBadges(p) }));
+    const payload = { minDiscount: MIN_DISCOUNT, count: withBadges.length, products: withBadges };
 
-    res.json({ minDiscount: MIN_DISCOUNT, count: withBadges.length, products: withBadges });
+    setCache(cacheKey, payload);
+    res.json(payload);
   } catch (err) {
     next(err);
   }
