@@ -7,7 +7,7 @@ const { connectDB } = require('./config/db');
 async function start() {
   await connectDB();
 
-  if (true) {
+  if (env === 'production') {
     const { scheduleRefreshJobs } = require('./queues/refresh.queue');
     const { startRefreshWorker } = require('./queues/refresh.worker');
 
