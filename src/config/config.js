@@ -18,8 +18,10 @@ module.exports = {
   mongoDbName: process.env.MONGO_DB_NAME || 'crawlit',
   redisUrl: process.env.REDIS_URL || 'redis://127.0.0.1:6379',
   refreshIntervalMs: Number(process.env.REFRESH_INTERVAL_MS) || 15 * 60 * 1000,
+  siteUrl: (process.env.SITE_URL || 'https://dealmint.in').replace(/\/$/, ''),
   adminUser: process.env.ADMIN_USER,
   adminPass: process.env.ADMIN_PASS,
+  amazonAssociateTag: process.env.AMAZON_ASSOCIATE_TAG,
   earnKaroApiToken: process.env.EARNKARO_API_TOKEN,
   earnKaroConvertOption: process.env.EARNKARO_CONVERT_OPTION || 'convert_only',
 };

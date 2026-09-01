@@ -3,6 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart and refreshed all day. Newest discounts first.">
+<link rel="canonical" href="https://dealmint.in/">
+<meta property="og:site_name" content="DealMint">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DealMint — High Discount Deals">
+<meta property="og:description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart and refreshed all day.">
+<meta property="og:url" content="https://dealmint.in/">
+<meta property="og:image" content="https://dealmint.in/dealmint-icon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DealMint — High Discount Deals">
+<meta name="twitter:description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart.">
+<meta name="twitter:image" content="https://dealmint.in/dealmint-icon.svg">
+<link rel="alternate" type="application/rss+xml" title="DealMint deals" href="/feed.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"DealMint","url":"https://dealmint.in/","description":"Deal tracking across Amazon and Flipkart.","publisher":{"@type":"Organization","name":"DealMint","logo":{"@type":"ImageObject","url":"https://dealmint.in/dealmint-icon.svg"}}}
+</script>
+<link rel="icon" type="image/svg+xml" href="/dealmint-icon.svg">
+<link rel="apple-touch-icon" href="/dealmint-icon.svg">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#6d28d9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="DealMint">
 <title>DealMint — High Discount Deals</title>
 <style>
   :root {
@@ -45,9 +67,9 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    background: linear-gradient(115deg, #4338ca 0%, #6d28d9 100%);
+    background: linear-gradient(115deg, #6d28d9 0%, #8b5cf6 100%);
     color: #fff;
-    box-shadow: 0 4px 16px rgba(76, 29, 149, 0.25);
+    box-shadow: 0 4px 16px rgba(76, 29, 149, 0.28);
   }
 
   .header-inner {
@@ -68,6 +90,20 @@
     color: inherit;
     min-width: 0;
   }
+
+  .logo-badge {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  }
+
+  .logo-badge img { display: block; }
 
   .logo-mark {
     flex: 0 0 auto;
@@ -90,18 +126,19 @@
   }
 
   header.site-header .brand-name {
-    font-size: 1.15rem;
+    font-size: 1.42rem;
     font-weight: 800;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
   }
 
   header.site-header .brand-name .accent {
-    color: #fde68a;
+    color: #fbbf24;
   }
 
   header.site-header .tagline {
     font-size: 0.72rem;
-    color: #e0e7ff;
+    color: #d8cdf5;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -420,7 +457,9 @@
 
   @media (max-width: 620px) {
     main { padding: 16px 14px 32px; }
-    .header-inner { padding: 10px 14px; }
+    .header-inner { padding: 8px 12px; }
+    .logo-badge { width: 38px; height: 38px; border-radius: 10px; }
+    .logo-badge img { width: 29px; height: 29px; }
     .tagline { display: none; }
     .grid { gap: 12px; }
     .card img { height: 120px; }
@@ -430,6 +469,9 @@
     .price { font-size: 1.12rem; }
     .discount-badge { font-size: 0.7rem; padding: 4px 7px; }
     .card-foot { gap: 4px; font-size: 0.66rem; }
+    /* The floating back-to-top button is fixed above the footer; leave it
+       clear space so it never covers the disclaimer text. */
+    .footer-bottom { padding-bottom: 64px; }
     .card-foot .store-tag { padding: 2px 6px; font-size: 0.64rem; }
     .card-foot .share-btn { width: 22px; height: 22px; }
     /* Narrow cards cannot fit "5 minutes ago" beside the store tag,
@@ -926,14 +968,31 @@
     max-width: 340px;
   }
 
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 2px;
+  }
+
+  .footer-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
   footer.site-footer .brand-name {
     color: #fff;
     font-weight: 800;
-    font-size: 1.05rem;
+    font-size: 1.18rem;
+    letter-spacing: -0.02em;
   }
 
+  /* Gold, as in the logo art — the muted violet read as disabled text. */
   footer.site-footer .brand-name .accent {
-    color: #c4b5fd;
+    color: #fbbf24;
   }
 
   .footer-desc {
@@ -982,9 +1041,9 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-8.6-8.6a2 2 0 0 1-.6-1.4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l8.4 8.4a2 2 0 0 1 0 2.8Z" transform="scale(0.9) translate(1.3 1.3)"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+      <a class="brand" href="/" aria-label="DealMint — deal tracking, all in one place">
+        <span class="logo-badge">
+          <img src="/dealmint-icon.svg" alt="" width="34" height="34">
         </span>
         <span class="brand-text">
           <span class="brand-name">Deal<span class="accent">Mint</span></span>
@@ -1074,13 +1133,26 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">Deal<span class="accent">Mint</span></span>
+        <a class="footer-logo" href="/" aria-label="DealMint home">
+          <span class="logo-badge footer-badge">
+            <img src="/dealmint-icon.svg" alt="" width="28" height="28">
+          </span>
+          <span class="brand-name">Deal<span class="accent">Mint</span></span>
+        </a>
         <span class="footer-desc">Tracking the best discounts across your favorite stores, refreshed automatically all day - so you never miss a deal.</span>
       </div>
       <div class="footer-links">
         <span class="col-title">Explore</span>
-        <a href="/">Home</a>
-        <a href="/discounts.html">Amazon Deals</a>
+        <a href="/">All Deals</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+        <a href="/contact.html#bug">Bug Report</a>
+      </div>
+      <div class="footer-links">
+        <span class="col-title">Legal</span>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/disclaimer.html">Disclaimer</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1145,7 +1217,9 @@
       return `${days} day${days === 1 ? '' : 's'} ago`;
     }
 
-    function escapeAttr(s) {
+    // Escapes for both attribute and text contexts. Product titles and prices
+    // come from third-party seller listings, so they are untrusted input.
+    function esc(s) {
       return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => (
         { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
       ));
@@ -1182,36 +1256,36 @@
         <div class="card${tier}">
           <div class="media">
             ${p.image
-              ? `<img src="${escapeAttr(p.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('afterbegin', document.getElementById('noImgTpl').innerHTML); this.onerror=null;">`
+              ? `<img src="${esc(p.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('afterbegin', document.getElementById('noImgTpl').innerHTML); this.onerror=null;">`
               : document.getElementById('noImgTpl').innerHTML}
-            <span class="discount-badge">${p.discountPct}% OFF</span>
+            <span class="discount-badge">${esc(p.discountPct)}% OFF</span>
             ${isNew ? '<span class="new-badge">NEW</span>' : ''}
           </div>
           <div class="body">
             ${(p.badges && p.badges.length)
-              ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${escapeAttr(b.key)}">${b.label}</span>`).join('')}</div>`
+              ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${esc(b.key)}">${esc(b.label)}</span>`).join('')}</div>`
               : ''}
-            <a class="card-link" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}">
-              <div class="title">${p.title}</div>
+            <a class="card-link" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}">
+              <div class="title">${esc(p.title)}</div>
             </a>
             <div class="price-block">
               <div class="price-row">
-                <span class="price">${p.price}</span>
-                <span class="mrp">${p.mrp || ''}</span>
+                <span class="price">${esc(p.price)}</span>
+                <span class="mrp">${esc(p.mrp || '')}</span>
               </div>
               ${savings ? `<span class="save">Save ₹${savings.toLocaleString('en-IN')}</span>` : ''}
             </div>
             <div class="card-foot">
-              <span class="store-tag ${storeClass}">${store}</span>
-              ${ratingNum ? `<span class="rating">★ ${ratingNum}</span>` : ''}
+              <span class="store-tag ${esc(storeClass)}">${esc(store)}</span>
+              ${ratingNum ? `<span class="rating">★ ${esc(ratingNum)}</span>` : ''}
               ${posted ? `<span class="posted-time"><span class="t-full">${posted}</span><span class="t-short">${timeAgoShort(p.firstSeenAt)}</span></span>` : ''}
               <button class="share-btn" type="button" aria-label="Share this deal"
-                      data-url="${escapeAttr(p.affiliateUrl || p.url)}" data-title="${escapeAttr(p.title)}"
-                      data-price="${escapeAttr(p.price)}" data-discount="${escapeAttr(p.discountPct)}">
+                      data-url="${esc(p.affiliateUrl || p.url)}" data-title="${esc(p.title)}"
+                      data-price="${esc(p.price)}" data-discount="${esc(p.discountPct)}">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
               </button>
             </div>
-            <a class="grab-btn" href="${escapeAttr(p.affiliateUrl || p.url)}" target="${linkTarget}">Grab Deal →</a>
+            <a class="grab-btn" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}">Grab Deal →</a>
           </div>
         </div>
       `;
@@ -1371,7 +1445,7 @@
       chips.innerHTML = [
         `<button class="chip${currentCategory === 'all' ? ' active' : ''}" data-cat="all">All<span class="count">${allProducts.length}</span></button>`,
         ...keys.map(k =>
-          `<button class="chip${currentCategory === k ? ' active' : ''}" data-cat="${k}">${prettyLabel(k)}<span class="count">${counts[k]}</span></button>`
+          `<button class="chip${currentCategory === k ? ' active' : ''}" data-cat="${esc(k)}">${esc(prettyLabel(k))}<span class="count">${counts[k]}</span></button>`
         ),
       ].join('');
     }
@@ -1473,8 +1547,19 @@
 
     const backToTop = document.getElementById('backToTop');
     backToTop.hidden = false;
+    // Hidden while the footer is on screen: the button is viewport-fixed and
+    // would otherwise sit on top of the footer text.
+    let footerVisible = false;
+    const footerEl = document.querySelector('footer');
+    if (footerEl && 'IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        footerVisible = entries[0].isIntersecting;
+        updateBackToTop();
+      }, { threshold: 0 }).observe(footerEl);
+    }
+
     function updateBackToTop() {
-      backToTop.classList.toggle('visible', window.scrollY > 300);
+      backToTop.classList.toggle('visible', window.scrollY > 300 && !footerVisible);
     }
     window.addEventListener('scroll', updateBackToTop, { passive: true });
     updateBackToTop();

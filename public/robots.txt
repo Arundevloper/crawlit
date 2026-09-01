@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Admin and API surfaces are not useful to search engines
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://dealmint.in/sitemap.xml
