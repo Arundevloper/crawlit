@@ -1,5 +1,6 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
+const { tagAmazonProducts } = require('../utils/affiliate');
 const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const COLLECTION = 'amazon_deals';
@@ -9,6 +10,9 @@ async function crawlAmazonDeals(limit = 150) {
   const { chromium } = await import('playwright');
 
   const browser = await chromium.launch();
+  // try/finally: without it, any throw between here and browser.close() leaks
+  // a Chromium process for the lifetime of the worker.
+  try {
   const page = await browser.newPage({
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     locale: 'en-IN',
@@ -56,7 +60,6 @@ async function crawlAmazonDeals(limit = 150) {
     await page.waitForTimeout(1500);
   }
 
-  await browser.close();
 
   const validDeals = [...products.values()]
     .slice(0, limit)
@@ -72,11 +75,15 @@ async function crawlAmazonDeals(limit = 150) {
 
   const result = validDeals.map((p) => ({ ...p, store: 'Amazon' }));
 
-  if (result.length) {
-    await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
-  }
+    if (result.length) {
+      tagAmazonProducts(result);
+      await upsertProducts(getDb().collection(COLLECTION), result, 'asin');
+    }
 
-  return result;
+    return result;
+  } finally {
+    await browser.close().catch(() => {});
+  }
 }
 
 async function getCachedDeals() {

@@ -1,0 +1,294 @@
+/* Shared chrome + prose styles for DealMint content pages.
+   The deals page keeps its own inline CSS; this covers everything else. */
+
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --text: #14181f;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --brand: #6d28d9;
+  --brand-light: #8b5cf6;
+  --gold: #fbbf24;
+  --footer-bg: #0b1120;
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a { color: var(--brand); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(115deg, #6d28d9 0%, #8b5cf6 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(76, 29, 149, 0.28);
+}
+
+.header-inner {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.logo-badge {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.logo-badge img { display: block; }
+
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+
+.brand-name {
+  font-size: 1.42rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-name .accent { color: var(--gold); }
+
+.tagline {
+  font-size: 0.72rem;
+  color: #d8cdf5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-nav { display: flex; align-items: center; gap: 8px; }
+
+.header-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #e0e7ff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.header-nav .nav-link:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+
+.header-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.92);
+  color: #4338ca;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Page body ---------- */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.page-eyebrow {
+  display: inline-block;
+  background: #ede9fe;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+h1 { font-size: 2rem; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.02em; }
+
+.lede { color: var(--text-muted); font-size: 1.02rem; margin: 0 0 28px; }
+
+.card-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+
+.card-panel h2 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.card-panel h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 18px 0 6px;
+}
+
+.card-panel p { margin: 0 0 12px; }
+.card-panel p:last-child { margin-bottom: 0; }
+.card-panel ul { margin: 0 0 12px; padding-left: 20px; }
+.card-panel li { margin-bottom: 6px; }
+
+.muted { color: var(--text-muted); font-size: 0.9rem; }
+
+.updated {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.callout {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  font-size: 0.92rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+
+.btn.secondary {
+  background: var(--surface);
+  color: var(--brand);
+  border: 1px solid var(--border);
+}
+
+.btn:hover { filter: brightness(1.08); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  position: relative;
+  background: var(--footer-bg);
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(115deg, #6d28d9 0%, #8b5cf6 100%);
+}
+
+.footer-inner {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 28px 20px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-brand { display: flex; flex-direction: column; gap: 8px; max-width: 340px; }
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-badge { width: 36px; height: 36px; border-radius: 10px; box-shadow: none; }
+
+.site-footer .brand-name { color: #fff; font-size: 1.18rem; }
+.site-footer .brand-name .accent { color: var(--gold); }
+.footer-desc { line-height: 1.5; }
+
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+
+.footer-links .col-title {
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.footer-links a { color: #94a3b8; text-decoration: none; transition: color 0.15s ease; }
+.footer-links a:hover { color: #fff; }
+
+.footer-bottom {
+  max-width: 1460px;
+  margin: 22px auto 0;
+  padding: 14px 20px 20px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+@media (max-width: 620px) {
+  .header-inner { padding: 8px 12px; }
+  .logo-badge { width: 38px; height: 38px; border-radius: 10px; }
+  .logo-badge img { width: 29px; height: 29px; }
+  .tagline { display: none; }
+  main { padding: 22px 16px 40px; }
+  h1 { font-size: 1.55rem; }
+  .card-panel { padding: 18px 16px; }
+}

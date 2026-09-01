@@ -1,5 +1,6 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
+const { tagAmazonProducts } = require('../utils/affiliate');
 const { isBrandedProduct } = require('../config/brands');
 const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
@@ -85,6 +86,7 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
 
   const docs = validProducts.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
   if (docs.length) {
+    tagAmazonProducts(docs);
     await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
   }
 
