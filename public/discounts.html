@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crawl It — High Discount Deals</title>
+<title>DealMint — High Discount Deals</title>
 <style>
   :root {
     --bg: #f6f7fb;
@@ -987,7 +987,7 @@
           <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-8.6-8.6a2 2 0 0 1-.6-1.4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l8.4 8.4a2 2 0 0 1 0 2.8Z" transform="scale(0.9) translate(1.3 1.3)"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></svg>
         </span>
         <span class="brand-text">
-          <span class="brand-name">Crawl<span class="accent">It</span></span>
+          <span class="brand-name">Deal<span class="accent">Mint</span></span>
           <span class="tagline">deal tracking, all in one place</span>
         </span>
       </a>
@@ -1074,8 +1074,8 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-name">Crawl<span class="accent">It</span></span>
-        <span class="footer-desc">Tracking the best discounts across your favorite stores, refreshed automatically all day — so you never miss a deal.</span>
+        <span class="brand-name">Deal<span class="accent">Mint</span></span>
+        <span class="footer-desc">Tracking the best discounts across your favorite stores, refreshed automatically all day - so you never miss a deal.</span>
       </div>
       <div class="footer-links">
         <span class="col-title">Explore</span>
@@ -1084,7 +1084,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 CrawlIt. All rights reserved.</span>
+      <span>&copy; 2026 dealmint.in. All rights reserved.</span>
       <span>Prices &amp; availability are subject to change on the seller's site.</span>
     </div>
   </footer>
@@ -1419,7 +1419,7 @@
       viewToggle.querySelectorAll('button').forEach((b) => {
         b.classList.toggle('active', b.dataset.cols === String(cols));
       });
-      try { localStorage.setItem('crawlit:cols', cols); } catch (err) { /* private mode */ }
+      try { localStorage.setItem('dealmint.in:cols', cols); } catch (err) { /* private mode */ }
       if (rerender) renderPage(1);
     }
 
@@ -1429,7 +1429,7 @@
     });
 
     let savedCols = '';
-    try { savedCols = localStorage.getItem('crawlit:cols') || ''; } catch (err) { /* private mode */ }
+    try { savedCols = localStorage.getItem('dealmint.in:cols') || ''; } catch (err) { /* private mode */ }
     // Default: six across on desktop. Mobile is unaffected — the column
     // overrides only apply above 621px, where the responsive rules cap it at 2.
     applyCols(['2', '4', '6', '12'].includes(savedCols) ? savedCols : '6');
@@ -1450,7 +1450,7 @@
       e.stopPropagation();
 
       const { url, title, price, discount } = btn.dataset;
-      const text = `${title}\n${price} (${discount}% off)\n\nvia CrawlIt`;
+      const text = `${title}\n${price} (${discount}% off)\n\nvia dealmint.in`;
 
       if (navigator.share) {
         try {
