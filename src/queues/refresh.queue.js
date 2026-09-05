@@ -1,13 +1,14 @@
 const { Queue } = require('bullmq');
 const { connection } = require('../config/redis');
 const { refreshIntervalMs } = require('../config/config');
-const { CATEGORIES } = require('../config/categories');
+const { CATEGORIES, MYNTRA_QUERIES } = require('../config/categories');
 
 const QUEUE_NAME = 'refresh';
 const CATEGORY_LIMIT = 3;
 // Flipkart reads every product off a single search page, so a larger limit
 // costs no extra page loads — unlike Amazon, which visits each product page.
 const FLIPKART_LIMIT = 10;
+const MYNTRA_LIMIT = 10;
 
 const refreshQueue = new Queue(QUEUE_NAME, { connection });
 
@@ -21,6 +22,12 @@ const JOBS = [
     name: `flipkart-search:${c.key}`,
     data: { query: c.query, limit: FLIPKART_LIMIT, category: c.key },
   })),
+  ...Object.entries(MYNTRA_QUERIES).flatMap(([key, queries]) =>
+    [].concat(queries).map((query, i) => ({
+      name: `myntra-search:${key}${i ? `:${i}` : ''}`,
+      data: { query, limit: MYNTRA_LIMIT, category: key },
+    })),
+  ),
 ];
 
 async function scheduleRefreshJobs() {

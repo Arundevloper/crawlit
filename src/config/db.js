@@ -17,13 +17,14 @@ async function connectDB() {
   await client.connect();
   db = client.db(mongoDbName);
 
-  const collections = ['amazon_products', 'amazon_deals', 'flipkart_products'];
+  const collections = ['amazon_products', 'amazon_deals', 'flipkart_products', 'myntra_products'];
 
   await Promise.all([
     // Unique identity indexes
     db.collection('amazon_products').createIndex({ url: 1 }, { unique: true }),
     db.collection('amazon_deals').createIndex({ asin: 1 }, { unique: true }),
     db.collection('flipkart_products').createIndex({ url: 1 }, { unique: true }),
+    db.collection('myntra_products').createIndex({ url: 1 }, { unique: true }),
 
     // High-performance query index for findRecent (filters by lastSeenAt, sorts by firstSeenAt)
     ...collections.map((col) =>

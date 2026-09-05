@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="cuelinks-verification" content="VERIFY-CL-HAWWUZH0">
-<meta name="description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart and refreshed all day. Newest discounts first.">
+<meta name="description" content="Live deals with more than 30% off, tracked across Amazon, Flipkart and Myntra and refreshed all day. Newest discounts first.">
 <link rel="canonical" href="https://dealmint.in/">
 <meta property="og:site_name" content="DealMint">
 <meta property="og:type" content="website">
 <meta property="og:title" content="DealMint — High Discount Deals">
-<meta property="og:description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart and refreshed all day.">
+<meta property="og:description" content="Live deals with more than 30% off, tracked across Amazon, Flipkart and Myntra and refreshed all day.">
 <meta property="og:url" content="https://dealmint.in/">
 <meta property="og:image" content="https://dealmint.in/dealmint-icon.svg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DealMint — High Discount Deals">
-<meta name="twitter:description" content="Live deals with more than 30% off, tracked across Amazon and Flipkart.">
+<meta name="twitter:description" content="Live deals with more than 30% off, tracked across Amazon, Flipkart and Myntra.">
 <meta name="twitter:image" content="https://dealmint.in/dealmint-icon.svg">
 <link rel="alternate" type="application/rss+xml" title="DealMint deals" href="/feed.xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"DealMint","url":"https://dealmint.in/","description":"Deal tracking across Amazon and Flipkart.","publisher":{"@type":"Organization","name":"DealMint","logo":{"@type":"ImageObject","url":"https://dealmint.in/dealmint-icon.svg"}}}
+{"@context":"https://schema.org","@type":"WebSite","name":"DealMint","url":"https://dealmint.in/","description":"Deal tracking across Amazon, Flipkart and Myntra.","publisher":{"@type":"Organization","name":"DealMint","logo":{"@type":"ImageObject","url":"https://dealmint.in/dealmint-icon.svg"}}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/dealmint-icon.svg">
 <link rel="apple-touch-icon" href="/dealmint-icon.svg">
@@ -261,6 +261,7 @@
   .live-stat { color: var(--text-muted); }
   .live-stat strong { color: var(--text); font-weight: 800; }
   .live-sep { color: var(--border); }
+  .l-short { display: none; }
 
   /* ---------- Toolbar: search / sort / price ---------- */
   .toolbar {
@@ -351,7 +352,11 @@
   }
 
   @media (max-width: 620px) {
-    .toolbar select { flex: 1 1 45%; }
+    .toolbar { gap: 8px; margin-bottom: 10px; }
+    .toolbar select { flex: 1 1 45%; min-width: 0; padding: 10px 10px; font-size: 0.84rem; }
+    /* Phones are capped at two columns, so the per-row picker would be a
+       control that does nothing. Hide it rather than explain it. */
+    .view-toggle { display: none; }
   }
 
   /* ---------- NEW badge ---------- */
@@ -393,6 +398,96 @@
   .back-to-top:hover {
     background: #4338ca;
     transform: translateY(-2px);
+  }
+
+
+  /* ---------- Store tabs (Amazon / Flipkart) ---------- */
+  .store-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 14px 0 10px;
+  }
+
+  .store-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  }
+
+  .store-tab:hover { transform: translateY(-1px); }
+
+  .store-tab .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .store-tab .count {
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    background: #f1f5f9;
+    padding: 1px 8px;
+    border-radius: 999px;
+  }
+
+  .store-tab.all { color: var(--brand); }
+  .store-tab.amazon { color: #b45309; }
+  .store-tab.flipkart { color: #1d4ed8; }
+  .store-tab.myntra { color: #be185d; }
+
+  .store-tab.active { border-color: currentColor; }
+  .store-tab.all.active { background: #ede9fe; }
+  .store-tab.amazon.active { background: #fff3e0; }
+  .store-tab.flipkart.active { background: #e6f0fd; }
+  .store-tab.myntra.active { background: #fce7f3; }
+  .store-tab.active .count { background: rgba(255, 255, 255, 0.7); color: inherit; }
+
+  .store-tab:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  /* Phones: one segmented control instead of a 2×2 grid of pills. Names
+     only — the "All" chip below already carries the selected store's count. */
+  @media (max-width: 620px) {
+    .store-tabs {
+      flex-wrap: nowrap;
+      gap: 3px;
+      padding: 3px;
+      margin: 10px 0 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .store-tab {
+      flex: 1 1 0;
+      min-width: 0;
+      justify-content: center;
+      gap: 5px;
+      padding: 9px 4px;
+      border: none;
+      border-radius: 9px;
+      font-size: 0.8rem;
+      background: transparent;
+      white-space: nowrap;
+    }
+    .store-tab:hover { transform: none; }
+    .store-tab .dot { width: 7px; height: 7px; }
+    .store-tab .count,
+    .store-tab .tab-word { display: none; }
+    .store-tab.active { box-shadow: inset 0 0 0 1.5px currentColor; }
+  }
+  @media (max-width: 340px) {
+    .store-tab { font-size: 0.72rem; gap: 4px; }
   }
 
   /* ---------- Category chips ---------- */
@@ -463,25 +558,31 @@
     .logo-badge img { width: 29px; height: 29px; }
     .tagline { display: none; }
     .grid { gap: 12px; }
-    .card img { height: 120px; }
-    .card .media { min-height: 120px; }
-    .card .body { padding: 10px 11px 10px; }
-    .card .title { font-size: 0.8rem; margin-bottom: 8px; }
-    .price { font-size: 1.12rem; }
-    .discount-badge { font-size: 0.7rem; padding: 4px 7px; }
-    .card-foot { gap: 4px; font-size: 0.66rem; }
+    /* On a phone the live bar wraps; a stranded separator at a line end
+       reads as a typo. */
+    .live-sep { display: none; }
+    .live-bar { padding: 7px 12px; gap: 10px; margin-bottom: 10px; font-size: 0.78rem; }
+    .live-bar .l-full { display: none; }
+    .live-bar .l-short { display: inline; }
+    .page-heading { margin-bottom: 12px; }
+    h1 { font-size: 1.35rem; }
+    #status { margin: 8px 0; }
+    .chips { padding: 2px 0 6px; scrollbar-width: none; }
+    /* Secondary controls still need to be tappable: 32px+ tall. */
+    .chip { padding: 8px 14px; }
+    .view-toggle button { min-height: 32px; }
     /* The floating back-to-top button is fixed above the footer; leave it
        clear space so it never covers the disclaimer text. */
     .footer-bottom { padding-bottom: 64px; }
-    .card-foot .store-tag { padding: 2px 6px; font-size: 0.64rem; }
-    .card-foot .share-btn { width: 22px; height: 22px; }
-    /* Narrow cards cannot fit "5 minutes ago" beside the store tag,
-       rating and share button — use the compact form instead. */
-    .card-foot .t-full { display: none; }
-    .card-foot .t-short { display: inline; }
+    /* Card rules for phones live at the end of the card section. Declared
+       here they lose to the base card rules further down, which share their
+       specificity and come later in the file. */
   }
 
-  @media (max-width: 360px) {
+  /* Two columns hold down to 330px (cards ~145px wide). Only genuinely tiny
+     screens drop to one. Exclusive bound: 360px is a common Android width
+     and must keep two columns. */
+  @media (max-width: 329px) {
     .grid { grid-template-columns: 1fr; }
   }
 
@@ -513,7 +614,6 @@
   .grid.cols-6 .card-foot .t-short { display: inline; }
   .grid.cols-6 .card-foot { gap: 5px; font-size: 0.68rem; }
   .grid.cols-6 .card-foot .store-tag { padding: 2px 6px; font-size: 0.64rem; }
-  .grid.cols-6 .card-foot .share-btn { width: 22px; height: 22px; }
 
   .grid.cols-12 .card img,
   .grid.cols-12 .card .media { height: 92px; min-height: 92px; }
@@ -525,6 +625,7 @@
   .grid.cols-12 .new-badge,
   .grid.cols-12 .fomo-row,
   .grid.cols-12 .save,
+  .grid.cols-12 .share-btn,
   .grid.cols-12 .card-foot { display: none; }
   .grid.cols-12 .grab-btn { font-size: 0.64rem; padding: 5px 4px; margin-top: 6px; }
 
@@ -582,7 +683,7 @@
     z-index: 2;
     display: block;
     margin-top: 8px;
-    padding: 7px 10px;
+    padding: 9px 10px;
     border-radius: 8px;
     background: linear-gradient(135deg, #4338ca, #6d28d9);
     color: #fff;
@@ -682,7 +783,7 @@
 
   .mrp {
     text-decoration: line-through;
-    color: #9ca3af;
+    color: #6b7280;
     font-size: 0.74rem;
   }
 
@@ -722,6 +823,8 @@
     color: #b45309;
     white-space: nowrap;
   }
+
+  .card-foot .rating.low { color: var(--text-muted); }
 
   .card-foot .posted-time {
     margin-left: auto;
@@ -807,18 +910,24 @@
 
   .store-tag.amazon { background: #fff3e0; color: #b45309; }
   .store-tag.flipkart { background: #e6f0fd; color: #1d4ed8; }
+  .store-tag.myntra { background: #fce7f3; color: #be185d; }
 
   /* ---------- Share button ---------- */
+  /* Sits on the image's top-right corner (the discount badge holds the
+     left). Out of the footer flow, so a two-column phone card keeps store,
+     rating and age on one line and the button can be thumb-sized. */
   .share-btn {
-    position: relative;
-    z-index: 2;
-    flex: 0 0 auto;
-    width: 25px;
-    height: 25px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid var(--border);
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.96);
     color: var(--text-muted);
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.14);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -841,6 +950,28 @@
   .share-btn:focus-visible {
     outline: 2px solid var(--brand);
     outline-offset: 2px;
+  }
+
+  /* ---------- Card: phone layout ---------- */
+  @media (max-width: 620px) {
+    .card img { height: 128px; }
+    .card .media { min-height: 128px; }
+    .card .body { padding: 10px 11px 10px; }
+    /* A ~160px card fits ~20 characters a line; two lines cut most product
+       names before the model or size. Three lines carry the name. */
+    .card .title { -webkit-line-clamp: 3; }
+    .discount-badge { font-size: 0.7rem; padding: 4px 7px; }
+    /* Written with the grid in the selector so they outrank the
+       .grid.cols-6 footer rules, which otherwise apply on phones too. */
+    .grid .card .card-foot { gap: 5px; font-size: 0.7rem; }
+    .grid .card .card-foot .store-tag { padding: 2px 6px; font-size: 0.66rem; }
+    /* A ~150px card cannot fit "52 minutes ago" beside store and rating. */
+    .card-foot .t-full { display: none; }
+    .card-foot .t-short { display: inline; }
+    /* Thumb-sized targets: 40px+ is the working minimum for touch. */
+    .share-btn { width: 36px; height: 36px; top: 6px; right: 6px; }
+    .share-btn svg { width: 16px; height: 16px; }
+    .grab-btn { padding: 12px 10px; font-size: 0.82rem; }
   }
 
   /* ---------- Toast ---------- */
@@ -1051,20 +1182,13 @@
           <span class="tagline">deal tracking, all in one place</span>
         </span>
       </a>
-      <nav class="header-nav">
-        <a class="nav-link active" href="/">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
-          Home
-        </a>
-      </nav>
+
     </div>
   </header>
 
   <main>
     <div class="page-heading">
-      <span class="category-badge">Amazon &amp; Flipkart</span>
       <h1>High Discount Deals</h1>
-      <p class="subtitle">Products with more than 30% off and MRP up to ₹10,000, sourced from amazon.in and flipkart.com</p>
     </div>
 
     <div class="live-bar" id="liveBar" hidden></div>
@@ -1086,11 +1210,6 @@
         <option value="500-2000">₹500 – ₹2,000</option>
         <option value="2000-10000">₹2,000 – ₹10,000</option>
       </select>
-      <select id="storeSelect" aria-label="Filter by store">
-        <option value="all">All stores</option>
-        <option value="Amazon">Amazon</option>
-        <option value="Flipkart">Flipkart</option>
-      </select>
       <div class="view-toggle" id="viewToggle" role="group" aria-label="Items per row">
         <button type="button" data-cols="2" aria-label="Show 2 items per row" title="2 per row">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
@@ -1111,6 +1230,7 @@
       </div>
     </div>
 
+    <div class="store-tabs" id="storeTabs" role="tablist" aria-label="Filter by store"></div>
     <div class="chips" id="chips" hidden></div>
     <div id="status">Loading deals…</div>
     <div class="grid" id="grid"></div>
@@ -1240,7 +1360,6 @@
 
     function cardHtml(p) {
       const posted = timeAgo(p.firstSeenAt);
-      const isNew = p.firstSeenAt && (Date.now() - new Date(p.firstSeenAt).getTime()) < 60 * 60 * 1000;
       const store = p.store || 'Amazon';
       const storeClass = store.toLowerCase();
       // Amazon returns "3.5 out of 5 stars", Flipkart returns "3.5" — keep
@@ -1257,36 +1376,35 @@
         <div class="card${tier}">
           <div class="media">
             ${p.image
-              ? `<img src="${esc(p.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('afterbegin', document.getElementById('noImgTpl').innerHTML); this.onerror=null;">`
+              ? `<img src="${esc(p.image)}" alt="${esc(String(p.title || '').slice(0, 80))}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('afterbegin', document.getElementById('noImgTpl').innerHTML); this.onerror=null;">`
               : document.getElementById('noImgTpl').innerHTML}
             <span class="discount-badge">${esc(p.discountPct)}% OFF</span>
-            ${isNew ? '<span class="new-badge">NEW</span>' : ''}
           </div>
           <div class="body">
             ${(p.badges && p.badges.length)
               ? `<div class="fomo-row">${p.badges.map(b => `<span class="fomo fomo-${esc(b.key)}">${esc(b.label)}</span>`).join('')}</div>`
               : ''}
-            <a class="card-link" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}">
+            <a class="card-link" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="nofollow sponsored noopener" title="${esc(p.title)}">
               <div class="title">${esc(p.title)}</div>
             </a>
             <div class="price-block">
               <div class="price-row">
-                <span class="price">${esc(p.price)}</span>
-                <span class="mrp">${esc(p.mrp || '')}</span>
+                <span class="price">${esc(fmtPrice(p.price))}</span>
+                <span class="mrp">${esc(p.mrp ? fmtPrice(p.mrp) : '')}</span>
               </div>
               ${savings ? `<span class="save">Save ₹${savings.toLocaleString('en-IN')}</span>` : ''}
             </div>
             <div class="card-foot">
               <span class="store-tag ${esc(storeClass)}">${esc(store)}</span>
-              ${ratingNum ? `<span class="rating">★ ${esc(ratingNum)}</span>` : ''}
-              ${posted ? `<span class="posted-time"><span class="t-full">${posted}</span><span class="t-short">${timeAgoShort(p.firstSeenAt)}</span></span>` : ''}
+              ${ratingNum ? `<span class="rating${Number(ratingNum) < 3.5 ? ' low' : ''}">★ ${esc(ratingNum)}</span>` : ''}
+              ${posted ? `<span class="posted-time" title="${esc(posted)}"><span class="t-full">${posted}</span><span class="t-short">${timeAgoShort(p.firstSeenAt)}</span></span>` : ''}
               <button class="share-btn" type="button" aria-label="Share this deal"
                       data-url="${esc(p.affiliateUrl || p.url)}" data-title="${esc(p.title)}"
-                      data-price="${esc(p.price)}" data-discount="${esc(p.discountPct)}">
+                      data-price="${esc(fmtPrice(p.price))}" data-discount="${esc(p.discountPct)}">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
               </button>
             </div>
-            <a class="grab-btn" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}">Grab Deal →</a>
+            <a class="grab-btn" href="${esc(p.affiliateUrl || p.url)}" target="${linkTarget}" rel="nofollow sponsored noopener">Grab Deal →</a>
           </div>
         </div>
       `;
@@ -1296,18 +1414,20 @@
 
     function renderLiveBar() {
       if (!allProducts.length) { liveBar.hidden = true; return; }
-      const hot = allProducts.filter(p => (p.discountPct || 0) >= 70).length;
       const hourAgo = Date.now() - 60 * 60 * 1000;
       const freshCount = allProducts.filter(p => new Date(p.firstSeenAt).getTime() > hourAgo).length;
+      const newest = allProducts.reduce((m, p) => Math.max(m, new Date(p.lastSeenAt || 0).getTime()), 0);
+      const updated = newest ? timeAgo(new Date(newest).toISOString()).toLowerCase() : '';
+      const shortAge = newest ? timeAgoShort(new Date(newest).toISOString()) : '';
+      const updatedShort = shortAge === 'now' ? 'just now' : `${shortAge} ago`;
 
       liveBar.hidden = false;
+      // Two phrasings: the full one for desktop, a shorter one that fits a
+      // phone's width on a single line (CSS picks which is shown).
       liveBar.innerHTML = `
         <span class="live-dot">LIVE</span>
-        <span class="live-stat"><strong>${allProducts.length}</strong> deals tracked</span>
-        <span class="live-sep">|</span>
-        <span class="live-stat"><strong>${hot}</strong> above 70% off</span>
-        <span class="live-sep">|</span>
-        <span class="live-stat"><strong>${freshCount}</strong> found in the last hour</span>
+        <span class="live-stat"><strong>${freshCount}</strong> new deal${freshCount === 1 ? '' : 's'} <span class="l-full">in the last hour</span><span class="l-short">this hour</span></span>
+        ${updated ? `<span class="live-sep">|</span><span class="live-stat"><span class="l-full">Updated ${esc(updated)}</span><span class="l-short">· updated ${esc(updatedShort)}</span></span>` : ''}
       `;
     }
 
@@ -1369,6 +1489,19 @@
       return Number.isFinite(n) ? n : null;
     }
 
+    // Stores print prices differently: Amazon "₹219.00", Myntra "₹5465",
+    // Flipkart "₹3,299". Show one format — Indian grouping, no ".00" —
+    // and fall back to the raw text when it is not a plain number.
+    function fmtPrice(raw) {
+      const text = String(raw == null ? '' : raw).trim();
+      if (!text) return '';
+      const n = Number(text.replace(/[₹,\s]/g, ''));
+      if (!Number.isFinite(n)) return text;
+      return '₹' + (Number.isInteger(n)
+        ? n.toLocaleString('en-IN')
+        : n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    }
+
     function activeProducts() {
       let items = allProducts;
       if (currentCategory === 'steal-deals') {
@@ -1410,7 +1543,11 @@
       let stealCount = 0;
       let mensFashionCount = 0;
       let womensFashionCount = 0;
-      allProducts.forEach(p => {
+      // Count within the selected store so chip numbers agree with the tab.
+      const inStore = storeFilter === 'all'
+        ? allProducts
+        : allProducts.filter(p => (p.store || 'Amazon') === storeFilter);
+      inStore.forEach(p => {
         const c = p.category || 'other';
         counts[c] = (counts[c] || 0) + 1;
         if ((p.discountPct ?? 0) >= 85) stealCount++;
@@ -1444,7 +1581,7 @@
 
       chips.hidden = keys.length < 2;
       chips.innerHTML = [
-        `<button class="chip${currentCategory === 'all' ? ' active' : ''}" data-cat="all">All<span class="count">${allProducts.length}</span></button>`,
+        `<button class="chip${currentCategory === 'all' ? ' active' : ''}" data-cat="all">All<span class="count">${inStore.length}</span></button>`,
         ...keys.map(k =>
           `<button class="chip${currentCategory === k ? ' active' : ''}" data-cat="${esc(k)}">${esc(prettyLabel(k))}<span class="count">${counts[k]}</span></button>`
         ),
@@ -1479,8 +1616,30 @@
       renderPage(1);
     });
 
-    document.getElementById('storeSelect').addEventListener('change', (e) => {
-      storeFilter = e.target.value;
+    const storeTabs = document.getElementById('storeTabs');
+
+    function renderStoreTabs() {
+      const count = (store) => allProducts.filter(p => (p.store || 'Amazon') === store).length;
+      const tabs = [
+        { key: 'all', label: 'All<span class="tab-word"> Stores</span>', cls: 'all', n: allProducts.length },
+        { key: 'Amazon', label: 'Amazon', cls: 'amazon', n: count('Amazon') },
+        { key: 'Flipkart', label: 'Flipkart', cls: 'flipkart', n: count('Flipkart') },
+        { key: 'Myntra', label: 'Myntra', cls: 'myntra', n: count('Myntra') },
+      ];
+      storeTabs.innerHTML = tabs.map(t => `
+        <button type="button" role="tab" class="store-tab ${t.cls}${storeFilter === t.key ? ' active' : ''}"
+                aria-selected="${storeFilter === t.key}" data-store="${esc(t.key)}">
+          ${t.key === 'all' ? '' : '<span class="dot" aria-hidden="true"></span>'}<span class="tab-label">${t.label}</span><span class="count">${t.n}</span>
+        </button>`).join('');
+    }
+
+    storeTabs.addEventListener('click', (e) => {
+      const btn = e.target.closest('.store-tab');
+      if (!btn) return;
+      storeFilter = btn.dataset.store;
+      // A category picked under one store may not exist under another.
+      currentCategory = 'all';
+      renderStoreTabs();
       renderChips();
       renderPage(1);
     });
@@ -1579,10 +1738,13 @@
       grid.innerHTML = pageItems.map(cardHtml).join('');
       const catLabel = currentCategory === 'all' ? '' : ` in ${prettyLabel(currentCategory)}`;
       const searchLabel = searchText ? ` matching “${searchText}”` : '';
-      status.textContent = `${items.length} products${catLabel}${searchLabel} · more than ${window.__minDiscount}% off${lastUpdatedText}`;
+      const filtering = Boolean(searchText) || currentCategory !== 'all' || storeFilter !== 'all' || priceBucket !== 'all';
+      status.hidden = !filtering;
+      status.textContent = `${items.length} products${catLabel}${searchLabel}`;
 
       if (!pageItems.length) {
         grid.innerHTML = '';
+        status.hidden = false;
         status.textContent = searchText
           ? `No deals matching “${searchText}”${catLabel}. Try a different search.`
           : `No deals${catLabel} in this price range right now.`;
@@ -1631,6 +1793,7 @@
         }, 0);
         if (newest) lastUpdatedText = ` · Updated ${timeAgo(new Date(newest).toISOString()).toLowerCase()}`;
         renderLiveBar();
+        renderStoreTabs();
         renderChips();
         renderPage(1);
       } catch (err) {
@@ -1654,6 +1817,7 @@
 
         allProducts = data.products;
         renderLiveBar();
+        renderStoreTabs();
         renderChips();
         renderPage(currentPage);
 

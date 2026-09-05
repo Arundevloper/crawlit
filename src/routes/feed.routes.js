@@ -3,6 +3,7 @@ const { siteUrl } = require('../config/config');
 const { getCachedDeals } = require('../services/amazonDeals.service');
 const { getCachedProducts } = require('../services/amazon.service');
 const { getCachedFlipkart } = require('../services/flipkart.service');
+const { getCachedMyntra } = require('../services/myntra.service');
 const { parseDiscountPct } = require('../utils/price');
 
 const router = express.Router();
@@ -19,13 +20,14 @@ function xmlEscape(value) {
 
 router.get('/feed.xml', async (req, res, next) => {
   try {
-    const [deals, products, flipkart] = await Promise.all([
+    const [deals, products, flipkart, myntra] = await Promise.all([
       getCachedDeals(),
       getCachedProducts(),
       getCachedFlipkart(),
+      getCachedMyntra(),
     ]);
 
-    const items = [...(deals || []), ...(products || []), ...(flipkart || [])]
+    const items = [...(deals || []), ...(products || []), ...(flipkart || []), ...(myntra || [])]
       .map((p) => ({ ...p, discountPct: parseDiscountPct(p.discountPct ?? p.discount) }))
       .filter((p) => p.url && p.title && p.discountPct !== null && p.discountPct > MIN_DISCOUNT)
       .sort((a, b) => new Date(b.firstSeenAt) - new Date(a.firstSeenAt))
@@ -55,7 +57,7 @@ router.get('/feed.xml', async (req, res, next) => {
     <title>DealMint — High Discount Deals</title>
     <link>${siteUrl}/</link>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Products with more than ${MIN_DISCOUNT}% off, tracked across Amazon and Flipkart.</description>
+    <description>Products with more than ${MIN_DISCOUNT}% off, tracked across Amazon, Flipkart and Myntra.</description>
     <language>en-in</language>
     <lastBuildDate>${now}</lastBuildDate>
 ${entries}
@@ -74,27 +76,44 @@ ${entries}
 // without a manual rebuild. Overrides the static public/sitemap.xml.
 router.get('/sitemap.xml', async (req, res, next) => {
   try {
-    const [deals, products, flipkart] = await Promise.all([
-      getCachedDeals(), getCachedProducts(), getCachedFlipkart(),
+    const [deals, products, flipkart, myntra] = await Promise.all([
+      getCachedDeals(), getCachedProducts(), getCachedFlipkart(), getCachedMyntra(),
     ]);
 
     const statics = ['/', '/about.html', '/contact.html', '/privacy.html', '/terms.html', '/disclaimer.html']
       .map((u) => `  <url><loc>${siteUrl}${u}</loc><changefreq>${u === '/' ? 'hourly' : 'monthly'}</changefreq><priority>${u === '/' ? '1.0' : '0.5'}</priority></url>`);
 
-    const dealUrls = [];
-    for (const p of [...(deals || []), ...(products || []), ...(flipkart || [])]) {
+    // Resolve each product to its deal-page path by hostname, not by pattern
+    // alone: an unanchored /itm.../ match would mislabel a Myntra slug that
+    // happens to contain "itm". Newest deals first, deduped, capped well under
+    // the 50,000-URL sitemap limit.
+    const candidates = new Map();
+    for (const p of [...(deals || []), ...(products || []), ...(flipkart || []), ...(myntra || [])]) {
       if (!p.url) continue;
-      const amazon = p.url.match(/\/dp\/([A-Z0-9]{8,})/i);
-      const flip = p.url.match(/itm([a-z0-9]+)/i);
-      const path = p.asin ? `/deal/amazon/${p.asin}`
-        : amazon ? `/deal/amazon/${amazon[1]}`
-        : flip ? `/deal/flipkart/${flip[1]}` : null;
+      let host = '';
+      try { host = new URL(p.url).hostname; } catch (err) { continue; }
+      let path = null;
+      if (/myntra\.com$/i.test(host)) {
+        const m = p.url.match(/\/(\d{5,})\/buy/i);
+        if (m) path = `/deal/myntra/${m[1]}`;
+      } else if (/flipkart\.com$/i.test(host)) {
+        const m = p.url.match(/itm([a-z0-9]+)/i);
+        if (m) path = `/deal/flipkart/${m[1]}`;
+      } else if (/amazon\./i.test(host)) {
+        const m = p.url.match(/\/dp\/([A-Z0-9]{8,})/i);
+        if (p.asin) path = `/deal/amazon/${p.asin}`;
+        else if (m) path = `/deal/amazon/${m[1]}`;
+      }
       if (!path) continue;
-      dealUrls.push(`  <url><loc>${siteUrl}${path}</loc><changefreq>daily</changefreq><priority>0.7</priority></url>`);
-      if (dealUrls.length >= 5000) break; // sitemap protocol limit is 50k
+      const t = new Date(p.firstSeenAt || 0).getTime();
+      if (!candidates.has(path) || candidates.get(path) < t) candidates.set(path, t);
     }
+    const dealUrls = [...candidates.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 45000)
+      .map(([path]) => `  <url><loc>${siteUrl}${path}</loc><changefreq>daily</changefreq><priority>0.7</priority></url>`);
 
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...statics, ...new Set(dealUrls)].join('\n')}\n</urlset>\n`;
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...statics, ...dealUrls].join('\n')}\n</urlset>\n`;
     res.type('application/xml').set('Cache-Control', 'public, max-age=1800').send(xml);
   } catch (err) {
     next(err);
