@@ -27,6 +27,9 @@ async function findDeal(store, id) {
   if (store === 'flipkart') {
     return db.collection('flipkart_products').findOne({ url: new RegExp(`itm${safeId}(?:[/?]|$)`, 'i') });
   }
+  if (store === 'myntra') {
+    return db.collection('myntra_products').findOne({ url: new RegExp(`/${safeId}/buy(?:[/?]|$)`, 'i') });
+  }
   return null;
 }
 
@@ -37,7 +40,7 @@ function renderDealPage(product, store, id) {
   const saving = price !== null && mrp !== null && mrp > price ? Math.round(mrp - price) : null;
   const target = product.affiliateUrl || product.url;
   const canonical = `${siteUrl}/deal/${store}/${id}`;
-  const storeName = product.store || (store === 'flipkart' ? 'Flipkart' : 'Amazon');
+  const storeName = product.store || ({ flipkart: 'Flipkart', myntra: 'Myntra' }[store] || 'Amazon');
 
   // Product structured data: this is what lets the page appear as a rich
   // result rather than a plain blue link.
@@ -154,7 +157,7 @@ ${product.image ? `<meta property="og:image" content="${esc(product.image)}">` :
         <span class="logo-badge footer-badge"><img src="/dealmint-icon.svg" alt="" width="28" height="28"></span>
         <span class="brand-name">Deal<span class="accent">Mint</span></span>
       </a>
-      <span class="footer-desc">Tracking the best discounts across Amazon and Flipkart.</span>
+      <span class="footer-desc">Tracking the best discounts across Amazon, Flipkart and Myntra.</span>
     </div>
     <div class="footer-links">
       <span class="col-title">Explore</span>

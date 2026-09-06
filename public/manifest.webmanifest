@@ -1,7 +1,7 @@
 {
   "name": "DealMint — High Discount Deals",
   "short_name": "DealMint",
-  "description": "Live deals with more than 30% off, tracked across Amazon and Flipkart.",
+  "description": "Live deals with more than 30% off, tracked across Amazon, Flipkart and Myntra.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

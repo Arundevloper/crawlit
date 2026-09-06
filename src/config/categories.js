@@ -60,4 +60,20 @@ const CATEGORIES = [
   { key: 'camera', query: 'camera' },
 ];
 
-module.exports = { CATEGORIES };
+// Myntra sells fashion and beauty only, and its search wants plain terms
+// rather than the brand-led strings used for Amazon/Flipkart. Keys must be
+// existing CATEGORIES keys so the category chips stay consistent. A value
+// may be an array to run several searches into one category.
+const MYNTRA_QUERIES = {
+  clothes: ['men tshirts', 'women kurtas'],
+  shoes: 'men shoes',
+  sandals: 'women sandals',
+  handbag: 'handbags',
+  watch: 'watches',
+  innerwear: 'men innerwear',
+  perfume: 'perfume',
+  makeup: 'makeup',
+  skincare: 'skin care',
+};
+
+module.exports = { CATEGORIES, MYNTRA_QUERIES };
