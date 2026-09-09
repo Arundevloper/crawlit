@@ -1,6 +1,7 @@
 const { crawlAmazon, getCachedProducts } = require('../services/amazon.service');
 const { crawlAmazonDeals, getCachedDeals } = require('../services/amazonDeals.service');
 const { getCachedFlipkart } = require('../services/flipkart.service');
+const { getCachedMyntra } = require('../services/myntra.service');
 const { parseRangeParams, filterByPriceRange, parseDiscountPct } = require('../utils/price');
 const { isBrandedProduct } = require('../config/brands');
 const { computeBadges } = require('../utils/badges');
@@ -133,12 +134,13 @@ async function getHighDiscountDeals(req, res, next) {
       return res.json(cachedResponse);
     }
 
-    const [deals, searchProducts, flipkart] = await Promise.all([
+    const [deals, searchProducts, flipkart, myntra] = await Promise.all([
       getCachedDeals(),
       getCachedProducts(),
       getCachedFlipkart(),
+      getCachedMyntra(),
     ]);
-    if (!deals && !searchProducts && !flipkart) {
+    if (!deals && !searchProducts && !flipkart && !myntra) {
       return res.status(404).json({ error: 'No cached deals yet. Call GET /api/amazon/deals/refresh first.' });
     }
 
@@ -155,6 +157,7 @@ async function getHighDiscountDeals(req, res, next) {
       ...(deals || []).map((p) => normalize(p, 'hot-deals')),
       ...(searchProducts || []).map((p) => normalize(p, 'other')),
       ...(flipkart || []).map((p) => normalize(p, 'other')),
+      ...(myntra || []).map((p) => normalize(p, 'other')),
     ];
 
     const seen = new Set();

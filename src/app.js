@@ -26,7 +26,7 @@ app.use((req, res, next) => {
       "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
       // Product photos are hotlinked from the merchants' own CDNs.
-      "img-src 'self' data: https://m.media-amazon.com https://images-na.ssl-images-amazon.com https://rukminim1.flixcart.com https://rukminim2.flixcart.com",
+      "img-src 'self' data: https://m.media-amazon.com https://images-na.ssl-images-amazon.com https://rukminim1.flixcart.com https://rukminim2.flixcart.com https://assets.myntassets.com",
       "connect-src 'self'",
       "form-action 'self'",
       "frame-ancestors 'self'",

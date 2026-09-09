@@ -76,9 +76,9 @@ async function convertLinks(products) {
     return products;
   }
 
-  // Only Flipkart is available on EarnKaro — skip Amazon URLs to avoid
-  // wasted API calls. Update this filter if more sellers are added.
-  const isSupported = (url) => /flipkart\.com/i.test(url);
+  // Flipkart and Myntra are on EarnKaro; Amazon is not (it is tagged directly
+  // via the Associates tag instead), so skip it to avoid wasted API calls.
+  const isSupported = (url) => /flipkart\.com|myntra\.com/i.test(url);
 
   const toConvert = products.filter((p) => p.url && !p.affiliateUrl && isSupported(p.url));
   if (!toConvert.length) return products;
