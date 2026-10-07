@@ -5,6 +5,7 @@ const { getCachedMyntra } = require('../services/myntra.service');
 const { parseRangeParams, filterByPriceRange, parseDiscountPct } = require('../utils/price');
 const { isBrandedProduct } = require('../config/brands');
 const { computeBadges } = require('../utils/badges');
+const { titleWords, prefixSignature } = require('../utils/titles');
 const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const MIN_DISCOUNT = 30;
@@ -26,22 +27,6 @@ function getCache(key) {
 function setCache(key, data) {
   if (responseCache.size > 50) responseCache.clear();
   responseCache.set(key, { data, timestamp: Date.now() });
-}
-
-function titleWords(title) {
-  return String(title || '')
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-    .split(/\s+/)
-    .filter(Boolean);
-}
-
-// Variants of one product (colors, sizes, pack counts) have distinct URLs/ASINs
-// but near-identical titles. The first 8 significant words identify the product,
-// so "SMOWKLY Casual Trousers ... (Black)" and "... (Beige)" collapse to one.
-function prefixSignature(product) {
-  const words = titleWords(product.title);
-  return words.length ? words.slice(0, 8).join(' ') : null;
 }
 
 // The prefix alone misses variants whose distinguishing word comes early —
@@ -74,7 +59,7 @@ function dedupeBy(products, keyFn) {
 }
 
 function dedupeVariants(products) {
-  return dedupeBy(dedupeBy(products, prefixSignature), brandPriceSignature);
+  return dedupeBy(dedupeBy(products, (p) => prefixSignature(p.title)), brandPriceSignature);
 }
 
 async function getProducts(req, res, next) {

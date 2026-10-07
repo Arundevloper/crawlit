@@ -38,6 +38,14 @@ async function connectDB() {
         { expireAfterSeconds: 30 * 24 * 60 * 60, name: 'ttl_stale_deals_30d' }
       )
     ),
+
+    // Amazon product pages opened by the search crawler. Each run skips these,
+    // so it only opens new products; after a day the entry expires and the
+    // product can be re-opened to refresh its price.
+    db.collection('amazon_seen').createIndex(
+      { at: 1 },
+      { expireAfterSeconds: 24 * 60 * 60, name: 'ttl_amazon_seen_1d' }
+    ),
   ]);
 
   console.log(`Connected to MongoDB database "${mongoDbName}"`);

@@ -1,6 +1,7 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
 const { convertLinks } = require('./earnkaro.service');
+const { reuseStoredAffiliateLinks } = require('../utils/affiliate');
 const { isBrandedProduct } = require('../config/brands');
 const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
@@ -140,8 +141,10 @@ async function crawlFlipkart(query = 'earbuds', limit = 10, category = null) {
   const docs = validProducts.map((p) => ({ ...p, store: 'Flipkart', ...(category ? { category } : {}) }));
 
   if (docs.length) {
+    const collection = getDb().collection(COLLECTION);
+    await reuseStoredAffiliateLinks(collection, docs);
     await convertLinks(docs);
-    await upsertProducts(getDb().collection(COLLECTION), docs, 'url');
+    await upsertProducts(collection, docs, 'url');
   }
 
   return docs;

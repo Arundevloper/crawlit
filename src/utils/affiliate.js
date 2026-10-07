@@ -32,4 +32,21 @@ function tagAmazonProducts(products) {
   return products;
 }
 
-module.exports = { withAmazonTag, tagAmazonProducts };
+// A product's affiliate link never changes, but converting one costs a
+// rate-limited EarnKaro call. Copy links already stored for these products so
+// only products new to the collection go through the converter.
+async function reuseStoredAffiliateLinks(collection, products) {
+  const urls = products.filter((p) => p.url && !p.affiliateUrl).map((p) => p.url);
+  if (!urls.length) return products;
+
+  const stored = await collection
+    .find({ url: { $in: urls }, affiliateUrl: { $type: 'string' } }, { projection: { _id: 0, url: 1, affiliateUrl: 1 } })
+    .toArray();
+  const byUrl = new Map(stored.map((s) => [s.url, s.affiliateUrl]));
+  for (const product of products) {
+    if (!product.affiliateUrl && byUrl.has(product.url)) product.affiliateUrl = byUrl.get(product.url);
+  }
+  return products;
+}
+
+module.exports = { withAmazonTag, tagAmazonProducts, reuseStoredAffiliateLinks };

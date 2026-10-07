@@ -2,6 +2,7 @@ const express = require('express');
 const { getDb } = require('../config/db');
 const { siteUrl } = require('../config/config');
 const { parseDiscountPct, parsePrice } = require('../utils/price');
+const { tagAmazonProducts } = require('../utils/affiliate');
 
 const router = express.Router();
 
@@ -19,10 +20,10 @@ async function findDeal(store, id) {
   if (!safeId) return null;
 
   if (store === 'amazon') {
-    return (
+    const product =
       (await db.collection('amazon_deals').findOne({ asin: safeId })) ||
-      (await db.collection('amazon_products').findOne({ url: new RegExp(`/dp/${safeId}(?:[/?]|$)`) }))
-    );
+      (await db.collection('amazon_products').findOne({ url: new RegExp(`/dp/${safeId}(?:[/?]|$)`) }));
+    return product && tagAmazonProducts([product])[0];
   }
   if (store === 'flipkart') {
     return db.collection('flipkart_products').findOne({ url: new RegExp(`itm${safeId}(?:[/?]|$)`, 'i') });
