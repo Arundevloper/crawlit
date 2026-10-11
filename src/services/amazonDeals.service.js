@@ -88,7 +88,9 @@ async function crawlAmazonDeals(limit = 150) {
 
 async function getCachedDeals() {
   const deals = await findRecent(getDb().collection(COLLECTION));
-  return deals.length ? deals : null;
+  // Also tagged here, not only at crawl time: deals crawled before the
+  // Associates tag was configured would otherwise go out untagged until re-crawled.
+  return deals.length ? tagAmazonProducts(deals) : null;
 }
 
 module.exports = { crawlAmazonDeals, getCachedDeals };

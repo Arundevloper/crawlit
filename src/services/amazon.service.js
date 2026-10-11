@@ -1,14 +1,61 @@
 const { getDb } = require('../config/db');
 const { upsertProducts, findRecent } = require('../utils/upsert');
 const { tagAmazonProducts } = require('../utils/affiliate');
+const { prefixSignature } = require('../utils/titles');
 const { isBrandedProduct } = require('../config/brands');
 const { isKidsClothing, isMobilePhone, isHardwareTool, isPestControl } = require('../config/exclusions');
 
 const COLLECTION = 'amazon_products';
+// Products whose page was already opened; entries expire after a day (TTL
+// index in config/db.js). Keyed by title signature rather than ASIN so that
+// every color/size variant of an opened product counts as seen too.
+const SEEN_COLLECTION = 'amazon_seen';
+
+function isWanted(title, category) {
+  return (
+    isBrandedProduct(title, category) &&
+    !isKidsClothing(title) &&
+    !isMobilePhone(title) &&
+    !isHardwareTool(title) &&
+    !isPestControl(title)
+  );
+}
+
+// Opening a product page is the expensive part of a crawl, so only open
+// results that are new: not a variant of another result, not one the filters
+// would drop anyway, and not opened within the last day. Search cards carry
+// "Brand | Title", enough to apply the same filters as the product page.
+async function pickNewResults(results, limit, category) {
+  const byKey = new Map();
+  for (const { asin, title } of results) {
+    const key = prefixSignature(title) || asin;
+    if (byKey.has(key)) continue;
+    // A card with no title (layout change) is left for the product page to judge.
+    if (title && !isWanted(title, category)) continue;
+    byKey.set(key, { asin, key });
+  }
+
+  const seen = await getDb()
+    .collection(SEEN_COLLECTION)
+    .find({ _id: { $in: [...byKey.keys()] } }, { projection: { _id: 1 } })
+    .toArray();
+  const seenKeys = new Set(seen.map((s) => s._id));
+
+  return [...byKey.values()].filter((r) => !seenKeys.has(r.key)).slice(0, limit);
+}
+
+async function markSeen(keys) {
+  if (!keys.length) return;
+  const at = new Date();
+  await getDb()
+    .collection(SEEN_COLLECTION)
+    .bulkWrite(keys.map((key) => ({ updateOne: { filter: { _id: key }, update: { $set: { at } }, upsert: true } })));
+}
 
 async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
   const { PlaywrightCrawler, RequestQueue } = await import('crawlee');
   const products = [];
+  const openedKeys = [];
 
   // Unique queue per run: Crawlee's shared "default" queue would otherwise mark
   // this query's URLs as already handled on repeat runs (e.g. the scheduled refresh),
@@ -18,10 +65,11 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
   const crawler = new PlaywrightCrawler({
     requestQueue,
     maxRequestsPerCrawl: limit + 1,
+    // Everything read below is text or an attribute, so images, CSS and fonts
+    // are pure download time.
+    preNavigationHooks: [async ({ blockRequests }) => blockRequests({ extraUrlPatterns: ['.webp', '.woff2', '.mp4'] })],
     async requestHandler({ request, page, log }) {
       if (request.label === 'PRODUCT') {
-        await page.waitForTimeout(1500);
-
         const data = await page.evaluate(() => {
           const text = (sel) => document.querySelector(sel)?.textContent?.trim().replace(/\s+/g, ' ') || null;
 
@@ -52,37 +100,39 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
         });
 
         log.info(`Scraped: ${data.title} — ${data.price}`);
-        products.push({ ...data, url: request.loadedUrl });
+        // No title means a captcha or error page; leave it unseen so the next run retries.
+        if (data.title) openedKeys.push(request.userData.key);
+        products.push({ ...data, asin: request.userData.asin, url: request.loadedUrl });
         return;
       }
 
-      const asins = await page.evaluate((max) => {
-        const found = [...document.querySelectorAll('[data-asin]')]
-          .map((el) => el.getAttribute('data-asin'))
-          .filter(Boolean);
-        return [...new Set(found)].slice(0, max);
-      }, limit);
+      const results = await page.evaluate(() => {
+        const cards = [...document.querySelectorAll('[data-component-type="s-search-result"][data-asin]')];
+        return cards
+          .map((card) => ({
+            asin: card.getAttribute('data-asin'),
+            title: [...card.querySelectorAll('h2')].map((h) => h.textContent.trim()).join(' ') || null,
+          }))
+          .filter((r) => r.asin);
+      });
 
-      log.info(`Found ${asins.length} products for "${query}"`);
+      const picked = await pickNewResults(results, limit, category);
+      log.info(`Found ${results.length} results for "${query}", opening ${picked.length} new`);
       await crawler.addRequests(
-        asins.map((asin) => ({ url: `https://www.amazon.in/dp/${asin}`, label: 'PRODUCT' })),
+        picked.map(({ asin, key }) => ({
+          url: `https://www.amazon.in/dp/${asin}`,
+          label: 'PRODUCT',
+          userData: { asin, key },
+        })),
       );
     },
   });
 
   await crawler.run([{ url: `https://www.amazon.in/s?k=${encodeURIComponent(query)}`, label: 'SEARCH' }]);
   await requestQueue.drop();
+  await markSeen(openedKeys);
 
-  const validProducts = products.filter((p) => {
-    if (!p || !p.title || !p.url) return false;
-    const cat = category || p.category;
-    if (!isBrandedProduct(p.title, cat)) return false;
-    if (isKidsClothing(p.title)) return false;
-    if (isMobilePhone(p.title)) return false;
-    if (isHardwareTool(p.title)) return false;
-    if (isPestControl(p.title)) return false;
-    return true;
-  });
+  const validProducts = products.filter((p) => p && p.title && p.url && isWanted(p.title, category));
 
   const docs = validProducts.map((p) => ({ ...p, store: 'Amazon', ...(category ? { category } : {}) }));
   if (docs.length) {
@@ -95,7 +145,9 @@ async function crawlAmazon(query = 'laptop', limit = 10, category = null) {
 
 async function getCachedProducts() {
   const products = await findRecent(getDb().collection(COLLECTION));
-  return products.length ? products : null;
+  // Also tagged here, not only at crawl time: products crawled before the
+  // Associates tag was configured would otherwise go out untagged until re-crawled.
+  return products.length ? tagAmazonProducts(products) : null;
 }
 
 module.exports = { crawlAmazon, getCachedProducts };
